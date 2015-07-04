@@ -133,7 +133,7 @@ TODO: using crate features to enable crates selectively.
 
 # Past batteries
 
-Rust 1.2 will be the first release for which stdx exists. There are no
+Rust 1.2 will be the first release for which **stdx** exists. There are no
 previous revisions yet.
 
 # Contributing
