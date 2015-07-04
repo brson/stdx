@@ -136,7 +136,7 @@ TODO: using crate features to enable crates selectively.
 Rust 1.2 will be the first release for which stdx exists. There are no
 previous revisions yet.
 
-# Contributing and policy
+# Contributing
 
 **stdx** favors crates that have been 'battle-tested', this includes old
 and unloved crates like [`libc`], crates that are used by the official
