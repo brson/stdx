@@ -148,7 +148,7 @@ beautiful), and crates that are otherwise popular and well maintained.
 All crates must work on Rust's tier-1 platforms, currently x86 Linux,
 OS X, and Windows.
 
-All crates must be published to crates.io along with documentation
+All crates must be published to [crates.io](https://crates.io) along with documentation
 link and declared license.
 
 # License
