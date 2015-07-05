@@ -73,7 +73,8 @@ the Rust stable 1.2 release.
   [`bitflags!`](http://doc.rust-lang.org/bitflags/bitflags/macro.bitflags!.html#example)
   macro, but it's a heckuva-useful macro. `bitflags!` produces
   typesafe bitmasks, types with named values that are efficiently
-  packed together as bits to express sets of options. [Official].
+  packed together as bits to express sets of options. Official
+  [rust-lang] crate.
 
 * [`docopt-0.6.67`](https://crates.io/crates/docopt/0.6.67). The
   preferred way to parse command line options in Rustland. Originally
@@ -89,7 +90,7 @@ the Rust stable 1.2 release.
   environment variable. This was a feature of the Rust language and
   runtime since ancient times, but is now implemented in an external
   library, and is still the most popular way to log information about
-  what your Rust program is doing. [Official].
+  what your Rust program is. Official [rust-lang] crate.
 
 * [`flate2-0.2.7`](https://crates.io/crates/flate2/0.2.7). Basic
   [deflate](https://en.wikipedia.org/wiki/DEFLATE) compression and
@@ -125,12 +126,7 @@ the Rust stable 1.2 release.
 
 * [`url-0.2.35`](https://crates.io/crates/url/0.2.35)
 
-<a name="official-crates"/>
-
-Crates tagged [Official] are maintained by the
-[rust-lang](http://github.com/rust-lang) project.
-
-[Official]: #user-content-official-crates
+[rust-lang]: http://github.com/rust-lang
 
 # Advanced details for the crate connoisseur
 
