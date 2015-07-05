@@ -10,7 +10,7 @@ Nobody even knows! (Well, that's not true, [the
 gurus](https://github.com/ctjhoa/rust-learning#people) know, but
 they're too often hiding themselves away in their guru-caves). [The
 Rust Standard Library](http://doc.rust-lang.org/std/) is a mighty and
-precious work of craftsmanship that will continue to serve our great
+precious work of craftsmanship that will continue to serve our
 grandparents when they are forging crates on the moon. It is not
 though the comprehensive toolset they'll need to create serious moon
 softwares, which often require such basic building blocks as, oh
