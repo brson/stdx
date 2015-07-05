@@ -13,6 +13,9 @@ pub use flate2_ as flate2;
 extern crate hyper as hyper_;
 pub use hyper_ as hyper;
 
+extern crate itertools as itertools_;
+pub use itertools_ as itertools;
+
 extern crate lazy_static as lazy_static_;
 pub use lazy_static_ as lazy_static;
 

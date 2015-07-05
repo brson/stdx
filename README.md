@@ -112,6 +112,12 @@ the Rust stable 1.2 release.
   [Servo](https://github.com/servo/servo) and maintained by Mozilla's
   [seanmonstar](https://github.com/seanmonstar) so it's pretty solid.
 
+* [`itertools-0.3.21`](https://crates.io/crates/itertools/0.3.21).
+  When it comes to iterators, this crate has everything *including*
+  the kitchen sink (in the form of the `batching` adaptor).
+  Highlights include `dedup`, `group_by`, `mend_slices`, `merge`,
+  `join` and more.
+
 * [`lazy_static-0.1.11`](https://crates.io/crates/lazy_static/0.1.11)
 
 * [`libc-0.1.8`](https://crates.io/crates/libc/0.1.8)
