@@ -1,8 +1,8 @@
 # The missing batteries of Rust
 
-Rust is a blank canvas. You can create anything with Rust that your
-big beautiful brain can imagine. When you master Rust you will Be a
-Better Person.
+[Rust](http://www.rust-lang.org) is a blank canvas. You can create
+anything with Rust that your big beautiful brain can imagine. When you
+master Rust you will Be a Better Person.
 
 But how do you create a fucking random number?
 
