@@ -33,7 +33,7 @@ Rust](http://brson.github.io/temple-of-rust).*
 
 ***Warning: Don't do this. It does not work. Instead read the [recommended crates][stdx-current] and link to them [like the pros do](http://doc.crates.io/crates-io.html#using-crates.io-based-crates).***
 
-Add this to your Cargo.toml:
+Add this to your [Cargo.toml file](http://doc.crates.io/manifest.html):
 
 ```toml
 [dependencies]
