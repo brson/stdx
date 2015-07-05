@@ -68,35 +68,35 @@ break them.*
 The current revision of **stdx** is [`stdx-0.102.0`](https://crates.io/crates/stdx/0.102.0), which corresponds to
 the Rust stable 1.2 release.
 
-* [`bitflags-0.3.0`](https://crates.io/crates/bitflags/0.3.0) - The
+* [`bitflags-0.3.0`](https://crates.io/crates/bitflags/0.3.0). The
   only thing this crate does is export the
   [`bitflags!`](http://doc.rust-lang.org/bitflags/bitflags/macro.bitflags!.html#example)
   macro, but it's a heckuva-useful macro. `bitflags!` produces
   typesafe bitmasks, types with named values that are efficiently
-  packed together as bits to express sets of options.
+  packed together as bits to express sets of options. [Official].
 
-* [`docopt-0.6.67`](https://crates.io/crates/docopt/0.6.67) - The
+* [`docopt-0.6.67`](https://crates.io/crates/docopt/0.6.67). The
   preferred way to parse command line options in Rustland. Originally
-  created by Rust API design pioneer, [BurntSushi], it is used by
-  Cargo and many other projects, but notably not by rustc and rustdoc,
-  which use the older [`getopts`](https://crates.io/crates/getopts)
-  crate.
+  created by Rust API design pioneer,
+  [BurntSushi](http://github.com/burntsushi), it is used by Cargo and
+  many other projects, but notably not by rustc and rustdoc, which use
+  the older [`getopts`](https://crates.io/crates/getopts) crate.
 
-* [`env_logger-0.3.1`](https://crates.io/crates/env_logger/0.3.1) - In
+* [`env_logger-0.3.1`](https://crates.io/crates/env_logger/0.3.1). In
   conjunction with the [`log`](https://crates.io/crates/log) crate,
   enables the output of logs to the console via the
   [`RUST_LOG`](http://doc.rust-lang.org/log/env_logger/index.html#enabling-logging)
   environment variable. This was a feature of the Rust language and
   runtime since ancient times, but is now implemented in an external
   library, and is still the most popular way to log information about
-  what your Rust program is doing.
+  what your Rust program is doing. [Official].
 
-* [`flate2-0.2.7`](https://crates.io/crates/flate2/0.2.7) - Basic
+* [`flate2-0.2.7`](https://crates.io/crates/flate2/0.2.7). Basic
   [deflate](https://en.wikipedia.org/wiki/DEFLATE) compression and
   decompression, via bindings to the [miniz
   library](https://code.google.com/p/miniz/).
 
-* [`hyper-0.6.1`](https://crates.io/crates/hyper/0.6.1) - The most
+* [`hyper-0.6.1`](https://crates.io/crates/hyper/0.6.1). The most
   full-featured pure-Rust implementation of HTTP. Trusted by
   [Servo](https://github.com/servo/servo) and maintained by Mozilla's
   [seanmonstar](https://github.com/seanmonstar) so it's pretty solid.
@@ -125,7 +125,12 @@ the Rust stable 1.2 release.
 
 * [`url-0.2.35`](https://crates.io/crates/url/0.2.35)
 
-[BurntSushi]: http://github.com/burntsushi
+<a name="official-crates"/>
+
+Crates tagged [Official] are maintained by the
+[rust-lang](http://github.com/rust-lang) project.
+
+[Official]: #user-content-official-crates
 
 # Advanced details for the crate connoisseur
 
