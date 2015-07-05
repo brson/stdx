@@ -20,7 +20,7 @@ softwares, which often require such basic building blocks as, oh
 crates][stdx-current] for typical programming tasks, as well as a
 single crate that combines them together in a customizable way for
 convenience. *If you are a Rust newbie,* **stdx** *reveals the most
-legendary Crates in Rustendom that [everybody
+legendary [Crates in Rustendom](https://crates.io) that [everybody
 else](http://rustaceans.org/) already knows about! Read these words
 and step up to the next level in the [Temple of
 Rust](http://brson.github.io/temple-of-rust).*
