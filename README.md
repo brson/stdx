@@ -13,7 +13,7 @@ Rust Standard Library](http://doc.rust-lang.org/std/) is a mighty and
 precious work of craftsmanship that will continue to serve our great
 grandparents when they are forging crates on the moon. It is not
 though the comprehensive toolset they'll need to create serious moon
-software, which often require such basic building blocks as, oh
+softwares, which often require such basic building blocks as, oh
 ... random numbers.
 
 **stdx** then is a curated collection of [well-regarded Rust
