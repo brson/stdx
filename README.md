@@ -102,17 +102,6 @@ the Rust stable 1.2 release.
   library, and is still the most popular way to log information about
   what your Rust program is. Official [rust-lang] crate.
 
-* [`flate2-0.2.7`](https://crates.io/crates/flate2/0.2.7)
-  *(Optional)*. Basic [deflate](https://en.wikipedia.org/wiki/DEFLATE) compression and decompression, via bindings to the [miniz
-  library](https://code.google.com/p/miniz/).
-  **To enable**: use the **flate2** feature.
-
-* [`hyper-0.6.1`](https://crates.io/crates/hyper/0.6.1) *(Optional)*.
-  The most full-featured pure-Rust implementation of HTTP. Trusted by
-  [Servo](https://github.com/servo/servo) and maintained by Mozilla's
-  [seanmonstar](https://github.com/seanmonstar) so it's pretty solid.
-  **To enable**: use the **hyper** feature.
-
 * [`itertools-0.3.21`](https://crates.io/crates/itertools/0.3.21).
   When it comes to iterators, this crate has everything *including*
   the kitchen sink (in the form of the `batching` adaptor).
@@ -147,25 +136,10 @@ the Rust stable 1.2 release.
 
 # Advanced details for the crate connoisseur
 
-Some of the crates in **stdx** are optional, and must be enabled
-explicitly in your manifest.  They might be disabled because they
-do not work well on all platforms, because they are very large, or
-because they require special environment configuration to build.
-
-You can enable these crates by listing the ones you want like so:
-
-```toml
-[dependencies.stdx]
-version = "0.102"
-features = ["flate2", "hyper"]
-```
-
-**Note**: Having a `[dependencies.stdx]` section *replaces* the short
-`stdx = "..."` line.
-
-You can also use `"all"` to just enable everything.
-
-If you want to go the other way, you can also select *just* the set of crates you want.  For example, if you only want the `env_logger`, `log`, and `num` crates, you could use the following:
+Though they are all enabled by default, all of the crates included in
+**stdx** are optional, allowing you to select *just* the set of crates
+you want. For example, if you only want the `env_logger`, `log`, and
+`num` crates, you could use the following:
 
 ```toml
 [dependencies.stdx]
@@ -173,6 +147,11 @@ version = "0.102"
 default-features = false
 features = ["env_logger", "log", "num"]
 ```
+
+**Note**: Having a `[dependencies.stdx]` section *replaces* the short
+`stdx = "..."` line.
+
+You can also use `"all"` to just enable everything.
 
 There are more details about how features work in the
 [Cargo documentation](http://doc.crates.io/manifest.html#the-[features]-section).
