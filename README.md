@@ -56,11 +56,10 @@ Check it out:
 ```rust
 extern crate stdx;
 
-fn main() {
-    use stdx::rand::{self, rand::Rng};
+use stdx::rand::random;
 
-    let mut rng = rand::thread_rng();
-    println!("{}", rng.gen::<i32>())
+fn main() {
+    println!("{}", random::<i32>())
 }
 ```
 
@@ -119,19 +118,63 @@ the Rust stable 1.2 release.
   Highlights include `dedup`, `group_by`, `mend_slices`, `merge`,
   `join` and more.
 
-* [`lazy_static-0.1.11`](https://crates.io/crates/lazy_static/0.1.11)
+* [`lazy_static-0.1.11`](https://crates.io/crates/lazy_static/0.1.11).
+  Global state is one of those things Rust doesn't do so well. In
+  particular there is no ['life before
+  main'](https://isocpp.org/wiki/faq/ctors#static-init-order) in Rust,
+  so it's not possible to write a programmatic constructor for a
+  global value that will be run at startup. Instead, Rust prefers lazy
+  execution for global initialization, and the
+  [`lazy_static!`](http://rust-ci.org/Kimundi/lazy-static.rs/doc/lazy_static/)
+  macro does just that.
 
-* [`libc-0.1.8`](https://crates.io/crates/libc/0.1.8)
+* [`libc-0.1.8`](https://crates.io/crates/libc/0.1.8). If you need to
+  talk to foreign code, you need this crate. It contains declarations
+  for a grab bag of C types and functions that are correct for the
+  variety of compilers and platforms that Rust runs on. This crate is
+  a *notorious mess* design-wise, but it has endured for years as the
+  foundation Rust uses to talk to the outside world. Official
+  [rust-lang] crate.
 
-* [`log-0.3.1`](https://crates.io/crates/log/0.3.1)
+* [`log-0.3.1`](https://crates.io/crates/log/0.3.1). The most common
+  way to perform basic logging in Rust, with the `error!`, `warn!`,
+  `info!`, and `debug!` macros, always used in conjunction with the
+  [`env
+  logger`](http://rust-ci.org/Kimundi/lazy-static.rs/doc/lazy_static/)
+  crate. Official [rust-lang] crate.
 
-* [`num-0.1.25`](https://crates.io/crates/num/0.1.25)
+* [`num-0.1.25`](https://crates.io/crates/num/0.1.25). Big integers,
+  rational numbers, complex numbers, and a 'numeric tower' of numeric
+  traits. This is another rust-lang crate that has persisted through
+  Rust's evolution but is not designed well enough for the standard
+  library. It is though presently the most common way to access the
+  functionality it provides. Official [rust-lang] crate.
 
-* [`rand-0.3.8`](https://crates.io/crates/rand/0.3.8)
+* [`rand-0.3.8`](https://crates.io/crates/rand/0.3.8). Random number
+  generators. The defaults are cryptographically strong. Official
+  [rust-lang] crate.
 
-* [`regex-0.1.39`](https://crates.io/crates/regex/0.1.39)
+* [`regex-0.1.39`](https://crates.io/crates/regex/0.1.39). Another
+  [BurntSushi](http://github.com/burntsushi) joint, this a very
+  performant regular expression implementation that [stomps the
+  competition](http://benchmarksgame.alioth.debian.org/u64/performance.php?test=regexdna)
+  in some benchmarks. Though influenced by the highly-regarded
+  [RE2](https://github.com/google/re2) engine, it omits backreferences
+  and arbitrary lookahead in order to have predictable worst-case
+  performance. Official [rust-lang] crate.
 
-* [`rustc-serialize-0.3.15`](https://crates.io/crates/rustc-serialize/0.3.15)
+* [`rustc-serialize-0.3.15`](https://crates.io/crates/rustc-serialize/0.3.15).
+  Another crate with a storied history, it was designed long ago to be
+  Rust's solution for serialization, but time and better judgement
+  consigned it to the Rust junkyard. Curiously, this is the only
+  external crate that `rustc` has explicit knowledge of, since
+  `#[deriving(RustcEncodable, RustcDecodable)]` is hard-coded into the
+  compiler, and at the time the `rustc-serialize` crate was demoted it
+  was deemed too inconvenient to users to remove the deriving
+  mode. [Serde](https://github.com/erickt/rust-serde) is a more
+  modern, and faster alternative, though it is yet inconvenient to use
+  ... because it doesn't support `#[deriving]`! Official [rust-lang]
+  crate.
 
 * [`semver-0.1.19`](https://crates.io/crates/semver/0.1.19)
 

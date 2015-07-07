@@ -8,8 +8,7 @@ fn import() {
 
 #[test]
 fn rand_example() {
-    use stdx::rand::{self, Rng};
+    use stdx::rand::random;
 
-    let mut rng = rand::thread_rng();
-    println!("{}", rng.gen::<i32>())
+    println!("{}", random::<i32>())
 }
