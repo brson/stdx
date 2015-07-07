@@ -24,7 +24,7 @@ default = [
     "toml",
     "url",
 ]
-all = ["default", "flate2", "hyper"]
+all = ["default"]
 
 [dependencies]
 bitflags = { version = "0.3.0", optional = true }

@@ -7,12 +7,6 @@
 #[cfg(feature = "env_logger")] extern crate env_logger as env_logger_;
 #[cfg(feature = "env_logger")] pub use env_logger_ as env_logger;
 
-#[cfg(feature = "flate2")] extern crate flate2 as flate2_;
-#[cfg(feature = "flate2")] pub use flate2_ as flate2;
-
-#[cfg(feature = "hyper")] extern crate hyper as hyper_;
-#[cfg(feature = "hyper")] pub use hyper_ as hyper;
-
 #[cfg(feature = "itertools")] extern crate itertools as itertools_;
 #[cfg(feature = "itertools")] pub use itertools_ as itertools;
 
