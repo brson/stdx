@@ -139,9 +139,8 @@ the Rust stable 1.2 release.
 * [`log-0.3.1`](https://crates.io/crates/log/0.3.1). The most common
   way to perform basic logging in Rust, with the `error!`, `warn!`,
   `info!`, and `debug!` macros, always used in conjunction with the
-  [`env
-  logger`](http://rust-ci.org/Kimundi/lazy-static.rs/doc/lazy_static/)
-  crate. Official [rust-lang] crate.
+  [`env_logger`](https://crates.io/crates/env_logger) crate.
+  Official [rust-lang] crate.
 
 * [`num-0.1.25`](https://crates.io/crates/num/0.1.25). Big integers,
   rational numbers, complex numbers, and a 'numeric tower' of numeric
