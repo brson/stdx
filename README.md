@@ -157,7 +157,7 @@ the Rust stable 1.2 release.
   [BurntSushi](http://github.com/burntsushi) joint, this a very
   performant regular expression implementation that [stomps the
   competition](http://benchmarksgame.alioth.debian.org/u64/performance.php?test=regexdna)
-  in some benchmarks. Though influenced by the highly-regarded
+  in some benchmarks. Influenced by the highly-regarded
   [RE2](https://github.com/google/re2) engine, it omits backreferences
   and arbitrary lookahead in order to have predictable worst-case
   performance. Official [rust-lang] crate.
