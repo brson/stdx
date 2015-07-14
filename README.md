@@ -175,17 +175,34 @@ the Rust stable 1.2 release.
   ... because it doesn't support `#[deriving]`! Official [rust-lang]
   crate.
 
-* [`semver-0.1.19`](https://crates.io/crates/semver/0.1.19)
+* [`semver-0.1.19`](https://crates.io/crates/semver/0.1.19). Rust
+  crate versioning follows its interpretation of the
+  [semver](http://semver.org) versioning scheme. Official [rust-lang]
+  crate.
 
-* [`tempdir-0.3.4`](https://crates.io/crates/tempdir/0.3.4)
+* [`tempdir-0.3.4`](https://crates.io/crates/tempdir/0.3.4). Another
+  standard library reject. If you need to create temporary directories
+  this is the official [rust-lang] way to do it.
 
-* [`time-0.1.30`](https://crates.io/crates/time/0.1.30)
+* [`time-0.1.30`](https://crates.io/crates/time/0.1.30). This has got
+  to be the worst of the [rust-lang] crates. It originates in the dark
+  ages of Rust and limped along forever. If you need to get the time
+  this can do it, but you won't like it.
 
-* [`toml-0.1.21`](https://crates.io/crates/toml/0.1.21)
+* [`toml-0.1.21`](https://crates.io/crates/toml/0.1.21). [TOML](https://github.com/toml-lang/toml)
+  is the format to use for configuration files (at least once you are
+  ready to advace beyond simple [json serialization][json]). It is the
+  format for configuring Cargo (via
+  [Cargo.toml](http://doc.crates.io/manifest.html)), and the Rust
+  implementation is maintained by master wizard [Alex
+  Crichton](https://github.com/alexcrichton).
 
-* [`url-0.2.35`](https://crates.io/crates/url/0.2.35)
+* [`url-0.2.35`](https://crates.io/crates/url/0.2.35). The Rust URL
+  parser and type created for [Servo](https://github.com/servo/servo), by
+  [SimonSapin](https://github.com/simonsapin).
 
 [rust-lang]: http://github.com/rust-lang
+[json]: http://doc.rust-lang.org/rustc-serialize/rustc_serialize/json/index.html#using-autoserialization
 
 # Advanced details for the crate connoisseur
 
