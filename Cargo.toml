@@ -4,6 +4,7 @@ version = "0.0.1"
 authors = ["Brian Anderson <banderson@mozilla.com>"]
 description = "The missing batteries of Rust"
 license = "MIT/Apache-2.0"
+build = "build.rs"
 
 [features]
 default = [
@@ -45,3 +46,9 @@ tempdir = { version = "0.3.4", optional = true }
 time = { version = "0.1.30", optional = true }
 toml = { version = "0.1.21", optional = true }
 url = { version = "0.2.35", optional = true }
+
+[build-dependencies]
+skeptic = "=0.4.0"
+
+[dev-dependencies]
+skeptic = "=0.4.0"

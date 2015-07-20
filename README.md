@@ -42,7 +42,7 @@ stdx = "0.102"
 
 Then add this to the top of your crate source:
 
-```rust
+```rust,ignore
 extern crate stdx;
 ```
 
