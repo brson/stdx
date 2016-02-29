@@ -3,6 +3,8 @@
 **stdx** is a project to collect the best Rust crates and validate
 that they work together on the platforms that Rust supports.
 
+[![Build Status](https://travis-ci.org/brson/stdx.svg?branch=master)](https://travis-ci.org/rust-lang/brson/stdx)
+
 # Current crates
 
 The current revision of **stdx** is "0.107.0", which corresponds to
