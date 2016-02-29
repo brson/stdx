@@ -1,6 +1,6 @@
 [package]
 name = "stdx"
-version = "0.0.1"
+version = "0.107.0"
 authors = ["Brian Anderson <banderson@mozilla.com>"]
 description = "The missing batteries of Rust"
 license = "MIT/Apache-2.0"
