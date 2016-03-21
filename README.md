@@ -89,13 +89,11 @@ the Rust stable 1.7 release.
   Rust's solution for serialization, but time and better judgement
   consigned it to the Rust junkyard. Curiously, this is the only
   external crate that `rustc` has explicit knowledge of, since
-  `#[deriving(RustcEncodable, RustcDecodable)]` is hard-coded into the
+  `#[derive(RustcEncodable, RustcDecodable)]` is hard-coded into the
   compiler, and at the time the `rustc-serialize` crate was demoted it
   was deemed too inconvenient to users to remove the deriving
-  mode. [Serde](https://github.com/erickt/rust-serde) is a more
-  modern, and faster alternative, though it is yet inconvenient to use
-  ... because it doesn't support `#[deriving]`! Official [rust-lang]
-  crate.
+  mode. [Serde](https://github.com/serde-rs/serde) is a more modern,
+  and faster alternative. Official [rust-lang] crate.
 
 * [`semver-0.2.3`](https://crates.io/crates/semver/0.2.3). Rust
   crate versioning follows its interpretation of the
