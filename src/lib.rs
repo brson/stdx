@@ -12,6 +12,7 @@ pub extern crate log;
 pub extern crate ndarray;
 pub extern crate num;
 pub extern crate rand;
+pub extern crate rayon;
 pub extern crate regex;
 pub extern crate reqwest;
 pub extern crate serde;

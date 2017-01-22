@@ -211,6 +211,21 @@ strong. Official [rust-lang] crate.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+### `rayon = "0.6.0"`
+
+&emsp; [📖 docs][d-rayon] &emsp; [📦 crates.io][c-rayon]
+
+[d-rayon]: https://docs.rs/rayon/0.6.0/rayon/
+[c-rayon]: https://crates.io/crates/rayon/0.6.0
+
+When people say that Rust makes parallelism easy, this
+is why. Rayon provides parallel iterators that make
+expressing efficient parallel operations simple
+and foolproof.
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
+
 ### `regex = "0.2.1"`
 
 &emsp; [📖 docs][d-regex] &emsp; [📦 crates.io][c-regex]
