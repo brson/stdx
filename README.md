@@ -8,6 +8,48 @@ that they work together on the platforms that Rust supports.
 The current revision of **stdx** is "0.115.0", which corresponds to
 the Rust stable 1.15 release.
 
+| Feature                        | Crate                     |
+| -------------------------------|---------------------------|
+| Bitfields                      | [`bitflags = "0.7.0"`]    |
+| Byte order conversion          | [`byteorder = "1.0.0"`]   |
+| Date and time                  | [`chrono = "0.2.25"`]     |
+| Command-line argument parsing  | [`clap = "2.20.0"`]       |
+| Error handling                 | [`error-chain = "0.8.1"`] |
+| Iterator extensions            | [`itertools = "0.5.9"`]   |
+| Global initialization          | [`lazy_static = "0.2.2"`] |
+| C interop                      | [`libc = "0.2.18"`]       |
+| Logging                        | [`log = "0.3.6"`]         |
+| Multidimensional arrays        | [`ndarray = "0.7.2"`]     |
+| Big, rational, complex numbers | [`num = "0.1.36"`]        |
+| Random numbers                 | [`rand = "0.3.15"`]       |
+| Parallel iteration             | [`rayon = "0.6.0"`]       |
+| Regular expressions            | [`regex = "0.2.1"`]       |
+| HTTP client                    | [`reqwest = "0.3.0"`]     |
+| Serialization                  | [`serde = "0.9.0-rc2"`]   |
+| Temporary directories          | [`tempdir = "0.3.5"`]     |
+| Configuration files            | [`toml = "0.2.1"`]        |
+| URLs                           | [`url = "1.3.0"`]         |
+
+[`bitflags = "0.7.0"`]: #bitflags--070
+[`byteorder = "1.0.0"`]: #byteorder--100
+[`chrono = "0.2.25"`]: #chrono--0225
+[`clap = "2.20.0"`]: #clap--2200
+[`error-chain = "0.8.1"`]: #error-chain--081
+[`itertools = "0.5.9"`]: #itertools--059
+[`lazy_static = "0.2.2"`]: #lazy_static--022
+[`libc = "0.2.18"`]: #libc--0218
+[`log = "0.3.6"`]: #log--036
+[`ndarray = "0.7.2"`]: #ndarray--072
+[`num = "0.1.36"`]: #num--0136
+[`rand = "0.3.15"`]: #rand--0315
+[`rayon = "0.6.0"`]: #rayon--060
+[`regex = "0.2.1"`]: #regex--021
+[`reqwest = "0.3.0"`]: #reqwest--030
+[`serde = "0.9.0-rc2"`]: #serde--090-rc2
+[`tempdir = "0.3.5"`]: #tempdir--035
+[`toml = "0.2.1"`]: #toml--021
+[`url = "1.3.0"`]: #url--130
+
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
