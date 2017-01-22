@@ -16,6 +16,7 @@ the Rust stable 1.15 release.
 | Command-line argument parsing  | [`clap = "2.20.0"`]       | [📖][d-clap]        |
 | Error handling                 | [`error-chain = "0.8.1"`] | [📖][d-error-chain] |
 | Iterator extensions            | [`itertools = "0.5.9"`]   | [📖][d-itertools]   |
+| JSON                           | [`json = "0.11.5"`]       | [📖][d-json]        |
 | Global initialization          | [`lazy_static = "0.2.2"`] | [📖][d-lazy_static] |
 | C interop                      | [`libc = "0.2.18"`]       | [📖][d-libc]        |
 | Logging                        | [`log = "0.3.6"`]         | [📖][d-log]         |
@@ -36,6 +37,7 @@ the Rust stable 1.15 release.
 [`clap = "2.20.0"`]: #clap--2200--
 [`error-chain = "0.8.1"`]: #error-chain--081--
 [`itertools = "0.5.9"`]: #itertools--059--
+[`json = "0.11.5"`]: #json--0115--
 [`lazy_static = "0.2.2"`]: #lazy_static--022--
 [`libc = "0.2.18"`]: #libc--0218--
 [`log = "0.3.6"`]: #log--036--
@@ -125,6 +127,21 @@ to make error handling in Rust simple and elegant.
 When it comes to iterators, this crate has everything *including* the
 kitchen sink (in the form of the `batching` adaptor).  Highlights
 include `dedup`, `group_by`, `mend_slices`, `merge`, `join` and more.
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
+
+### `json = "0.11.5"` &emsp; [📖][d-json]
+
+[d-json]: https://docs.rs/json/0.11.5/json/
+
+Access to [JSON], the "JavaScript Object Notation" format,
+widely used for transmission and storage of data on the Internet.
+This crate can be used for reading, writing, and manipulation
+of arbitrary JSON; for simple serialization to Rust data structures,
+use [`serde`](#serde) and `serde_json`.
+
+[JSON]: http://json.org/
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
@@ -252,6 +269,7 @@ A simple HTTP and HTTPS client.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+<a id="serde"></a>
 ### `serde = "0.9.0-rc2"` &emsp; [📖][d-serde]
 
 [d-serde]: https://docs.rs/serde/0.9.0-rc2/serde/
@@ -294,7 +312,7 @@ this crate was once part of the standard library.
 
 [TOML](https://github.com/toml-lang/toml) is a common format for
 configuration files, like [Cargo.toml]. It's easy on the eyes, simple
-to parse, and serializes from Rust types with [`serde`][d-serde].
+to parse, and serializes from Rust types with [`serde`](#serde).
 
 [Cargo.toml]: http://doc.crates.io/manifest.html
 
