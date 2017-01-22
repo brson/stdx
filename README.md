@@ -392,8 +392,8 @@ the meantime, you just have to know which crates to use for what.
 
 `stdx` contains some of the most important crates in Rust. I mean
 it. If Rust had a more expansive standard library, many of the `stdx`
-crates would be in it. These are core ecosystem crates that all
-Rusticians should be aware of.
+crates would be in it. These are core elements of the crates ecosystem
+that all Rusticians should be aware of.
 
 [crates.io]: https://www.crates.io
 
