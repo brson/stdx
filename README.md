@@ -191,18 +191,6 @@ mode. [Serde](https://github.com/serde-rs/serde) is a more modern, and
 faster alternative. Official [rust-lang] crate.
 
 
-### `semver = "0.5.1"`
-
-&emsp; [📖 docs][d-semver] &emsp; [📦 crates.io][c-semver]
-
-[d-semver]: https://docs.rs/semver/0.5.1/semver/
-[c-semver]: https://crates.io/crates/semver/0.5.1
-
-Rust crate versioning follows its interpretation of the
-[semver](http://semver.org) versioning scheme. Official [rust-lang]
-crate.
-
-
 ### `tempdir = "0.3.5"`
 
 &emsp; [📖 docs][d-tempdir] &emsp; [📦 crates.io][c-tempdir]

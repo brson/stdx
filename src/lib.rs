@@ -13,7 +13,6 @@ pub extern crate num;
 pub extern crate rand;
 pub extern crate regex;
 pub extern crate rustc_serialize;
-pub extern crate semver;
 pub extern crate tempdir;
 pub extern crate time;
 pub extern crate toml;
