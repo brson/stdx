@@ -44,24 +44,6 @@ use and is highly configurable.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-### `env_logger = "0.4.0"`
-
-&emsp; [📖 docs][d-env_logger] &emsp; [📦 crates.io][c-env_logger]
-
-[d-env_logger]: https://docs.rs/env_logger/0.4.0/env_logger/
-[c-env_logger]: https://crates.io/crates/env_logger/0.4.0
-
-In conjunction with the [`log`](https://crates.io/crates/log) crate,
-enables the output of logs to the console via the
-[`RUST_LOG`](http://doc.rust-lang.org/log/env_logger/index.html#enabling-logging)
-environment variable. This was a feature of the Rust language and
-runtime since ancient times, but is now implemented in an external
-library, and is still the most popular way to log information about
-what your Rust program is. Official [rust-lang] crate.
-
-&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
-
-
 ### `error-chain = "0.8.1"`
 
 &emsp; [📖 docs][b-error-chain] &emsp; [📦 crates.io][c-error-chain]
@@ -142,10 +124,20 @@ as the foundation Rust uses to talk to the outside world. Official
 [c-log]: https://crates.io/crates/log/0.3.6
 
 The most common way to perform basic logging in Rust, with the
-`error!`, `warn!`, `info!`, and `debug!` macros, always used in
-conjunction with the
-[`env_logger`](https://crates.io/crates/env_logger) crate.  Official
-[rust-lang] crate.
+`error!`, `warn!`, `info!`, and `debug!` macros. It is often
+combined with the `env_logger` crate to get logging to the
+console, controlled by the `RUST_LOG` environment variable.
+This is the traditional logging crate used by `rustc`, and
+its functionality was once built in to the language.
+
+**Supplemental crates**: [`env_logger = "0.4.0"`]
+
+[`env_logger = "0.4.0"`]: https://docs.rs/env_logger/0.4.0/env_logger/
+
+**Alternatives**: [slog], [log4rs]
+
+[slog]: https://docs.rs/slog
+[log4rs]: https://docs.rs/log4rs
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
