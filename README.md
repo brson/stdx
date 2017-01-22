@@ -37,9 +37,9 @@ as bits to express sets of options. Official [rust-lang] crate.
 Clap is a command line argument parser that is easy to
 use and is highly configurable.
 
-**Alternatives**: [docopt]
+**Alternatives**: [`docopt`]
 
-[docopt]: https://docs.rs/docopt
+[`docopt`]: https://docs.rs/docopt
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
@@ -59,9 +59,9 @@ to make error handling in Rust simple and elegant.
 
 [error handling]: https://rust-lang.github.io/book/ch09-00-error-handling.html
 
-**Alternatives**: [quick-error]
+**Alternatives**: [`quick-error`]
 
-[quick-error]: https://docs.rs/quick-error/1.1.0/quick_error/
+[`quick-error`]: https://docs.rs/quick-error/1.1.0/quick_error/
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
@@ -134,10 +134,10 @@ its functionality was once built in to the language.
 
 [`env_logger = "0.4.0"`]: https://docs.rs/env_logger/0.4.0/env_logger/
 
-**Alternatives**: [slog], [log4rs]
+**Alternatives**: [`slog`], [`log4rs`]
 
-[slog]: https://docs.rs/slog
-[log4rs]: https://docs.rs/log4rs
+[`slog`]: https://docs.rs/slog
+[`log4rs`]: https://docs.rs/log4rs
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
@@ -189,24 +189,34 @@ performance. Official [rust-lang] crate.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-### `rustc-serialize = "0.3.22"`
+### `serde = "0.9.0-rc2"`
 
-&emsp; [📖 docs][d-rustc-serialize] &emsp; [📦 crates.io][c-rustc-serialize]
+&emsp; [📖 docs][d-serde] &emsp; [📦 crates.io][c-serde]
 
-[d-rustc-serialize]: https://docs.rs/rustc-serialize/0.3.22/rustc-serialize/
-[c-rustc-serialize]: https://crates.io/crates/rustc-serialize/0.3.22
+[d-serde]: https://docs.rs/serde/0.9.0-rc2/serde/
+[c-serde]: https://crates.io/crates/serde/0.9.0-rc2
 
-Another crate with a storied history, it was designed long ago to be
-Rust's solution for serialization, but time and better judgement
-consigned it to the Rust junkyard. Curiously, this is the only
-external crate that `rustc` has explicit knowledge of, since
-`#[derive(RustcEncodable, RustcDecodable)]` is hard-coded into the
-compiler, and at the time the `rustc-serialize` crate was demoted it
-was deemed too inconvenient to users to remove the deriving
-mode. [Serde](https://github.com/serde-rs/serde) is a more modern, and
-faster alternative. Official [rust-lang] crate.
+Serialization and deserialization of Rust datastructures is fast
+and easy using the `serde` serialization framework. Simply
+tag your data structures with `#[derive(Serialize, Deserialize)]`
+and serde will automatically convert them between formats like
+JSON, TOML, YAML, and more. To best understand serde, read
+its documentation at [serde.rs].
+
+**Supplemental crates**: [`serde_derive = "=0.9.0-rc2"`],
+                         [`serde_json = "=0.9.0-rc1"`],
+                         [`toml = "=0.2.1"]
+
+**Alternatives**: [`rustc-serialize`]
+
+[serde.rs]: https://serde.rs/
+[`rustc-serialize`]: https://docs.rs/rustc-serialize
+[`serde_derive = "=0.9.0-rc2"`]: https://docs.rs/serde_derive/0.9.0-rc2/serde_derive
+[`serde_json = "=0.9.0-rc1"`]: https://docs.rs/serde_json/0.9.0-rc1/serde_json
+[`toml = "=0.2.1"]: https://docs.rs/toml/0.2.1/toml
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
 
 
 ### `tempdir = "0.3.5"`
