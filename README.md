@@ -1,12 +1,12 @@
-# The missing batteries of Rust
+# `stdx` - The missing batteries of Rust
 
-**stdx** is a project to collect the best Rust crates and validate
+`stdx` is a project to collect the best Rust crates and validate
 that they work together on the platforms that Rust supports.
 
-## Current crates
+## The `stdx` Crates
 
-The current revision of **stdx** is "0.115.0", which corresponds to
-the Rust stable 1.15 release.
+The current revision of `stdx` is 0.115.0, corresponding to
+the Rust stable 1.15 release, February 2, 2017.
 
 | Feature                        | Crate                     |                    |
 | -------------------------------|---------------------------|--------------------|
@@ -333,7 +333,7 @@ for [Servo].
 
 ## Contributing
 
-**stdx** favors crates that have been 'battle-tested', this includes old
+`stdx` favors crates that have been 'battle-tested', this includes old
 and unloved crates like [`libc`], crates that are used by the official
 toolchain (which are maintained and highly-compatible if not always
 beautiful), and crates that are otherwise popular and well maintained.
@@ -349,12 +349,12 @@ link and declared license.
 
 ## License
 
-**stdx** and the crates it links to are licensed under various
+`stdx` and the crates it links to are licensed under various
 [permissive, BSD-like][perm] licenses. In lay-terms these licenses
 allow their code to be used and distributed freely, and are compatible
 with [Rust's own license (MIT/Apache 2)][rustlice].
 
-**stdx** itself is dual MIT/Apache 2 licensed, like Rust, and the
+`stdx` itself is dual MIT/Apache 2 licensed, like Rust, and the
 copyright is owned by its contributors.
 
 [perm]: https://en.wikipedia.org/wiki/Permissive_free_software_licence
