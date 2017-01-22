@@ -11,9 +11,9 @@ the Rust stable 1.15 release.
 
 ### `bitflags = "0.7.0"`
 
-&emsp; [📖 docs][b-bitflags] &emsp; [📦 crates.io][c-bitflags]
+&emsp; [📖 docs][d-bitflags] &emsp; [📦 crates.io][c-bitflags]
 
-[b-bitflags]: https://docs.rs/bitflags/0.7.0/bitflags/
+[d-bitflags]: https://docs.rs/bitflags/0.7.0/bitflags/
 [c-bitflags]: https://crates.io/crates/bitflags/0.7.0
 
 The only thing this crate does is export the
@@ -23,25 +23,26 @@ bitmasks, types with named values that are efficiently packed together
 as bits to express sets of options. Official [rust-lang] crate.
 
 
-### `docopt = "0.7.0"`
+### `clap = "2.20.0"`
 
-&emsp; [📖 docs][b-docopt] &emsp; [📦 crates.io][c-docopt]
+&emsp; [📖 docs][d-clap] &emsp; [📦 crates.io][c-clap]
 
-[b-docopt]: https://docs.rs/docopt/0.7.0/docopt/
-[c-docopt]: https://crates.io/crates/docopt/0.7.0
+[d-clap]: https://docs.rs/clap/2.20.0/clap/
+[c-clap]: https://crates.io/crates/clap/2.20.0
 
-The preferred way to parse command line options in
-Rustland. Originally created by Rust API design pioneer,
-[BurntSushi](http://github.com/burntsushi), it is used by Cargo and
-many other projects, but notably not by rustc and rustdoc, which use
-the older [`getopts`](https://crates.io/crates/getopts) crate.
+Clap is a command line argument parser that is easy to
+use and is highly configurable.
+
+**Alternatives**: [docopt]
+
+[docopt]: https://docs.rs/docopt
 
 
 ### `env_logger = "0.4.0"`
 
-&emsp; [📖 docs][b-env_logger] &emsp; [📦 crates.io][c-env_logger]
+&emsp; [📖 docs][d-env_logger] &emsp; [📦 crates.io][c-env_logger]
 
-[b-env_logger]: https://docs.rs/env_logger/0.4.0/env_logger/
+[d-env_logger]: https://docs.rs/env_logger/0.4.0/env_logger/
 [c-env_logger]: https://crates.io/crates/env_logger/0.4.0
 
 In conjunction with the [`log`](https://crates.io/crates/log) crate,
@@ -55,9 +56,9 @@ what your Rust program is. Official [rust-lang] crate.
 
 ### `itertools = "0.5.9"`
 
-&emsp; [📖 docs][b-itertools] &emsp; [📦 crates.io][c-itertools]
+&emsp; [📖 docs][d-itertools] &emsp; [📦 crates.io][c-itertools]
 
-[b-itertools]: https://docs.rs/itertools/0.5.9/itertools/
+[d-itertools]: https://docs.rs/itertools/0.5.9/itertools/
 [c-itertools]: https://crates.io/crates/itertools/0.5.9
 
 When it comes to iterators, this crate has everything *including* the
@@ -67,9 +68,9 @@ include `dedup`, `group_by`, `mend_slices`, `merge`, `join` and more.
 
 ### `lazy_static = "0.2.2"`
 
-&emsp; [📖 docs][b-lazy_static] &emsp; [📦 crates.io][c-lazy_static]
+&emsp; [📖 docs][d-lazy_static] &emsp; [📦 crates.io][c-lazy_static]
 
-[b-lazy_static]: https://docs.rs/env_logger/0.2.2/env_logger/
+[d-lazy_static]: https://docs.rs/env_logger/0.2.2/env_logger/
 [c-lazy_static]: https://crates.io/crates/env_logger/0.2.2
 
 Global state is one of those things Rust doesn't do so well. In
@@ -82,12 +83,12 @@ execution for global initialization, and the
 macro does just that.
 
 
-### `libc = "0.2.20"`
+### `libc = "0.2.18"`
 
-&emsp; [📖 docs][b-libc] &emsp; [📦 crates.io][c-libc]
+&emsp; [📖 docs][d-libc] &emsp; [📦 crates.io][c-libc]
 
-[b-libc]: https://docs.rs/libc/0.2.20/libc/
-[c-libc]: https://crates.io/crates/libc/0.2.20
+[d-libc]: https://docs.rs/libc/0.2.18/libc/
+[c-libc]: https://crates.io/crates/libc/0.2.18
 
 If you need to talk to foreign code, you need this crate. It contains
 declarations for a grab bag of C types and functions that are correct
@@ -99,9 +100,9 @@ as the foundation Rust uses to talk to the outside world. Official
 
 ### `log = "0.3.6"`
 
-&emsp; [📖 docs][b-log] &emsp; [📦 crates.io][c-log]
+&emsp; [📖 docs][d-log] &emsp; [📦 crates.io][c-log]
 
-[b-log]: https://docs.rs/log/0.3.6/log/
+[d-log]: https://docs.rs/log/0.3.6/log/
 [c-log]: https://crates.io/crates/log/0.3.6
 
 The most common way to perform basic logging in Rust, with the
@@ -113,9 +114,9 @@ conjunction with the
 
 ### `num = "0.1.36"`
 
-&emsp; [📖 docs][b-num] &emsp; [📦 crates.io][c-num]
+&emsp; [📖 docs][d-num] &emsp; [📦 crates.io][c-num]
 
-[b-num]: https://docs.rs/num/0.1.36/num/
+[d-num]: https://docs.rs/num/0.1.36/num/
 [c-num]: https://crates.io/crates/num/0.1.36
 
 Big integers, rational numbers, complex numbers, and a 'numeric tower'
@@ -127,9 +128,9 @@ the functionality it provides.
 
 ### `rand = "0.3.15"`
 
-&emsp; [📖 docs][b-rand] &emsp; [📦 crates.io][c-rand]
+&emsp; [📖 docs][d-rand] &emsp; [📦 crates.io][c-rand]
 
-[b-rand]: https://docs.rs/rand/0.3.15/rand/
+[d-rand]: https://docs.rs/rand/0.3.15/rand/
 [c-rand]: https://crates.io/crates/rand/0.3.15
 
 Random number generators. The defaults are cryptographically
@@ -138,9 +139,9 @@ strong. Official [rust-lang] crate.
 
 ### `regex = "0.2.1"`
 
-&emsp; [📖 docs][b-regex] &emsp; [📦 crates.io][c-regex]
+&emsp; [📖 docs][d-regex] &emsp; [📦 crates.io][c-regex]
 
-[b-regex]: https://docs.rs/regex/0.2.1/regex/
+[d-regex]: https://docs.rs/regex/0.2.1/regex/
 [c-regex]: https://crates.io/crates/regex/0.2.1
 
 Another [BurntSushi](http://github.com/burntsushi) joint, this a very
@@ -154,9 +155,9 @@ performance. Official [rust-lang] crate.
 
 ### `rustc-serialize = "0.3.22"`
 
-&emsp; [📖 docs][b-rustc-serialize] &emsp; [📦 crates.io][c-rustc-serialize]
+&emsp; [📖 docs][d-rustc-serialize] &emsp; [📦 crates.io][c-rustc-serialize]
 
-[b-rustc-serialize]: https://docs.rs/rustc-serialize/0.3.22/rustc-serialize/
+[d-rustc-serialize]: https://docs.rs/rustc-serialize/0.3.22/rustc-serialize/
 [c-rustc-serialize]: https://crates.io/crates/rustc-serialize/0.3.22
 
 Another crate with a storied history, it was designed long ago to be
@@ -172,9 +173,9 @@ faster alternative. Official [rust-lang] crate.
 
 ### `semver = "0.5.1"`
 
-&emsp; [📖 docs][b-semver] &emsp; [📦 crates.io][c-semver]
+&emsp; [📖 docs][d-semver] &emsp; [📦 crates.io][c-semver]
 
-[b-semver]: https://docs.rs/semver/0.5.1/semver/
+[d-semver]: https://docs.rs/semver/0.5.1/semver/
 [c-semver]: https://crates.io/crates/semver/0.5.1
 
 Rust crate versioning follows its interpretation of the
@@ -184,9 +185,9 @@ crate.
 
 ### `tempdir = "0.3.5"`
 
-&emsp; [📖 docs][b-tempdir] &emsp; [📦 crates.io][c-tempdir]
+&emsp; [📖 docs][d-tempdir] &emsp; [📦 crates.io][c-tempdir]
 
-[b-tempdir]: https://docs.rs/tempdir/0.3.5/tempdir/
+[d-tempdir]: https://docs.rs/tempdir/0.3.5/tempdir/
 [c-tempdir]: https://crates.io/crates/tempdir/0.3.5
 
 Another standard library reject. If you need to create temporary
@@ -195,9 +196,9 @@ directories this is the official [rust-lang] way to do it.
 
 ### `time = "0.1.36"`
 
-&emsp; [📖 docs][b-time] &emsp; [📦 crates.io][c-time]
+&emsp; [📖 docs][d-time] &emsp; [📦 crates.io][c-time]
 
-[b-time]: https://docs.rs/time/0.1.36/time/
+[d-time]: https://docs.rs/time/0.1.36/time/
 [c-time]: https://crates.io/crates/time/0.1.36
 
 This has got to be the worst of the [rust-lang] crates. It originates
@@ -207,9 +208,9 @@ the time this can do it, but you won't like it.
 
 ### `toml = "0.2.1"`
 
-&emsp; [📖 docs][b-toml] &emsp; [📦 crates.io][c-toml]
+&emsp; [📖 docs][d-toml] &emsp; [📦 crates.io][c-toml]
 
-[b-toml]: https://docs.rs/toml/0.2.1/toml/
+[d-toml]: https://docs.rs/toml/0.2.1/toml/
 [c-toml]: https://crates.io/crates/toml/0.2.1
 
 [TOML](https://github.com/toml-lang/toml) is the format to use for
@@ -222,9 +223,9 @@ Crichton](https://github.com/alexcrichton).
 
 ### `url = "1.3.0"`
 
-&emsp; [📖 docs][b-url] &emsp; [📦 crates.io][c-url]
+&emsp; [📖 docs][d-url] &emsp; [📦 crates.io][c-url]
 
-[b-url]: https://docs.rs/url/1.3.0/url/
+[d-url]: https://docs.rs/url/1.3.0/url/
 [c-url]: https://crates.io/crates/url/1.3.0
 
 The Rust URL parser and type created for

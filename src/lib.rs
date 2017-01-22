@@ -2,7 +2,7 @@
 // can link together.
 
 pub extern crate bitflags;
-pub extern crate docopt;
+pub extern crate clap;
 pub extern crate env_logger;
 pub extern crate itertools;
 pub extern crate lazy_static;

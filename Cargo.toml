@@ -7,11 +7,11 @@ license = "MIT/Apache-2.0"
 
 [dependencies]
 bitflags = "=0.7.0"
-docopt = "=0.7.0"
+clap = "=2.20.0"
 env_logger = "=0.4.0"
 itertools = "=0.5.9"
 lazy_static = "=0.2.2"
-libc = "=0.2.20"
+libc = "=0.2.18"
 log = "=0.3.6"
 num = "=0.1.36"
 rand = "=0.3.15"
