@@ -54,6 +54,26 @@ library, and is still the most popular way to log information about
 what your Rust program is. Official [rust-lang] crate.
 
 
+### `error-chain = "0.8.1"`
+
+&emsp; [📖 docs][b-error-chain] &emsp; [📦 crates.io][c-error-chain]
+
+[b-error-chain]: https://docs.rs/error-chain/0.8.1/error_chain/
+[c-error-chain]: https://crates.io/crates/error-chain/0.8.1
+
+Rust programs that handle errors consistently are reliable programs.
+Even after one understands [error handling] in Rust, it can be
+difficult to grasp and implement its best practices. `error-chain`
+helps you define your own error type that works with the `?` operator
+to make error handling in Rust simple and elegant.
+
+[error handling]: https://rust-lang.github.io/book/ch09-00-error-handling.html
+
+**Alternatives**: [quick-error]
+
+[quick-error]: https://docs.rs/quick-error/1.1.0/quick_error/
+
+
 ### `itertools = "0.5.9"`
 
 &emsp; [📖 docs][d-itertools] &emsp; [📦 crates.io][c-itertools]
