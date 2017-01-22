@@ -3,126 +3,239 @@
 **stdx** is a project to collect the best Rust crates and validate
 that they work together on the platforms that Rust supports.
 
-# Current crates
+## Current crates
 
 The current revision of **stdx** is "0.115.0", which corresponds to
 the Rust stable 1.15 release.
 
-* [`bitflags-0.7.0`](https://crates.io/crates/bitflags/0.7.0). The
-  only thing this crate does is export the
-  [`bitflags!`](http://doc.rust-lang.org/bitflags/bitflags/macro.bitflags!.html#example)
-  macro, but it's a heckuva-useful macro. `bitflags!` produces
-  typesafe bitmasks, types with named values that are efficiently
-  packed together as bits to express sets of options. Official
-  [rust-lang] crate.
 
-* [`docopt-0.7.0`](https://crates.io/crates/docopt/0.7.0). The
-  preferred way to parse command line options in Rustland. Originally
-  created by Rust API design pioneer,
-  [BurntSushi](http://github.com/burntsushi), it is used by Cargo and
-  many other projects, but notably not by rustc and rustdoc, which use
-  the older [`getopts`](https://crates.io/crates/getopts) crate.
+### `bitflags = "0.7.0"`
 
-* [`env_logger-0.4.0`](https://crates.io/crates/env_logger/0.4.0). In
-  conjunction with the [`log`](https://crates.io/crates/log) crate,
-  enables the output of logs to the console via the
-  [`RUST_LOG`](http://doc.rust-lang.org/log/env_logger/index.html#enabling-logging)
-  environment variable. This was a feature of the Rust language and
-  runtime since ancient times, but is now implemented in an external
-  library, and is still the most popular way to log information about
-  what your Rust program is. Official [rust-lang] crate.
+&emsp; [📖 docs][b-bitflags] &emsp; [📦 crates.io][c-bitflags]
 
-* [`itertools-0.5.9`](https://crates.io/crates/itertools/0.5.9).
-  When it comes to iterators, this crate has everything *including*
-  the kitchen sink (in the form of the `batching` adaptor).
-  Highlights include `dedup`, `group_by`, `mend_slices`, `merge`,
-  `join` and more.
+[b-bitflags]: https://docs.rs/bitflags/0.7.0/bitflags/
+[c-bitflags]: https://crates.io/crates/bitflags/0.7.0
 
-* [`lazy_static-0.2.2`](https://crates.io/crates/lazy_static/0.2.2).
-  Global state is one of those things Rust doesn't do so well. In
-  particular there is no ['life before
-  main'](https://isocpp.org/wiki/faq/ctors#static-init-order) in Rust,
-  so it's not possible to write a programmatic constructor for a
-  global value that will be run at startup. Instead, Rust prefers lazy
-  execution for global initialization, and the
-  [`lazy_static!`](http://rust-ci.org/Kimundi/lazy-static.rs/doc/lazy_static/)
-  macro does just that.
+The only thing this crate does is export the
+[`bitflags!`](http://doc.rust-lang.org/bitflags/bitflags/macro.bitflags!.html#example)
+macro, but it's a heckuva-useful macro. `bitflags!` produces typesafe
+bitmasks, types with named values that are efficiently packed together
+as bits to express sets of options. Official [rust-lang] crate.
 
-* [`libc-0.2.20`](https://crates.io/crates/libc/0.2.20). If you need to
-  talk to foreign code, you need this crate. It contains declarations
-  for a grab bag of C types and functions that are correct for the
-  variety of compilers and platforms that Rust runs on. This crate is
-  a *notorious mess* design-wise, but it has endured for years as the
-  foundation Rust uses to talk to the outside world. Official
-  [rust-lang] crate.
 
-* [`log-0.3.6`](https://crates.io/crates/log/0.3.6). The most common
-  way to perform basic logging in Rust, with the `error!`, `warn!`,
-  `info!`, and `debug!` macros, always used in conjunction with the
-  [`env_logger`](https://crates.io/crates/env_logger) crate.
-  Official [rust-lang] crate.
+### `docopt = "0.7.0"`
 
-* [`num-0.1.36`](https://crates.io/crates/num/0.1.36). Big integers,
-  rational numbers, complex numbers, and a 'numeric tower' of numeric
-  traits. This is another rust-lang crate that has persisted through
-  Rust's evolution but is not designed well enough for the standard
-  library. It is though presently the most common way to access the
-  functionality it provides.
+&emsp; [📖 docs][b-docopt] &emsp; [📦 crates.io][c-docopt]
 
-* [`rand-0.3.15`](https://crates.io/crates/rand/0.3.15). Random number
-  generators. The defaults are cryptographically strong. Official
-  [rust-lang] crate.
+[b-docopt]: https://docs.rs/docopt/0.7.0/docopt/
+[c-docopt]: https://crates.io/crates/docopt/0.7.0
 
-* [`regex-0.2.1`](https://crates.io/crates/regex/0.2.1). Another
-  [BurntSushi](http://github.com/burntsushi) joint, this a very
-  performant regular expression implementation that [stomps the
-  competition](http://benchmarksgame.alioth.debian.org/u64/performance.php?test=regexdna)
-  in some benchmarks. Influenced by the highly-regarded
-  [RE2](https://github.com/google/re2) engine, it omits backreferences
-  and arbitrary lookahead in order to have predictable worst-case
-  performance. Official [rust-lang] crate.
+The preferred way to parse command line options in
+Rustland. Originally created by Rust API design pioneer,
+[BurntSushi](http://github.com/burntsushi), it is used by Cargo and
+many other projects, but notably not by rustc and rustdoc, which use
+the older [`getopts`](https://crates.io/crates/getopts) crate.
 
-* [`rustc-serialize-0.3.22`](https://crates.io/crates/rustc-serialize/0.3.22).
-  Another crate with a storied history, it was designed long ago to be
-  Rust's solution for serialization, but time and better judgement
-  consigned it to the Rust junkyard. Curiously, this is the only
-  external crate that `rustc` has explicit knowledge of, since
-  `#[derive(RustcEncodable, RustcDecodable)]` is hard-coded into the
-  compiler, and at the time the `rustc-serialize` crate was demoted it
-  was deemed too inconvenient to users to remove the deriving
-  mode. [Serde](https://github.com/serde-rs/serde) is a more modern,
-  and faster alternative. Official [rust-lang] crate.
 
-* [`semver-0.5.1`](https://crates.io/crates/semver/0.5.1). Rust
-  crate versioning follows its interpretation of the
-  [semver](http://semver.org) versioning scheme. Official [rust-lang]
-  crate.
+### `env_logger = "0.4.0"`
 
-* [`tempdir-0.3.5`](https://crates.io/crates/tempdir/0.3.5). Another
-  standard library reject. If you need to create temporary directories
-  this is the official [rust-lang] way to do it.
+&emsp; [📖 docs][b-env_logger] &emsp; [📦 crates.io][c-env_logger]
 
-* [`time-0.1.36`](https://crates.io/crates/time/0.1.36). This has got
-  to be the worst of the [rust-lang] crates. It originates in the dark
-  ages of Rust and limped along forever. If you need to get the time
-  this can do it, but you won't like it.
+[b-env_logger]: https://docs.rs/env_logger/0.4.0/env_logger/
+[c-env_logger]: https://crates.io/crates/env_logger/0.4.0
 
-* [`toml-0.1.36`](https://crates.io/crates/toml/0.1.36). [TOML](https://github.com/toml-lang/toml)
-  is the format to use for configuration files (at least once you are
-  ready to advace beyond simple [json serialization][json]). It is the
-  format for configuring Cargo (via
-  [Cargo.toml](http://doc.crates.io/manifest.html)), and the Rust
-  implementation is maintained by master wizard [Alex
-  Crichton](https://github.com/alexcrichton).
+In conjunction with the [`log`](https://crates.io/crates/log) crate,
+enables the output of logs to the console via the
+[`RUST_LOG`](http://doc.rust-lang.org/log/env_logger/index.html#enabling-logging)
+environment variable. This was a feature of the Rust language and
+runtime since ancient times, but is now implemented in an external
+library, and is still the most popular way to log information about
+what your Rust program is. Official [rust-lang] crate.
 
-* [`url-1.3.0`](https://crates.io/crates/url/1.3.0). The Rust URL
-  parser and type created for [Servo](https://github.com/servo/servo), by
-  [SimonSapin](https://github.com/simonsapin).
+
+### `itertools = "0.5.9"`
+
+&emsp; [📖 docs][b-itertools] &emsp; [📦 crates.io][c-itertools]
+
+[b-itertools]: https://docs.rs/itertools/0.5.9/itertools/
+[c-itertools]: https://crates.io/crates/itertools/0.5.9
+
+When it comes to iterators, this crate has everything *including* the
+kitchen sink (in the form of the `batching` adaptor).  Highlights
+include `dedup`, `group_by`, `mend_slices`, `merge`, `join` and more.
+
+
+### `lazy_static = "0.2.2"`
+
+&emsp; [📖 docs][b-lazy_static] &emsp; [📦 crates.io][c-lazy_static]
+
+[b-lazy_static]: https://docs.rs/env_logger/0.2.2/env_logger/
+[c-lazy_static]: https://crates.io/crates/env_logger/0.2.2
+
+Global state is one of those things Rust doesn't do so well. In
+particular there is no ['life before
+main'](https://isocpp.org/wiki/faq/ctors#static-init-order) in Rust,
+so it's not possible to write a programmatic constructor for a global
+value that will be run at startup. Instead, Rust prefers lazy
+execution for global initialization, and the
+[`lazy_static!`](http://rust-ci.org/Kimundi/lazy-static.rs/doc/lazy_static/)
+macro does just that.
+
+
+### `libc = "0.2.20"`
+
+&emsp; [📖 docs][b-libc] &emsp; [📦 crates.io][c-libc]
+
+[b-libc]: https://docs.rs/libc/0.2.20/libc/
+[c-libc]: https://crates.io/crates/libc/0.2.20
+
+If you need to talk to foreign code, you need this crate. It contains
+declarations for a grab bag of C types and functions that are correct
+for the variety of compilers and platforms that Rust runs on. This
+crate is a *notorious mess* design-wise, but it has endured for years
+as the foundation Rust uses to talk to the outside world. Official
+[rust-lang] crate.
+
+
+### `log = "0.3.6"`
+
+&emsp; [📖 docs][b-log] &emsp; [📦 crates.io][c-log]
+
+[b-log]: https://docs.rs/log/0.3.6/log/
+[c-log]: https://crates.io/crates/log/0.3.6
+
+The most common way to perform basic logging in Rust, with the
+`error!`, `warn!`, `info!`, and `debug!` macros, always used in
+conjunction with the
+[`env_logger`](https://crates.io/crates/env_logger) crate.  Official
+[rust-lang] crate.
+
+
+### `num = "0.1.36"`
+
+&emsp; [📖 docs][b-num] &emsp; [📦 crates.io][c-num]
+
+[b-num]: https://docs.rs/num/0.1.36/num/
+[c-num]: https://crates.io/crates/num/0.1.36
+
+Big integers, rational numbers, complex numbers, and a 'numeric tower'
+of numeric traits. This is another rust-lang crate that has persisted
+through Rust's evolution but is not designed well enough for the
+standard library. It is though presently the most common way to access
+the functionality it provides.
+
+
+### `rand = "0.3.15"`
+
+&emsp; [📖 docs][b-rand] &emsp; [📦 crates.io][c-rand]
+
+[b-rand]: https://docs.rs/rand/0.3.15/rand/
+[c-rand]: https://crates.io/crates/rand/0.3.15
+
+Random number generators. The defaults are cryptographically
+strong. Official [rust-lang] crate.
+
+
+### `regex = "0.2.1"`
+
+&emsp; [📖 docs][b-regex] &emsp; [📦 crates.io][c-regex]
+
+[b-regex]: https://docs.rs/regex/0.2.1/regex/
+[c-regex]: https://crates.io/crates/regex/0.2.1
+
+Another [BurntSushi](http://github.com/burntsushi) joint, this a very
+performant regular expression implementation that [stomps the
+competition](http://benchmarksgame.alioth.debian.org/u64/performance.php?test=regexdna)
+in some benchmarks. Influenced by the highly-regarded
+[RE2](https://github.com/google/re2) engine, it omits backreferences
+and arbitrary lookahead in order to have predictable worst-case
+performance. Official [rust-lang] crate.
+
+
+### `rustc-serialize = "0.3.22"`
+
+&emsp; [📖 docs][b-rustc-serialize] &emsp; [📦 crates.io][c-rustc-serialize]
+
+[b-rustc-serialize]: https://docs.rs/rustc-serialize/0.3.22/rustc-serialize/
+[c-rustc-serialize]: https://crates.io/crates/rustc-serialize/0.3.22
+
+Another crate with a storied history, it was designed long ago to be
+Rust's solution for serialization, but time and better judgement
+consigned it to the Rust junkyard. Curiously, this is the only
+external crate that `rustc` has explicit knowledge of, since
+`#[derive(RustcEncodable, RustcDecodable)]` is hard-coded into the
+compiler, and at the time the `rustc-serialize` crate was demoted it
+was deemed too inconvenient to users to remove the deriving
+mode. [Serde](https://github.com/serde-rs/serde) is a more modern, and
+faster alternative. Official [rust-lang] crate.
+
+
+### `semver = "0.5.1"`
+
+&emsp; [📖 docs][b-semver] &emsp; [📦 crates.io][c-semver]
+
+[b-semver]: https://docs.rs/semver/0.5.1/semver/
+[c-semver]: https://crates.io/crates/semver/0.5.1
+
+Rust crate versioning follows its interpretation of the
+[semver](http://semver.org) versioning scheme. Official [rust-lang]
+crate.
+
+
+### `tempdir = "0.3.5"`
+
+&emsp; [📖 docs][b-tempdir] &emsp; [📦 crates.io][c-tempdir]
+
+[b-tempdir]: https://docs.rs/tempdir/0.3.5/tempdir/
+[c-tempdir]: https://crates.io/crates/tempdir/0.3.5
+
+Another standard library reject. If you need to create temporary
+directories this is the official [rust-lang] way to do it.
+
+
+### `time = "0.1.36"`
+
+&emsp; [📖 docs][b-time] &emsp; [📦 crates.io][c-time]
+
+[b-time]: https://docs.rs/time/0.1.36/time/
+[c-time]: https://crates.io/crates/time/0.1.36
+
+This has got to be the worst of the [rust-lang] crates. It originates
+in the dark ages of Rust and limped along forever. If you need to get
+the time this can do it, but you won't like it.
+
+
+### `toml = "0.2.1"`
+
+&emsp; [📖 docs][b-toml] &emsp; [📦 crates.io][c-toml]
+
+[b-toml]: https://docs.rs/toml/0.2.1/toml/
+[c-toml]: https://crates.io/crates/toml/0.2.1
+
+[TOML](https://github.com/toml-lang/toml) is the format to use for
+configuration files (at least once you are ready to advace beyond
+simple [json serialization][json]). It is the format for configuring
+Cargo (via [Cargo.toml](http://doc.crates.io/manifest.html)), and the
+Rust implementation is maintained by master wizard [Alex
+Crichton](https://github.com/alexcrichton).
+
+
+### `url = "1.3.0"`
+
+&emsp; [📖 docs][b-url] &emsp; [📦 crates.io][c-url]
+
+[b-url]: https://docs.rs/url/1.3.0/url/
+[c-url]: https://crates.io/crates/url/1.3.0
+
+The Rust URL parser and type created for
+[Servo](https://github.com/servo/servo), by
+[SimonSapin](https://github.com/simonsapin).
 
 [rust-lang]: http://github.com/rust-lang
 [json]: http://doc.rust-lang.org/rustc-serialize/rustc_serialize/json/index.html#using-autoserialization
 
-# Contributing
+
+## Contributing
 
 **stdx** favors crates that have been 'battle-tested', this includes old
 and unloved crates like [`libc`], crates that are used by the official
@@ -137,7 +250,7 @@ OS X, and Windows.
 All crates must be published to [crates.io](https://crates.io) along with documentation
 link and declared license.
 
-# License
+## License
 
 **stdx** and the crates it links to are licensed under various
 [permissive, BSD-like][perm] licenses. In lay-terms these licenses
