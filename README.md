@@ -8,6 +8,8 @@ that they work together on the platforms that Rust supports.
 The current revision of **stdx** is "0.115.0", which corresponds to
 the Rust stable 1.15 release.
 
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
 
 ### `bitflags = "0.7.0"`
 
@@ -21,6 +23,8 @@ The only thing this crate does is export the
 macro, but it's a heckuva-useful macro. `bitflags!` produces typesafe
 bitmasks, types with named values that are efficiently packed together
 as bits to express sets of options. Official [rust-lang] crate.
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
 ### `clap = "2.20.0"`
@@ -37,6 +41,8 @@ use and is highly configurable.
 
 [docopt]: https://docs.rs/docopt
 
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
 
 ### `env_logger = "0.4.0"`
 
@@ -52,6 +58,8 @@ environment variable. This was a feature of the Rust language and
 runtime since ancient times, but is now implemented in an external
 library, and is still the most popular way to log information about
 what your Rust program is. Official [rust-lang] crate.
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
 ### `error-chain = "0.8.1"`
@@ -73,6 +81,8 @@ to make error handling in Rust simple and elegant.
 
 [quick-error]: https://docs.rs/quick-error/1.1.0/quick_error/
 
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
 
 ### `itertools = "0.5.9"`
 
@@ -84,6 +94,8 @@ to make error handling in Rust simple and elegant.
 When it comes to iterators, this crate has everything *including* the
 kitchen sink (in the form of the `batching` adaptor).  Highlights
 include `dedup`, `group_by`, `mend_slices`, `merge`, `join` and more.
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
 ### `lazy_static = "0.2.2"`
@@ -102,6 +114,8 @@ execution for global initialization, and the
 [`lazy_static!`](http://rust-ci.org/Kimundi/lazy-static.rs/doc/lazy_static/)
 macro does just that.
 
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
 
 ### `libc = "0.2.18"`
 
@@ -117,6 +131,8 @@ crate is a *notorious mess* design-wise, but it has endured for years
 as the foundation Rust uses to talk to the outside world. Official
 [rust-lang] crate.
 
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
 
 ### `log = "0.3.6"`
 
@@ -130,6 +146,8 @@ The most common way to perform basic logging in Rust, with the
 conjunction with the
 [`env_logger`](https://crates.io/crates/env_logger) crate.  Official
 [rust-lang] crate.
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
 ### `num = "0.1.36"`
@@ -145,6 +163,8 @@ through Rust's evolution but is not designed well enough for the
 standard library. It is though presently the most common way to access
 the functionality it provides.
 
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
 
 ### `rand = "0.3.15"`
 
@@ -155,6 +175,8 @@ the functionality it provides.
 
 Random number generators. The defaults are cryptographically
 strong. Official [rust-lang] crate.
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
 ### `regex = "0.2.1"`
@@ -171,6 +193,8 @@ in some benchmarks. Influenced by the highly-regarded
 [RE2](https://github.com/google/re2) engine, it omits backreferences
 and arbitrary lookahead in order to have predictable worst-case
 performance. Official [rust-lang] crate.
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
 ### `rustc-serialize = "0.3.22"`
@@ -190,6 +214,8 @@ was deemed too inconvenient to users to remove the deriving
 mode. [Serde](https://github.com/serde-rs/serde) is a more modern, and
 faster alternative. Official [rust-lang] crate.
 
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
 
 ### `tempdir = "0.3.5"`
 
@@ -200,6 +226,8 @@ faster alternative. Official [rust-lang] crate.
 
 Another standard library reject. If you need to create temporary
 directories this is the official [rust-lang] way to do it.
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
 ### `time = "0.1.36"`
@@ -212,6 +240,8 @@ directories this is the official [rust-lang] way to do it.
 This has got to be the worst of the [rust-lang] crates. It originates
 in the dark ages of Rust and limped along forever. If you need to get
 the time this can do it, but you won't like it.
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
 ### `toml = "0.2.1"`
@@ -228,6 +258,8 @@ Cargo (via [Cargo.toml](http://doc.crates.io/manifest.html)), and the
 Rust implementation is maintained by master wizard [Alex
 Crichton](https://github.com/alexcrichton).
 
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
 
 ### `url = "1.3.0"`
 
@@ -242,6 +274,8 @@ The Rust URL parser and type created for
 
 [rust-lang]: http://github.com/rust-lang
 [json]: http://doc.rust-lang.org/rustc-serialize/rustc_serialize/json/index.html#using-autoserialization
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
 ## Contributing
