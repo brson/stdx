@@ -28,30 +28,31 @@ Current revision:  `stdx` 0.115.0, Rust 1.15, February 2, 2017.
 | Configuration files            | [`toml = "0.2.1"`]        | [📖][d-toml]        |
 | URLs                           | [`url = "1.3.0"`]         | [📖][d-url]         |
 
-[`bitflags = "0.7.0"`]: #bitflags--070--
-[`byteorder = "1.0.0"`]: #byteorder--100--
-[`chrono = "0.2.25"`]: #chrono--0225--
-[`clap = "2.20.0"`]: #clap--2200--
-[`error-chain = "0.8.1"`]: #error-chain--081--
-[`itertools = "0.5.9"`]: #itertools--059--
-[`json = "0.11.5"`]: #json--0115--
-[`lazy_static = "0.2.2"`]: #lazy_static--022--
-[`libc = "0.2.18"`]: #libc--0218--
-[`log = "0.3.6"`]: #log--036--
-[`ndarray = "0.7.2"`]: #ndarray--072--
-[`num = "0.1.36"`]: #num--0136--
-[`rand = "0.3.15"`]: #rand--0315--
-[`rayon = "0.6.0"`]: #rayon--060--
-[`regex = "0.2.1"`]: #regex--021--
-[`reqwest = "0.3.0"`]: #reqwest--030--
-[`serde = "0.9.0-rc2"`]: #serde--090-rc2--
-[`tempdir = "0.3.5"`]: #tempdir--035--
-[`toml = "0.2.1"`]: #toml--021--
-[`url = "1.3.0"`]: #url--130--
+[`bitflags = "0.7.0"`]: #bitflags
+[`byteorder = "1.0.0"`]: #byteorder
+[`chrono = "0.2.25"`]: #chrono
+[`clap = "2.20.0"`]: #clap
+[`error-chain = "0.8.1"`]: #error-chain
+[`itertools = "0.5.9"`]: #itertools
+[`json = "0.11.5"`]: #json
+[`lazy_static = "0.2.2"`]: #lazy_static
+[`libc = "0.2.18"`]: #libc
+[`log = "0.3.6"`]: #log
+[`ndarray = "0.7.2"`]: #ndarray
+[`num = "0.1.36"`]: #num
+[`rand = "0.3.15"`]: #rand
+[`rayon = "0.6.0"`]: #rayon
+[`regex = "0.2.1"`]: #regex
+[`reqwest = "0.3.0"`]: #reqwest
+[`serde = "0.9.0-rc2"`]: #serde
+[`tempdir = "0.3.5"`]: #tempdir
+[`toml = "0.2.1"`]: #toml
+[`url = "1.3.0"`]: #url
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+<a id="bitflags"></a>
 ### `bitflags = "0.7.0"` &emsp; [📖][d-bitflags]
 
 [d-bitflags]: https://docs.rs/bitflags/0.7.0/bitflags/
@@ -65,6 +66,7 @@ as bits to express sets of options.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+<a id="byteorder"></a>
 ### `byteorder = "1.0.0"` &emsp; [📖][d-byteorder]
 
 [d-byteorder]: https://docs.rs/byteorder/0.7.0/byteorder/
@@ -75,6 +77,7 @@ in little-endian, or big-endian orders.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+<a id="chrono"></a>
 ### `chrono = "0.2.25"` &emsp; [📖][d-chrono]
 
 [d-chrono]: https://docs.rs/chrono/0.2.25/chrono/
@@ -84,6 +87,7 @@ Date and time types.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+<a id="clap"></a>
 ### `clap = "2.20.0"` &emsp; [📖][d-clap]
 
 [d-clap]: https://docs.rs/clap/2.20.0/clap/
@@ -98,6 +102,7 @@ use and is highly configurable.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+<a id="error-chain"></a>
 ### `error-chain = "0.8.1"` &emsp; [📖][d-error-chain]
 
 [d-error-chain]: https://docs.rs/error-chain/0.8.1/error_chain/
@@ -117,6 +122,7 @@ to make error handling in Rust simple and elegant.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+<a id="itertools"></a>
 ### `itertools = "0.5.9"` &emsp; [📖][d-itertools]
 
 [d-itertools]: https://docs.rs/itertools/0.5.9/itertools/
@@ -128,6 +134,7 @@ include `dedup`, `group_by`, `mend_slices`, `merge`, `join` and more.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+<a id="json"></a>
 ### `json = "0.11.5"` &emsp; [📖][d-json]
 
 [d-json]: https://docs.rs/json/0.11.5/json/
@@ -143,6 +150,7 @@ use [`serde`](#serde) and `serde_json`.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+<a id="lazy_static"></a>
 ### `lazy_static = "0.2.2"` &emsp; [📖][d-lazy_static]
 
 [d-lazy_static]: https://docs.rs/env_logger/0.2.2/env_logger/
@@ -158,6 +166,7 @@ macro does just that.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+<a id="libc"></a>
 ### `libc = "0.2.18"` &emsp; [📖][d-libc]
 
 [d-libc]: https://docs.rs/libc/0.2.18/libc/
@@ -177,6 +186,7 @@ see [`nix`] and [`winapi`].
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+<a id="log"></a>
 ### `log = "0.3.6"` &emsp; [📖][d-log]
 
 [d-log]: https://docs.rs/log/0.3.6/log/
@@ -200,6 +210,7 @@ its functionality was once built in to the language.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+<a id="ndarray"></a>
 ### `ndarray = "0.7.2"` &emsp; [📖][d-ndarray]
 
 [d-ndarray]: https://docs.rs/ndarray/0.7.2/ndarray/
@@ -212,6 +223,7 @@ and Rust does not have one in the language or standard library.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+<a id="num"></a>
 ### `num = "0.1.36"` &emsp; [📖][d-num]
 
 [d-num]: https://docs.rs/num/0.1.36/num/
@@ -223,6 +235,7 @@ evolution but is somewhat unloved.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+<a id="rand"></a>
 ### `rand = "0.3.15"` &emsp; [📖][d-rand]
 
 [d-rand]: https://docs.rs/rand/0.3.15/rand/
@@ -232,6 +245,7 @@ Random number generators. The defaults are cryptographically strong.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+<a id="rayon"></a>
 ### `rayon = "0.6.0"` &emsp; [📖][d-rayon]
 
 [d-rayon]: https://docs.rs/rayon/0.6.0/rayon/
@@ -244,6 +258,7 @@ and foolproof.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+<a id="regex"></a>
 ### `regex = "0.2.1"` &emsp; [📖][d-regex]
 
 [d-regex]: https://docs.rs/regex/0.2.1/regex/
@@ -257,6 +272,7 @@ and arbitrary lookahead, creating predictable worst-case performance.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+<a id="reqwest"></a>
 ### `reqwest = "0.3.0"` &emsp; [📖][d-reqwest]
 
 [d-reqwest]: https://docs.rs/reqwest/0.3.0/reqwest/
@@ -293,6 +309,7 @@ its documentation at [serde.rs].
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+<a id="tempdir"></a>
 ### `tempdir = "0.3.5"` &emsp; [📖][d-tempdir]
 
 [d-tempdir]: https://docs.rs/tempdir/0.3.5/tempdir/
@@ -303,6 +320,7 @@ this crate was once part of the standard library.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+<a id="toml"></a>
 ### `toml = "0.2.1"` &emsp; [📖][d-toml]
 
 [d-toml]: https://docs.rs/toml/0.2.1/toml/
@@ -316,6 +334,7 @@ to parse, and serializes from Rust types with [`serde`](#serde).
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+<a id="url"></a>
 ### `url = "1.3.0"` &emsp; [📖][d-url]
 
 [d-url]: https://docs.rs/url/1.3.0/url/
