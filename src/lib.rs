@@ -2,6 +2,7 @@
 
 pub extern crate bitflags;
 pub extern crate byteorder;
+pub extern crate chrono;
 pub extern crate clap;
 pub extern crate error_chain;
 pub extern crate itertools;
@@ -15,7 +16,6 @@ pub extern crate regex;
 pub extern crate reqwest;
 pub extern crate serde;
 pub extern crate tempdir;
-pub extern crate time;
 pub extern crate toml;
 pub extern crate url;
 

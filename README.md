@@ -40,6 +40,18 @@ in little-endian, or big-endian orders.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+### `chrono = "0.2.25"`
+
+&emsp; [📖 docs][d-chrono] &emsp; [📦 crates.io][c-chrono]
+
+[d-chrono]: https://docs.rs/chrono/0.2.25/chrono/
+[c-chrono]: https://crates.io/crates/chrono/0.2.25
+
+Date and time types.
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
+
 ### `clap = "2.20.0"`
 
 &emsp; [📖 docs][d-clap] &emsp; [📦 crates.io][c-clap]
@@ -258,7 +270,6 @@ its documentation at [serde.rs].
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-
 ### `tempdir = "0.3.5"`
 
 &emsp; [📖 docs][d-tempdir] &emsp; [📦 crates.io][c-tempdir]
@@ -268,20 +279,6 @@ its documentation at [serde.rs].
 
 Another standard library reject. If you need to create temporary
 directories this is the official [rust-lang] way to do it.
-
-&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
-
-
-### `time = "0.1.36"`
-
-&emsp; [📖 docs][d-time] &emsp; [📦 crates.io][c-time]
-
-[d-time]: https://docs.rs/time/0.1.36/time/
-[c-time]: https://crates.io/crates/time/0.1.36
-
-This has got to be the worst of the [rust-lang] crates. It originates
-in the dark ages of Rust and limped along forever. If you need to get
-the time this can do it, but you won't like it.
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
