@@ -142,6 +142,21 @@ its functionality was once built in to the language.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+### `ndarray = "0.7.2"`
+
+&emsp; [📖 docs][d-ndarray] &emsp; [📦 crates.io][c-ndarray]
+
+[d-ndarray]: https://docs.rs/ndarray/0.7.2/ndarray/
+[c-ndarray]: https://crates.io/crates/ndarray/0.7.2
+
+The ndarray crate provides an N-dimensional container for general
+elements and for numerics. The multidimensional array, otherwise known
+as a "matrix", is a core data structure for numerical applications,
+and Rust does not have one in the language or standard library.
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
+
 ### `num = "0.1.36"`
 
 &emsp; [📖 docs][d-num] &emsp; [📦 crates.io][c-num]

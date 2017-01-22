@@ -13,6 +13,7 @@ itertools = "=0.5.9"
 lazy_static = "=0.2.2"
 libc = "=0.2.18"
 log = "=0.3.6"
+ndarray = { version = "=0.7.2", features = [ "serde" ] }
 num = "=0.1.36"
 rand = "=0.3.15"
 regex = "=0.2.1"
