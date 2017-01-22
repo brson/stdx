@@ -61,7 +61,7 @@ The only thing this crate does is export the
 [`bitflags!`](http://doc.rust-lang.org/bitflags/bitflags/macro.bitflags!.html#example)
 macro, but it's a heckuva-useful macro. `bitflags!` produces typesafe
 bitmasks, types with named values that are efficiently packed together
-as bits to express sets of options. Official [rust-lang] crate.
+as bits to express sets of options.
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
@@ -138,8 +138,7 @@ particular there is no ['life before
 main'](https://isocpp.org/wiki/faq/ctors#static-init-order) in Rust,
 so it's not possible to write a programmatic constructor for a global
 value that will be run at startup. Instead, Rust prefers lazy
-execution for global initialization, and the
-[`lazy_static!`](http://rust-ci.org/Kimundi/lazy-static.rs/doc/lazy_static/)
+execution for global initialization, and the `lazy_static!`
 macro does just that.
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
@@ -149,12 +148,17 @@ macro does just that.
 
 [d-libc]: https://docs.rs/libc/0.2.18/libc/
 
-If you need to talk to foreign code, you need this crate. It contains
-declarations for a grab bag of C types and functions that are correct
-for the variety of compilers and platforms that Rust runs on. This
-crate is a *notorious mess* design-wise, but it has endured for years
-as the foundation Rust uses to talk to the outside world. Official
-[rust-lang] crate.
+If you need to talk to foreign code, you need this crate. It exports C
+type and function definitions appropriate to each target platform Rust
+supports. It defines the standardized C features that are common
+across all platforms as well as non-standard features specific to the
+platform C libraries. For more platform-specific FFI definitions
+see [`nix`] and [`winapi`].
+
+**Supplemental crates**: [`nix`], [`winapi`]
+
+[`nix`]: https://docs.rs/nix
+[`winapi`]: https://docs.rs/winapi
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
