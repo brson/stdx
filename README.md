@@ -202,11 +202,9 @@ and Rust does not have one in the language or standard library.
 
 [d-num]: https://docs.rs/num/0.1.36/num/
 
-Big integers, rational numbers, complex numbers, and a 'numeric tower'
-of numeric traits. This is another rust-lang crate that has persisted
-through Rust's evolution but is not designed well enough for the
-standard library. It is though presently the most common way to access
-the functionality it provides.
+Big integers, rational numbers, complex numbers, and numeric
+traits. This is a rust-lang crate that has persisted through Rust's
+evolution but is somewhat unloved.
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
@@ -215,8 +213,7 @@ the functionality it provides.
 
 [d-rand]: https://docs.rs/rand/0.3.15/rand/
 
-Random number generators. The defaults are cryptographically
-strong. Official [rust-lang] crate.
+Random number generators. The defaults are cryptographically strong.
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
@@ -237,13 +234,11 @@ and foolproof.
 
 [d-regex]: https://docs.rs/regex/0.2.1/regex/
 
-Another [BurntSushi](http://github.com/burntsushi) joint, this a very
-performant regular expression implementation that [stomps the
-competition](http://benchmarksgame.alioth.debian.org/u64/performance.php?test=regexdna)
-in some benchmarks. Influenced by the highly-regarded
-[RE2](https://github.com/google/re2) engine, it omits backreferences
-and arbitrary lookahead in order to have predictable worst-case
-performance. Official [rust-lang] crate.
+Rust's regular expressions are [fast], like Rust is fast. Part of
+their power comes from a careful design that disallows back-references
+and arbitrary lookahead, creating predictable worst-case performance.
+
+[fast]: http://blog.burntsushi.net/ripgrep/
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
@@ -252,7 +247,7 @@ performance. Official [rust-lang] crate.
 
 [d-reqwest]: https://docs.rs/reqwest/0.3.0/reqwest/
 
-A simple HTTP client.
+A simple HTTP and HTTPS client.
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
@@ -287,8 +282,8 @@ its documentation at [serde.rs].
 
 [d-tempdir]: https://docs.rs/tempdir/0.3.5/tempdir/
 
-Another standard library reject. If you need to create temporary
-directories this is the official [rust-lang] way to do it.
+The most common way to create temporary directories in Rust,
+this crate was once part of the standard library.
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
@@ -297,12 +292,11 @@ directories this is the official [rust-lang] way to do it.
 
 [d-toml]: https://docs.rs/toml/0.2.1/toml/
 
-[TOML](https://github.com/toml-lang/toml) is the format to use for
-configuration files (at least once you are ready to advace beyond
-simple [json serialization][json]). It is the format for configuring
-Cargo (via [Cargo.toml](http://doc.crates.io/manifest.html)), and the
-Rust implementation is maintained by master wizard [Alex
-Crichton](https://github.com/alexcrichton).
+[TOML](https://github.com/toml-lang/toml) is a common format for
+configuration files, like [Cargo.toml]. It's easy on the eyes, simple
+to parse, and serializes from Rust types with [`serde`][d-serde].
+
+[Cargo.toml]: http://doc.crates.io/manifest.html
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
@@ -311,12 +305,10 @@ Crichton](https://github.com/alexcrichton).
 
 [d-url]: https://docs.rs/url/1.3.0/url/
 
-The Rust URL parser and type created for
-[Servo](https://github.com/servo/servo), by
-[SimonSapin](https://github.com/simonsapin).
+The Rust URL parser and type, originally created
+for [Servo].
 
-[rust-lang]: http://github.com/rust-lang
-[json]: http://doc.rust-lang.org/rustc-serialize/rustc_serialize/json/index.html#using-autoserialization
+[Servo]: https://servo.org
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
