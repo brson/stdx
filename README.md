@@ -312,17 +312,17 @@ and serde will automatically convert them between formats like
 JSON, TOML, YAML, and more. To best understand serde, read
 its documentation at [serde.rs].
 
-**Supplemental crates**: [`serde_derive = "=0.9.0-rc2"`],
-                         [`serde_json = "=0.9.0-rc1"`],
-                         [`toml = "=0.2.1"]
+**Supplemental crates**: [`serde_derive = "0.9.0-rc2"`],
+                         [`serde_json = "0.9.0-rc1"`],
+                         [`toml = "0.2.1"]
 
 **Alternatives**: [`rustc-serialize`]
 
 [serde.rs]: https://serde.rs/
 [`rustc-serialize`]: https://docs.rs/rustc-serialize
-[`serde_derive = "=0.9.0-rc2"`]: https://docs.rs/serde_derive/0.9.0-rc2/serde_derive
-[`serde_json = "=0.9.0-rc1"`]: https://docs.rs/serde_json/0.9.0-rc1/serde_json
-[`toml = "=0.2.1"]: https://docs.rs/toml/0.2.1/toml
+[`serde_derive = "0.9.0-rc2"`]: https://docs.rs/serde_derive/0.9.0-rc2/serde_derive
+[`serde_json = "0.9.0-rc1"`]: https://docs.rs/serde_json/0.9.0-rc1/serde_json
+[`toml = "0.2.1"]: https://docs.rs/toml/0.2.1/toml
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
