@@ -1,15 +1,12 @@
 # `stdx` - The missing batteries of Rust
 
-`stdx` is a project to collect the best Rust crates and validate
-that they work together on the platforms that Rust supports.
+New to Rust and don't yet know what crates to use?
+[**stdx has the best crates**](#about-stdx).
 
-## The `stdx` Crates
-
-The current revision of `stdx` is 0.115.0, corresponding to
-the Rust stable 1.15 release, February 2, 2017.
+Current revision:  `stdx` 0.115.0, Rust 1.15, February 2, 2017.
 
 | Feature                        | Crate                     |                    |
-| -------------------------------|---------------------------|--------------------|
+|--------------------------------|---------------------------|--------------------|
 | Bitfields                      | [`bitflags = "0.7.0"`]    | [📖][d-bitflags]    |
 | Byte order conversion          | [`byteorder = "1.0.0"`]   | [📖][d-byteorder]   |
 | Date and time                  | [`chrono = "0.2.25"`]     | [📖][d-chrono]      |
@@ -331,21 +328,47 @@ for [Servo].
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-## Contributing
+## About `stdx`
 
-`stdx` favors crates that have been 'battle-tested', this includes old
-and unloved crates like [`libc`], crates that are used by the official
-toolchain (which are maintained and highly-compatible if not always
-beautiful), and crates that are otherwise popular and well maintained.
+Rust has a lovely and portable standard library, but it is not
+featureful enough to write software of any great
+sophistication. Compared to common platforms including Java, Python,
+and Go, Rust's standard library is small.
 
-[`libc`]: https://github.com/rust-lang/libc
+In Rust, the libraries we use for even simple tasks live and evolve on
+[crates.io]. This affords the Rust community freedom to experiment -
+discovering the Rustiest solutions to even common problems can take
+quite some iteration - but it also means that we're in for a slow
+evolutionary process to converge around the best of those solutions. In
+the meantime, you just have to know which crates to use for what.
+
+`stdx` contains some of the most important crates in Rust. I mean
+it. If Rust had a more expansive standard library, many of the `stdx`
+crates would be in it. These are core ecosystem crates that all
+Rusticians should be aware of.
+
+[crates.io]: https://www.crates.io
+
+## Selection criteria
+
+The criteria for inclusion in `stdx` is conservative, and fuzzy. It's
+mostly crates that I think are pretty super important, considering
+criteria like
+
+- universality of the feature
+- portability
+- quality
+- interoperability with other stdx crates
+- reliability of maintainers
+- de-facto adoption
+- historical context and precedent
+
+`stdx` is focused on core features, crates that are quintessentially
+Rust and make a part of many Rust programs. It is intentionally
+limited for the sake of simplicity and ease of comprehension.
 
 All crates must work on Rust's tier-1 platforms, currently x86 Linux,
 OS X, and Windows.
-
-All crates must be published to [crates.io](https://crates.io) along with documentation
-link and declared license.
-
 
 ## License
 
