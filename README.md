@@ -101,7 +101,34 @@ fn main() {
 [d-byteorder]: https://docs.rs/byteorder/0.7.0/byteorder/
 
 Functions for converting between numbers and bytes, in
-in little-endian, or big-endian orders.
+little-endian, or big-endian orders.
+
+**Example**: [`byteorder.rs`]
+
+[`byteorder.rs`]: examples/byteorder.rs
+
+```rust
+extern crate byteorder;
+
+use std::io::Cursor;
+use byteorder::{BigEndian, ReadBytesExt};
+use byteorder::{LittleEndian, WriteBytesExt};
+
+fn main() {
+    // Read unsigned 16 bit big-endian integers from a Read type:
+    let mut rdr = Cursor::new(vec![2, 5, 3, 0]);
+    // Note that we use type parameters to indicate which kind of byte
+    // order we want!
+    assert_eq!(517, rdr.read_u16::<BigEndian>().unwrap());
+    assert_eq!(768, rdr.read_u16::<BigEndian>().unwrap());
+
+    // Write unsigned 16 bit little-endian integers to a Write type:
+    let mut wtr = vec![];
+    wtr.write_u16::<LittleEndian>(517).unwrap();
+    wtr.write_u16::<LittleEndian>(768).unwrap();
+    assert_eq!(wtr, vec![5, 2, 0, 3]);
+}
+```
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
