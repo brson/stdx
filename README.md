@@ -27,6 +27,19 @@ as bits to express sets of options. Official [rust-lang] crate.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+### `byteorder = "1.0.0"`
+
+&emsp; [📖 docs][d-byteorder] &emsp; [📦 crates.io][c-byteorder]
+
+[d-byteorder]: https://docs.rs/byteorder/0.7.0/byteorder/
+[c-byteorder]: https://crates.io/crates/byteorder/0.7.0
+
+Functions for converting between numbers and bytes, in
+in little-endian, or big-endian orders.
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
+
 ### `clap = "2.20.0"`
 
 &emsp; [📖 docs][d-clap] &emsp; [📦 crates.io][c-clap]

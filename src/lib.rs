@@ -1,6 +1,7 @@
 // These are ordered as they are in Cargo.toml
 
 pub extern crate bitflags;
+pub extern crate byteorder;
 pub extern crate clap;
 pub extern crate error_chain;
 pub extern crate itertools;
