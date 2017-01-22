@@ -17,6 +17,7 @@ ndarray = { version = "=0.7.2", features = [ "serde" ] }
 num = "=0.1.36"
 rand = "=0.3.15"
 regex = "=0.2.1"
+reqwest = "=0.3.0"
 serde = "=0.9.0-rc2"
 tempdir = "=0.3.5"
 time = "=0.1.36"

@@ -204,6 +204,18 @@ performance. Official [rust-lang] crate.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+### `reqwest = "0.3.0"`
+
+&emsp; [📖 docs][d-reqwest] &emsp; [📦 crates.io][c-reqwest]
+
+[d-reqwest]: https://docs.rs/reqwest/0.3.0/reqwest/
+[c-reqwest]: https://crates.io/crates/reqwest/0.3.0
+
+A simple HTTP client.
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
+
 ### `serde = "0.9.0-rc2"`
 
 &emsp; [📖 docs][d-serde] &emsp; [📦 crates.io][c-serde]
