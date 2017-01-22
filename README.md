@@ -430,7 +430,6 @@ The criteria for inclusion in `stdx` is conservative, and fuzzy. It's
 mostly crates that I think are pretty super important, considering
 criteria like
 
-- universality of the feature
 - portability
 - quality
 - interoperability with other stdx crates
@@ -439,7 +438,7 @@ criteria like
 - historical context and precedent
 
 `stdx` is focused on core features, crates that are quintessentially
-Rust and make a part of many Rust programs. It is intentionally
+Rust and relied on by many Rust programs. It is intentionally
 limited for the sake of simplicity and ease of comprehension.
 
 All crates must work on Rust's tier-1 platforms, currently x86 Linux,
