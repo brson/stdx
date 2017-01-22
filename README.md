@@ -30,33 +30,32 @@ the Rust stable 1.15 release.
 | Configuration files            | [`toml = "0.2.1"`]        | [📖][d-toml]        |
 | URLs                           | [`url = "1.3.0"`]         | [📖][d-url]         |
 
-[`bitflags = "0.7.0"`]: #bitflags--070----
-[`byteorder = "1.0.0"`]: #byteorder--100----
-[`chrono = "0.2.25"`]: #chrono--0225----
-[`clap = "2.20.0"`]: #clap--2200----
-[`error-chain = "0.8.1"`]: #error-chain--081----
-[`itertools = "0.5.9"`]: #itertools--059----
-[`lazy_static = "0.2.2"`]: #lazy_static--022----
-[`libc = "0.2.18"`]: #libc--0218----
-[`log = "0.3.6"`]: #log--036----
-[`ndarray = "0.7.2"`]: #ndarray--072----
-[`num = "0.1.36"`]: #num--0136----
-[`rand = "0.3.15"`]: #rand--0315----
-[`rayon = "0.6.0"`]: #rayon--060----
-[`regex = "0.2.1"`]: #regex--021----
-[`reqwest = "0.3.0"`]: #reqwest--030----
-[`serde = "0.9.0-rc2"`]: #serde--090-rc2----
-[`tempdir = "0.3.5"`]: #tempdir--035----
-[`toml = "0.2.1"`]: #toml--021----
-[`url = "1.3.0"`]: #url--130----
+[`bitflags = "0.7.0"`]: #bitflags--070--
+[`byteorder = "1.0.0"`]: #byteorder--100--
+[`chrono = "0.2.25"`]: #chrono--0225--
+[`clap = "2.20.0"`]: #clap--2200--
+[`error-chain = "0.8.1"`]: #error-chain--081--
+[`itertools = "0.5.9"`]: #itertools--059--
+[`lazy_static = "0.2.2"`]: #lazy_static--022--
+[`libc = "0.2.18"`]: #libc--0218--
+[`log = "0.3.6"`]: #log--036--
+[`ndarray = "0.7.2"`]: #ndarray--072--
+[`num = "0.1.36"`]: #num--0136--
+[`rand = "0.3.15"`]: #rand--0315--
+[`rayon = "0.6.0"`]: #rayon--060--
+[`regex = "0.2.1"`]: #regex--021--
+[`reqwest = "0.3.0"`]: #reqwest--030--
+[`serde = "0.9.0-rc2"`]: #serde--090-rc2--
+[`tempdir = "0.3.5"`]: #tempdir--035--
+[`toml = "0.2.1"`]: #toml--021--
+[`url = "1.3.0"`]: #url--130--
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-### `bitflags = "0.7.0"` &emsp; [📖][d-bitflags] &emsp; [📦][c-bitflags]
+### `bitflags = "0.7.0"` &emsp; [📖][d-bitflags]
 
 [d-bitflags]: https://docs.rs/bitflags/0.7.0/bitflags/
-[c-bitflags]: https://crates.io/crates/bitflags/0.7.0
 
 The only thing this crate does is export the
 [`bitflags!`](http://doc.rust-lang.org/bitflags/bitflags/macro.bitflags!.html#example)
@@ -67,10 +66,9 @@ as bits to express sets of options. Official [rust-lang] crate.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-### `byteorder = "1.0.0"` &emsp; [📖][d-byteorder] &emsp; [📦][c-byteorder]
+### `byteorder = "1.0.0"` &emsp; [📖][d-byteorder]
 
 [d-byteorder]: https://docs.rs/byteorder/0.7.0/byteorder/
-[c-byteorder]: https://crates.io/crates/byteorder/0.7.0
 
 Functions for converting between numbers and bytes, in
 in little-endian, or big-endian orders.
@@ -78,20 +76,18 @@ in little-endian, or big-endian orders.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-### `chrono = "0.2.25"` &emsp; [📖][d-chrono] &emsp; [📦][c-chrono]
+### `chrono = "0.2.25"` &emsp; [📖][d-chrono]
 
 [d-chrono]: https://docs.rs/chrono/0.2.25/chrono/
-[c-chrono]: https://crates.io/crates/chrono/0.2.25
 
 Date and time types.
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-### `clap = "2.20.0"` &emsp; [📖][d-clap] &emsp; [📦][c-clap]
+### `clap = "2.20.0"` &emsp; [📖][d-clap]
 
 [d-clap]: https://docs.rs/clap/2.20.0/clap/
-[c-clap]: https://crates.io/crates/clap/2.20.0
 
 Clap is a command line argument parser that is easy to
 use and is highly configurable.
@@ -103,10 +99,9 @@ use and is highly configurable.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-### `error-chain = "0.8.1"` &emsp; [📖][d-error-chain] &emsp; [📦][c-error-chain]
+### `error-chain = "0.8.1"` &emsp; [📖][d-error-chain]
 
 [d-error-chain]: https://docs.rs/error-chain/0.8.1/error_chain/
-[c-error-chain]: https://crates.io/crates/error-chain/0.8.1
 
 Rust programs that handle errors consistently are reliable programs.
 Even after one understands [error handling] in Rust, it can be
@@ -123,10 +118,9 @@ to make error handling in Rust simple and elegant.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-### `itertools = "0.5.9"` &emsp; [📖][d-itertools] &emsp; [📦][c-itertools]
+### `itertools = "0.5.9"` &emsp; [📖][d-itertools]
 
 [d-itertools]: https://docs.rs/itertools/0.5.9/itertools/
-[c-itertools]: https://crates.io/crates/itertools/0.5.9
 
 When it comes to iterators, this crate has everything *including* the
 kitchen sink (in the form of the `batching` adaptor).  Highlights
@@ -135,10 +129,9 @@ include `dedup`, `group_by`, `mend_slices`, `merge`, `join` and more.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-### `lazy_static = "0.2.2"` &emsp; [📖][d-lazy_static] &emsp; [📦][c-lazy_static]
+### `lazy_static = "0.2.2"` &emsp; [📖][d-lazy_static]
 
 [d-lazy_static]: https://docs.rs/env_logger/0.2.2/env_logger/
-[c-lazy_static]: https://crates.io/crates/env_logger/0.2.2
 
 Global state is one of those things Rust doesn't do so well. In
 particular there is no ['life before
@@ -152,10 +145,9 @@ macro does just that.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-### `libc = "0.2.18"` &emsp; [📖][d-libc] &emsp; [📦][c-libc]
+### `libc = "0.2.18"` &emsp; [📖][d-libc]
 
 [d-libc]: https://docs.rs/libc/0.2.18/libc/
-[c-libc]: https://crates.io/crates/libc/0.2.18
 
 If you need to talk to foreign code, you need this crate. It contains
 declarations for a grab bag of C types and functions that are correct
@@ -167,10 +159,9 @@ as the foundation Rust uses to talk to the outside world. Official
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-### `log = "0.3.6"` &emsp; [📖][d-log] &emsp; [📦][c-log]
+### `log = "0.3.6"` &emsp; [📖][d-log]
 
 [d-log]: https://docs.rs/log/0.3.6/log/
-[c-log]: https://crates.io/crates/log/0.3.6
 
 The most common way to perform basic logging in Rust, with the
 `error!`, `warn!`, `info!`, and `debug!` macros. It is often
@@ -191,10 +182,9 @@ its functionality was once built in to the language.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-### `ndarray = "0.7.2"` &emsp; [📖][d-ndarray] &emsp; [📦][c-ndarray]
+### `ndarray = "0.7.2"` &emsp; [📖][d-ndarray]
 
 [d-ndarray]: https://docs.rs/ndarray/0.7.2/ndarray/
-[c-ndarray]: https://crates.io/crates/ndarray/0.7.2
 
 The ndarray crate provides an N-dimensional container for general
 elements and for numerics. The multidimensional array, otherwise known
@@ -204,12 +194,9 @@ and Rust does not have one in the language or standard library.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-### `num = "0.1.36"`
-
-&emsp; [📖 docs][d-num] &emsp; [📦 crates.io][c-num]
+### `num = "0.1.36"` &emsp; [📖][d-num]
 
 [d-num]: https://docs.rs/num/0.1.36/num/
-[c-num]: https://crates.io/crates/num/0.1.36
 
 Big integers, rational numbers, complex numbers, and a 'numeric tower'
 of numeric traits. This is another rust-lang crate that has persisted
@@ -220,10 +207,9 @@ the functionality it provides.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-### `rand = "0.3.15"` &emsp; [📖][d-rand] &emsp; [📦][c-rand]
+### `rand = "0.3.15"` &emsp; [📖][d-rand]
 
 [d-rand]: https://docs.rs/rand/0.3.15/rand/
-[c-rand]: https://crates.io/crates/rand/0.3.15
 
 Random number generators. The defaults are cryptographically
 strong. Official [rust-lang] crate.
@@ -231,10 +217,9 @@ strong. Official [rust-lang] crate.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-### `rayon = "0.6.0"` &emsp; [📖][d-rayon] &emsp; [📦][c-rayon]
+### `rayon = "0.6.0"` &emsp; [📖][d-rayon]
 
 [d-rayon]: https://docs.rs/rayon/0.6.0/rayon/
-[c-rayon]: https://crates.io/crates/rayon/0.6.0
 
 When people say that Rust makes parallelism easy, this
 is why. Rayon provides parallel iterators that make
@@ -244,10 +229,9 @@ and foolproof.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-### `regex = "0.2.1"` &emsp; [📖][d-regex] &emsp; [📦][c-regex]
+### `regex = "0.2.1"` &emsp; [📖][d-regex]
 
 [d-regex]: https://docs.rs/regex/0.2.1/regex/
-[c-regex]: https://crates.io/crates/regex/0.2.1
 
 Another [BurntSushi](http://github.com/burntsushi) joint, this a very
 performant regular expression implementation that [stomps the
@@ -260,20 +244,18 @@ performance. Official [rust-lang] crate.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-### `reqwest = "0.3.0"` &emsp; [📖][d-reqwest] &emsp; [📦][c-reqwest]
+### `reqwest = "0.3.0"` &emsp; [📖][d-reqwest]
 
 [d-reqwest]: https://docs.rs/reqwest/0.3.0/reqwest/
-[c-reqwest]: https://crates.io/crates/reqwest/0.3.0
 
 A simple HTTP client.
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-### `serde = "0.9.0-rc2"` &emsp; [📖][d-serde] &emsp; [📦][c-serde]
+### `serde = "0.9.0-rc2"` &emsp; [📖][d-serde]
 
 [d-serde]: https://docs.rs/serde/0.9.0-rc2/serde/
-[c-serde]: https://crates.io/crates/serde/0.9.0-rc2
 
 Serialization and deserialization of Rust datastructures is fast
 and easy using the `serde` serialization framework. Simply
@@ -297,10 +279,9 @@ its documentation at [serde.rs].
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-### `tempdir = "0.3.5"` &emsp; [📖][d-tempdir] &emsp; [📦][c-tempdir]
+### `tempdir = "0.3.5"` &emsp; [📖][d-tempdir]
 
 [d-tempdir]: https://docs.rs/tempdir/0.3.5/tempdir/
-[c-tempdir]: https://crates.io/crates/tempdir/0.3.5
 
 Another standard library reject. If you need to create temporary
 directories this is the official [rust-lang] way to do it.
@@ -308,10 +289,9 @@ directories this is the official [rust-lang] way to do it.
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-### `toml = "0.2.1"` &emsp; [📖][d-toml] &emsp; [📦][c-toml]
+### `toml = "0.2.1"` &emsp; [📖][d-toml]
 
 [d-toml]: https://docs.rs/toml/0.2.1/toml/
-[c-toml]: https://crates.io/crates/toml/0.2.1
 
 [TOML](https://github.com/toml-lang/toml) is the format to use for
 configuration files (at least once you are ready to advace beyond
@@ -323,10 +303,9 @@ Crichton](https://github.com/alexcrichton).
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-### `url = "1.3.0"` &emsp; [📖][d-url] &emsp; [📦][c-url]
+### `url = "1.3.0"` &emsp; [📖][d-url]
 
 [d-url]: https://docs.rs/url/1.3.0/url/
-[c-url]: https://crates.io/crates/url/1.3.0
 
 The Rust URL parser and type created for
 [Servo](https://github.com/servo/servo), by
