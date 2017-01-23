@@ -433,6 +433,20 @@ see [`nix`] and [`winapi`].
 [`nix`]: https://docs.rs/nix
 [`winapi`]: https://docs.rs/winapi
 
+**Example**: [`examples/libc.rs`]
+
+[`examples/libc.rs`]: examples/libc.rs
+
+```rust
+extern crate libc;
+
+fn main() {
+    unsafe {
+        libc::exit(0);
+    }
+}
+```
+
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
@@ -451,6 +465,30 @@ its functionality was once built in to the language.
 **Supplemental crates**: [`env_logger = "0.4.0"`]
 
 [`env_logger = "0.4.0"`]: https://docs.rs/env_logger/0.4.0/env_logger/
+
+**Example**: [`examples/log.rs`]
+
+[`examples/log.rs`]: examples/log.rs
+
+```rust
+#[macro_use]
+extern crate log;
+extern crate env_logger;
+
+use log::LogLevel;
+
+fn main() {
+    env_logger::init().unwrap();
+
+    debug!("this is a debug {}", "message");
+    error!("this is printed by default");
+
+    if log_enabled!(LogLevel::Info) {
+        let x = 3 * 4; // expensive computation
+        info!("the answer was: {}", x);
+    }
+}
+```
 
 **Alternatives**: [`slog`], [`log4rs`]
 
