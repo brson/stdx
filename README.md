@@ -883,6 +883,24 @@ to parse, and serializes from Rust types with [`serde`](#serde).
 
 [Cargo.toml]: http://doc.crates.io/manifest.html
 
+**Example**: [`examples/toml.rs`]
+
+[`examples/toml.rs`]: examples/toml.rs
+
+```rust
+extern crate toml;
+
+fn main() {
+    let toml = r#"
+    [test]
+    foo = "bar"
+"#;
+
+    let value = toml::Parser::new(toml).parse().unwrap();
+    println!("{:?}", value);
+}
+```
+
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
