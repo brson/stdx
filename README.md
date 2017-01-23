@@ -1,3 +1,4 @@
+<a id="list"></a>
 # `stdx` - The missing batteries of Rust
 
 New to Rust and don't yet know what crates to use?
@@ -63,9 +64,9 @@ macro, but it's a heckuva-useful macro. `bitflags!` produces typesafe
 bitmasks, types with named values that are efficiently packed together
 as bits to express sets of options.
 
-**Example**: [`bitflags.rs`]
+**Example**: [`examples/bitflags.rs`]
 
-[`bitflags.rs`]: examples/bitflags.rs
+[`examples/bitflags.rs`]: examples/bitflags.rs
 
 ```rust
 #[macro_use]
@@ -98,14 +99,14 @@ fn main() {
 <a id="byteorder"></a>
 ### `byteorder = "1.0.0"` &emsp; [📖][d-byteorder]
 
-[d-byteorder]: https://docs.rs/byteorder/0.7.0/byteorder/
+[d-byteorder]: https://docs.rs/byteorder/1.0.0/byteorder/
 
 Functions for converting between numbers and bytes, in
 little-endian, or big-endian orders.
 
-**Example**: [`byteorder.rs`]
+**Example**: [`example/byteorder.rs`]
 
-[`byteorder.rs`]: examples/byteorder.rs
+[`examples/byteorder.rs`]: examples/byteorder.rs
 
 ```rust
 extern crate byteorder;
@@ -140,9 +141,9 @@ fn main() {
 
 Date and time types.
 
-**Example**: [`chrono.rs`]
+**Example**: [`examples/chrono.rs`]
 
-[`chrono.rs`]: examples/chrono.rs
+[`examples/chrono.rs`]: examples/chrono.rs
 
 ```rust
 extern crate chrono;
@@ -175,9 +176,9 @@ fn main() {
 Clap is a command line argument parser that is easy to
 use and is highly configurable.
 
-**Example**: [`clap.rs`]
+**Example**: [`examples/clap.rs`]
 
-[`clap.rs`]: examples/clap.rs
+[`examples/clap.rs`]: examples/clap.rs
 
 ```rust
 extern crate clap;
@@ -244,9 +245,9 @@ to make error handling in Rust simple and elegant.
 
 [error handling]: https://rust-lang.github.io/book/ch09-00-error-handling.html
 
-**Example**: [`error-chain.rs`]
+**Example**: [`examples/error-chain.rs`]
 
-[`error-chain.rs`]: examples/error-chain.rs
+[`examples/error-chain.rs`]: examples/error-chain.rs
 
 ```rust
 #![allow(unused)]
@@ -555,20 +556,127 @@ the meantime, you just have to know which crates to use for what.
 
 `stdx` contains some of the most important crates in Rust. I mean
 it. If Rust had a more expansive standard library, many of the `stdx`
-crates would be in it. These are core elements of the crates ecosystem
-that all Rusticians should be aware of.
+crates would be in it, or at least the features they provide. Many of
+the crates of `stdx` are maintained by the same authors as the Rustard
+standard library, and they are designed to be ideomatic and
+interoperable. These are core elements of the crates ecosystem that
+all Rusticians should be aware of.
 
 [crates.io]: https://www.crates.io
+
+## How to use `stdx`
+
+`stdx` is primarily a teaching tool. New and old Rust programmers
+alike will get the most from it by digesting [the list](#list) of
+`stdx` crates, each entry of which links to a descrption of the crate
+along with _an example if its basic use_.
+
+These examples are full working source and are intended to get you
+up and running with any of the `stdx` crates _immediately_. Just
+copy the crate name and version exactly as written into the `dependencies`
+section of your `Cargo.toml` like so:
+
+```toml
+[dependencies]
+bitflags = "0.7.0"
+```
+
+Then copy the full example into your `examples` directory, like
+so
+
+**Example**: [`examples/bitflags.rs`]
+
+[`examples/bitflags.rs`]: examples/bitflags.rs
+
+```rust
+#[macro_use]
+extern crate bitflags;
+
+bitflags! {
+    flags Flags: u32 {
+        const FLAG_A       = 0b00000001,
+        const FLAG_B       = 0b00000010,
+        const FLAG_C       = 0b00000100,
+        const FLAG_ABC     = FLAG_A.bits
+                           | FLAG_B.bits
+                           | FLAG_C.bits,
+    }
+}
+
+fn main() {
+    let e1 = FLAG_A | FLAG_C;
+    let e2 = FLAG_B | FLAG_C;
+    assert_eq!((e1 | e2), FLAG_ABC);   // union
+    assert_eq!((e1 & e2), FLAG_C);     // intersection
+    assert_eq!((e1 - e2), FLAG_A);     // set difference
+    assert_eq!(!e2, FLAG_A);           // set complement
+}
+```
+
+Then execute the following:
+
+```sh
+cargo run --example fitflags
+```
+
+And suddenly you are a slightly-experienced user of that crate.
+Now click on the [📖][d-bitflags] icon to get the rest of the story
+on that crate.
+
+Convinced? [Go check out that list](#list).
+
+
+## Why use `stdx`?
+
+As a learning tool, I hope the benefit will be evident from a straight
+read-through. But it, and tools like it, may provide important
+benefits to users in the future.
+
+To be clear, `stdx` is experimental. A lot of the below is
+speculative.
+
+`stdx` provides assurances that the versions of crates it specifes
+work together correctly in a wide variety of configurations. Today
+those assurances are few, but they will grow. And these types of
+assurances will become increasingly valuable to Rust.
+
+As of now, the only validation `stdx` provides is that the exact
+versions of the `stdx` crates resolve correctly by Cargo, and that
+they build on Linux. That is already beneficial by uncovering
+problematic combinations and incorrect semver specifications. Here are
+some other assurances that `stdx` will enable:
+
+* Additional integration test cases between the `stdx` crates
+* Testing of all `stdx` crates' own test suites using the `stdx` version lock
+* Testing on all tier 1 platforms
+* Testing on tier 2 platforms
+* Enforcement and coverage of `serde` features and interop
+* Enforcement of other compile-time feature standards
+* `stdx` as version lock - you don't even have to call into it. Just
+  link to it and it locks down a chunk of your crate graph to
+  known-good combinaitons.
+* Ecosystem wide testing using `stdx` version lock - eventually we
+  will be able to say which creates are known to work correctly
+  with `stdx`.
+* The more people use the `stdx` version lock the more assurance they
+  get they get. This plays into future Rusts LTS directions.
+
+With high standards of quality on a small selection of important
+crates we can create a high degree of confidence in a larger core
+of the Rust ecosystem.
+
 
 ## Selection criteria
 
 The criteria for inclusion in `stdx` is conservative, and fuzzy. It's
-mostly crates that I think are pretty super important, considering
-criteria like
+mostly crates that are pretty super important, considering criteria
+like
 
 - portability
 - quality
-- interoperability with other stdx crates
+- conformance to conventions
+- documentation
+- interoperability with other crates
 - reliability of maintainers
 - de-facto adoption
 - historical context and precedent
@@ -579,6 +687,7 @@ limited for the sake of simplicity and ease of comprehension.
 
 All crates must work on Rust's tier-1 platforms, currently x86 Linux,
 OS X, and Windows.
+
 
 ## License
 
