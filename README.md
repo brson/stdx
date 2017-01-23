@@ -909,8 +909,7 @@ fn main() {
 
 [d-url]: https://docs.rs/url/1.3.0/url/
 
-The Rust URL parser and type, originally created
-for [Servo].
+The URL parser and type, originally created for [Servo].
 
 [Servo]: https://servo.org
 
