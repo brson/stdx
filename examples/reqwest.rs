@@ -1,4 +1,3 @@
-#![allow(unused)]
 extern crate reqwest;
 
 use std::collections::HashMap;

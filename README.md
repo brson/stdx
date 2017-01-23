@@ -248,8 +248,6 @@ to make error handling in Rust simple and elegant.
 [`examples/error-chain.rs`]: examples/error-chain.rs
 
 ```rust
-#![allow(unused)]
-
 // `error_chain!` can recurse deeply
 #![recursion_limit = "1024"]
 
@@ -643,7 +641,6 @@ and foolproof.
 [`examples/rayon.rs`]: examples/rayon.rs
 
 ```rust
-#![allow(unused)]
 extern crate rayon;
 
 use rayon::prelude::*;

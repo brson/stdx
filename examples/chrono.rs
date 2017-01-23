@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 extern crate chrono;
 use chrono::*;
 
