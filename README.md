@@ -326,6 +326,46 @@ use [`serde`](#serde) and `serde_json`.
 
 [JSON]: http://json.org/
 
+**Example**: [`examples/json.rs`]
+
+[`examples/json.rs`]: examples/json.rs
+
+```rust
+#[macro_use]
+extern crate json;
+
+fn main() {
+    let parsed = json::parse(r#"
+{
+    "code": 200,
+    "success": true,
+    "payload": {
+        "features": [
+            "awesome",
+            "easyAPI",
+            "lowLearningCurve"
+        ]
+    }
+}
+
+"#).unwrap();
+
+    let instantiated = object!{
+        "code" => 200,
+        "success" => true,
+        "payload" => object!{
+            "features" => array![
+                "awesome",
+                "easyAPI",
+                "lowLearningCurve"
+            ]
+        }
+    };
+
+    assert_eq!(parsed, instantiated);
+}
+```
+
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
