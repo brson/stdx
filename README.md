@@ -1025,8 +1025,7 @@ cargo run --example bitflags
 ```
 
 And suddenly you are a slightly-experienced user of that crate.
-Now click on the [📖][d-bitflags] icon to get the rest of the story
-on that crate.
+Then click on the [📖][d-bitflags] icon to get the rest of the story.
 
 Convinced? [Go check out that list](#list).
 
