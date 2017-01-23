@@ -4,7 +4,7 @@
 New to Rust and don't yet know what crates to use?
 [**stdx has the best crates**](#about-stdx).
 
-Current revision:  `stdx` 0.115.0-rc, for Rust 1.15, February 2, 2017.
+Current revision: `stdx` 0.115.0-rc, for Rust 1.15, February 2, 2017.
 
 | Feature                        | Crate                     |                    |
 |--------------------------------|---------------------------|--------------------|
@@ -962,10 +962,10 @@ the meantime, you just have to know which crates to use for what.
 `stdx` contains some of the most important crates in Rust. I mean
 it. If Rust had a more expansive standard library, many of the `stdx`
 crates would be in it, or at least the features they provide. Many of
-the crates of `stdx` are maintained by the same authors as the Rustard
-standard library, and they are designed to be ideomatic and
-interoperable. These are core elements of the crates ecosystem that
-all Rusticians should be aware of.
+the crates of `stdx` are maintained by the same authors as the Rust
+standard library, and they are designed to be idiomatic and
+interoperable. These are core elements of the crate ecosystem that
+all Rustaceans should be aware of.
 
 [crates.io]: https://www.crates.io
 
@@ -973,8 +973,8 @@ all Rusticians should be aware of.
 
 `stdx` is primarily a teaching tool. New and old Rust programmers
 alike will get the most from it by digesting [the list](#list) of
-`stdx` crates, each entry of which links to a descrption of the crate
-along with _an example if its basic use_.
+`stdx` crates, each entry of which links to a description of the crate
+along with _an example of its basic use_.
 
 These examples are full working source and are intended to get you
 up and running with any of the `stdx` crates _immediately_. Just
@@ -987,7 +987,7 @@ bitflags = "0.7.0"
 ```
 
 Then copy the full example into your `examples` directory, like
-so
+so:
 
 **Example**: [`examples/bitflags.rs`]
 
@@ -1021,7 +1021,7 @@ fn main() {
 Then execute the following:
 
 ```sh
-cargo run --example fitflags
+cargo run --example bitflags
 ```
 
 And suddenly you are a slightly-experienced user of that crate.
@@ -1062,10 +1062,10 @@ enable:
   link to it and it locks down a chunk of your crate graph to
   known-good combinaitons.
 * Ecosystem wide testing using `stdx` version lock - eventually we
-  will be able to say which creates are known to work correctly
+  will be able to say which crates are known to work correctly
   with `stdx`.
 * The more people use the `stdx` version lock the more assurance they
-  get they get. This plays into future Rusts LTS directions.
+  get they get. This plays into future Rust's LTS directions.
 
 By applying high quality standards to a small selection of critical
 crates we can create a high degree of confidence in a larger core of
