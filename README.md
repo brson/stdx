@@ -965,7 +965,7 @@ crates would be in it, or at least the features they provide. Many of
 the crates of `stdx` are maintained by the same authors as the Rust
 standard library, and they are designed to be idiomatic and
 interoperable. These are core elements of the crate ecosystem that
-all Rustaceans should be aware of.
+all Rusticians should be aware of.
 
 [crates.io]: https://www.crates.io
 
