@@ -1,6 +1,6 @@
 [package]
 name = "stdx"
-version = "0.115.0"
+version = "0.115.0-rc"
 authors = ["Brian Anderson <banderson@mozilla.com>"]
 description = "The missing batteries of Rust"
 license = "MIT/Apache-2.0"
@@ -14,7 +14,6 @@ byteorder = "=1.0.0"
 chrono = "=0.2.25"
 clap = "=2.20.0"
 error-chain = "=0.8.1"
-itertools = "=0.5.9"
 json = "=0.11.5"
 lazy_static = "=0.2.2"
 libc = "=0.2.18"

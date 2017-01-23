@@ -4,7 +4,7 @@
 New to Rust and don't yet know what crates to use?
 [**stdx has the best crates**](#about-stdx).
 
-Current revision:  `stdx` 0.115.0, Rust 1.15, February 2, 2017.
+Current revision:  `stdx` 0.115.0-rc, for Rust 1.15, February 2, 2017.
 
 | Feature                        | Crate                     |                    |
 |--------------------------------|---------------------------|--------------------|
@@ -13,7 +13,6 @@ Current revision:  `stdx` 0.115.0, Rust 1.15, February 2, 2017.
 | Date and time                  | [`chrono = "0.2.25"`]     | [📖][d-chrono]      |
 | Command-line argument parsing  | [`clap = "2.20.0"`]       | [📖][d-clap]        |
 | Error handling                 | [`error-chain = "0.8.1"`] | [📖][d-error-chain] |
-| Iterator extensions            | [`itertools = "0.5.9"`]   | [📖][d-itertools]   |
 | JSON                           | [`json = "0.11.5"`]       | [📖][d-json]        |
 | Global initialization          | [`lazy_static = "0.2.2"`] | [📖][d-lazy_static] |
 | C interop                      | [`libc = "0.2.18"`]       | [📖][d-libc]        |
@@ -34,7 +33,6 @@ Current revision:  `stdx` 0.115.0, Rust 1.15, February 2, 2017.
 [`chrono = "0.2.25"`]: #chrono
 [`clap = "2.20.0"`]: #clap
 [`error-chain = "0.8.1"`]: #error-chain
-[`itertools = "0.5.9"`]: #itertools
 [`json = "0.11.5"`]: #json
 [`lazy_static = "0.2.2"`]: #lazy_static
 [`libc = "0.2.18"`]: #libc
@@ -311,18 +309,6 @@ fn run() -> Result<()> {
 **Alternatives**: [`quick-error`]
 
 [`quick-error`]: https://docs.rs/quick-error/1.1.0/quick_error/
-
-&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
-
-
-<a id="itertools"></a>
-### `itertools = "0.5.9"` &emsp; [📖][d-itertools]
-
-[d-itertools]: https://docs.rs/itertools/0.5.9/itertools/
-
-When it comes to iterators, this crate has everything *including* the
-kitchen sink (in the form of the `batching` adaptor).  Highlights
-include `dedup`, `group_by`, `mend_slices`, `merge`, `join` and more.
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
@@ -629,7 +615,7 @@ Convinced? [Go check out that list](#list).
 ## Why use `stdx`?
 
 As a learning tool, I hope the benefit will be evident from a straight
-read-through. But it, and tools like it, may provide important
+read-through. But `stdx`, and tools like it, may provide important
 benefits to users in the future.
 
 To be clear, `stdx` is experimental. A lot of the below is
@@ -642,9 +628,10 @@ assurances will become increasingly valuable to Rust.
 
 As of now, the only validation `stdx` provides is that the exact
 versions of the `stdx` crates resolve correctly by Cargo, and that
-they build on Linux. That is already beneficial by uncovering
-problematic combinations and incorrect semver specifications. Here are
-some other assurances that `stdx` will enable:
+they build on Linux and Windows. That is already beneficial by
+uncovering problematic combinations and incorrect semver
+specifications. Here are some other assurances that `stdx` will
+enable:
 
 * Additional integration test cases between the `stdx` crates
 * Testing of all `stdx` crates' own test suites using the `stdx` version lock
@@ -661,9 +648,9 @@ some other assurances that `stdx` will enable:
 * The more people use the `stdx` version lock the more assurance they
   get they get. This plays into future Rusts LTS directions.
 
-With high standards of quality on a small selection of important
-crates we can create a high degree of confidence in a larger core
-of the Rust ecosystem.
+By applying high quality standards to a small selection of critical
+crates we can create a high degree of confidence in a larger core of
+the Rust ecosystem.
 
 
 ## Selection criteria

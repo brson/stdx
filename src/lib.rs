@@ -5,7 +5,6 @@ pub extern crate byteorder;
 pub extern crate chrono;
 pub extern crate clap;
 pub extern crate error_chain;
-pub extern crate itertools;
 pub extern crate lazy_static;
 pub extern crate libc;
 pub extern crate log;
