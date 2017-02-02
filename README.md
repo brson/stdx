@@ -17,7 +17,7 @@ Current revision: `stdx` 0.115.0-rc, for Rust 1.15, February 2, 2017.
 | Global initialization          | [`lazy_static = "0.2.2"`] | [📖][d-lazy_static] |
 | C interop                      | [`libc = "0.2.20"`]       | [📖][d-libc]        |
 | Logging                        | [`log = "0.3.6"`]         | [📖][d-log]         |
-| Multidimensional arrays        | [`ndarray = "0.7.2"`]     | [📖][d-ndarray]     |
+| Multidimensional arrays        | [`ndarray = "0.7.3"`]     | [📖][d-ndarray]     |
 | Big, rational, complex numbers | [`num = "0.1.36"`]        | [📖][d-num]         |
 | Random numbers                 | [`rand = "0.3.15"`]       | [📖][d-rand]        |
 | Parallel iteration             | [`rayon = "0.6.0"`]       | [📖][d-rayon]       |
