@@ -102,7 +102,7 @@ fn main() {
 Functions for converting between numbers and bytes, in
 little-endian, or big-endian orders.
 
-**Example**: [`example/byteorder.rs`]
+**Example**: [`examples/byteorder.rs`]
 
 [`examples/byteorder.rs`]: examples/byteorder.rs
 
