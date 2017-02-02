@@ -11,11 +11,11 @@ Current revision: `stdx` 0.115.0-rc, for Rust 1.15, February 2, 2017.
 | Bitfields                      | [`bitflags = "0.7.0"`]    | [📖][d-bitflags]    |
 | Byte order conversion          | [`byteorder = "1.0.0"`]   | [📖][d-byteorder]   |
 | Date and time                  | [`chrono = "0.2.25"`]     | [📖][d-chrono]      |
-| Command-line argument parsing  | [`clap = "2.20.0"`]       | [📖][d-clap]        |
+| Command-line argument parsing  | [`clap = "2.20.1"`]       | [📖][d-clap]        |
 | Error handling                 | [`error-chain = "0.8.1"`] | [📖][d-error-chain] |
 | JSON                           | [`json = "0.11.5"`]       | [📖][d-json]        |
 | Global initialization          | [`lazy_static = "0.2.2"`] | [📖][d-lazy_static] |
-| C interop                      | [`libc = "0.2.18"`]       | [📖][d-libc]        |
+| C interop                      | [`libc = "0.2.20"`]       | [📖][d-libc]        |
 | Logging                        | [`log = "0.3.6"`]         | [📖][d-log]         |
 | Multidimensional arrays        | [`ndarray = "0.7.2"`]     | [📖][d-ndarray]     |
 | Big, rational, complex numbers | [`num = "0.1.36"`]        | [📖][d-num]         |
@@ -23,30 +23,30 @@ Current revision: `stdx` 0.115.0-rc, for Rust 1.15, February 2, 2017.
 | Parallel iteration             | [`rayon = "0.6.0"`]       | [📖][d-rayon]       |
 | Regular expressions            | [`regex = "0.2.1"`]       | [📖][d-regex]       |
 | HTTP client                    | [`reqwest = "0.3.0"`]     | [📖][d-reqwest]     |
-| Serialization                  | [`serde = "0.9.0-rc2"`]   | [📖][d-serde]       |
+| Serialization                  | [`serde = "0.9.5"`]       | [📖][d-serde]       |
 | Temporary directories          | [`tempdir = "0.3.5"`]     | [📖][d-tempdir]     |
 | Configuration files            | [`toml = "0.2.1"`]        | [📖][d-toml]        |
-| URLs                           | [`url = "1.3.0"`]         | [📖][d-url]         |
+| URLs                           | [`url = "1.4.0"`]         | [📖][d-url]         |
 
 [`bitflags = "0.7.0"`]: #bitflags
 [`byteorder = "1.0.0"`]: #byteorder
 [`chrono = "0.2.25"`]: #chrono
-[`clap = "2.20.0"`]: #clap
+[`clap = "2.20.1"`]: #clap
 [`error-chain = "0.8.1"`]: #error-chain
 [`json = "0.11.5"`]: #json
 [`lazy_static = "0.2.2"`]: #lazy_static
-[`libc = "0.2.18"`]: #libc
+[`libc = "0.2.20"`]: #libc
 [`log = "0.3.6"`]: #log
-[`ndarray = "0.7.2"`]: #ndarray
+[`ndarray = "0.7.3"`]: #ndarray
 [`num = "0.1.36"`]: #num
 [`rand = "0.3.15"`]: #rand
 [`rayon = "0.6.0"`]: #rayon
 [`regex = "0.2.1"`]: #regex
 [`reqwest = "0.3.0"`]: #reqwest
-[`serde = "0.9.0-rc2"`]: #serde
+[`serde = "0.9.5"`]: #serde
 [`tempdir = "0.3.5"`]: #tempdir
 [`toml = "0.2.1"`]: #toml
-[`url = "1.3.0"`]: #url
+[`url = "1.4.0"`]: #url
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
@@ -167,9 +167,9 @@ fn main() {
 
 
 <a id="clap"></a>
-### `clap = "2.20.0"` &emsp; [📖][d-clap]
+### `clap = "2.20.1"` &emsp; [📖][d-clap]
 
-[d-clap]: https://docs.rs/clap/2.20.0/clap/
+[d-clap]: https://docs.rs/clap/2.20.1/clap/
 
 Clap is a command line argument parser that is easy to
 use and is highly configurable.
@@ -415,9 +415,9 @@ fn main() {
 
 
 <a id="libc"></a>
-### `libc = "0.2.18"` &emsp; [📖][d-libc]
+### `libc = "0.2.20"` &emsp; [📖][d-libc]
 
-[d-libc]: https://docs.rs/libc/0.2.18/libc/
+[d-libc]: https://docs.rs/libc/0.2.20/libc/
 
 If you need to talk to foreign code, you need this crate. It exports C
 type and function definitions appropriate to each target platform Rust
@@ -497,9 +497,9 @@ fn main() {
 
 
 <a id="ndarray"></a>
-### `ndarray = "0.7.2"` &emsp; [📖][d-ndarray]
+### `ndarray = "0.7.3"` &emsp; [📖][d-ndarray]
 
-[d-ndarray]: https://docs.rs/ndarray/0.7.2/ndarray/
+[d-ndarray]: https://docs.rs/ndarray/0.7.3/ndarray/
 
 The ndarray crate provides an N-dimensional container for general
 elements and for numerics. The multidimensional array, otherwise known
@@ -779,9 +779,9 @@ fn main() {
 
 
 <a id="serde"></a>
-### `serde = "0.9.0-rc2"` &emsp; [📖][d-serde]
+### `serde = "0.9.5"` &emsp; [📖][d-serde]
 
-[d-serde]: https://docs.rs/serde/0.9.0-rc2/serde/
+[d-serde]: https://docs.rs/serde/0.9.5/serde/
 
 Serialization and deserialization of Rust datastructures is fast
 and easy using the `serde` serialization framework. Simply
@@ -790,8 +790,9 @@ and serde will automatically convert them between formats like
 JSON, TOML, YAML, and more. To best understand serde, read
 its documentation at [serde.rs].
 
-**Supplemental crates**: [`serde_derive = "0.9.0-rc2"`],
-                         [`serde_json = "0.9.0-rc1"`],
+**Supplemental crates**: [`serde_derive = "0.9.5"`],
+                         [`serde_codegen = "0.9.0"`],
+                         [`serde_json = "0.9.4"`],
                          [`toml = "0.2.1"`]
 
 **Example**: [`examples/serde.rs`]
@@ -915,9 +916,9 @@ fn main() {
 
 
 <a id="url"></a>
-### `url = "1.3.0"` &emsp; [📖][d-url]
+### `url = "1.4.0"` &emsp; [📖][d-url]
 
-[d-url]: https://docs.rs/url/1.3.0/url/
+[d-url]: https://docs.rs/url/1.4.0/url/
 
 The URL parser and type, originally created for [Servo].
 
