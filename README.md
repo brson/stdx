@@ -10,7 +10,7 @@ Current revision: `stdx` 0.115.0-rc, for Rust 1.15, February 2, 2017.
 |--------------------------------|---------------------------|--------------------|
 | Bitfields                      | [`bitflags = "0.7.0"`]    | [📖][d-bitflags]    |
 | Byte order conversion          | [`byteorder = "1.0.0"`]   | [📖][d-byteorder]   |
-| Date and time                  | [`chrono = "0.2.25"`]     | [📖][d-chrono]      |
+| Date and time                  | [`chrono = "0.3.0"`]      | [📖][d-chrono]      |
 | Command-line argument parsing  | [`clap = "2.20.1"`]       | [📖][d-clap]        |
 | Error handling                 | [`error-chain = "0.8.1"`] | [📖][d-error-chain] |
 | JSON                           | [`json = "0.11.5"`]       | [📖][d-json]        |
@@ -22,15 +22,15 @@ Current revision: `stdx` 0.115.0-rc, for Rust 1.15, February 2, 2017.
 | Random numbers                 | [`rand = "0.3.15"`]       | [📖][d-rand]        |
 | Parallel iteration             | [`rayon = "0.6.0"`]       | [📖][d-rayon]       |
 | Regular expressions            | [`regex = "0.2.1"`]       | [📖][d-regex]       |
-| HTTP client                    | [`reqwest = "0.3.0"`]     | [📖][d-reqwest]     |
-| Serialization                  | [`serde = "0.9.5"`]       | [📖][d-serde]       |
+| HTTP client                    | [`reqwest = "0.4.0"`]     | [📖][d-reqwest]     |
+| Serialization                  | [`serde = "0.9.10"`]      | [📖][d-serde]       |
 | Temporary directories          | [`tempdir = "0.3.5"`]     | [📖][d-tempdir]     |
-| Configuration files            | [`toml = "0.2.1"`]        | [📖][d-toml]        |
+| Configuration files            | [`toml = "0.3.1"`]        | [📖][d-toml]        |
 | URLs                           | [`url = "1.4.0"`]         | [📖][d-url]         |
 
 [`bitflags = "0.7.0"`]: #bitflags
 [`byteorder = "1.0.0"`]: #byteorder
-[`chrono = "0.2.25"`]: #chrono
+[`chrono = "0.3.0"`]: #chrono
 [`clap = "2.20.1"`]: #clap
 [`error-chain = "0.8.1"`]: #error-chain
 [`json = "0.11.5"`]: #json
@@ -42,10 +42,10 @@ Current revision: `stdx` 0.115.0-rc, for Rust 1.15, February 2, 2017.
 [`rand = "0.3.15"`]: #rand
 [`rayon = "0.6.0"`]: #rayon
 [`regex = "0.2.1"`]: #regex
-[`reqwest = "0.3.0"`]: #reqwest
-[`serde = "0.9.5"`]: #serde
+[`reqwest = "0.4.0"`]: #reqwest
+[`serde = "0.9.10"`]: #serde
 [`tempdir = "0.3.5"`]: #tempdir
-[`toml = "0.2.1"`]: #toml
+[`toml = "0.3.1"`]: #toml
 [`url = "1.4.0"`]: #url
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
@@ -133,9 +133,9 @@ fn main() {
 
 
 <a id="chrono"></a>
-### `chrono = "0.2.25"` &emsp; [📖][d-chrono]
+### `chrono = "0.3.0"` &emsp; [📖][d-chrono]
 
-[d-chrono]: https://docs.rs/chrono/0.2.25/chrono/
+[d-chrono]: https://docs.rs/chrono/0.3.0/chrono/
 
 Date and time types.
 
@@ -727,9 +727,9 @@ fn main() {
 
 
 <a id="reqwest"></a>
-### `reqwest = "0.3.0"` &emsp; [📖][d-reqwest]
+### `reqwest = "0.4.0"` &emsp; [📖][d-reqwest]
 
-[d-reqwest]: https://docs.rs/reqwest/0.3.0/reqwest/
+[d-reqwest]: https://docs.rs/reqwest/0.4.0/reqwest/
 
 A simple HTTP and HTTPS client.
 
@@ -779,9 +779,9 @@ fn main() {
 
 
 <a id="serde"></a>
-### `serde = "0.9.5"` &emsp; [📖][d-serde]
+### `serde = "0.9.10"` &emsp; [📖][d-serde]
 
-[d-serde]: https://docs.rs/serde/0.9.5/serde/
+[d-serde]: https://docs.rs/serde/0.9.10/serde/
 
 Serialization and deserialization of Rust datastructures is fast
 and easy using the `serde` serialization framework. Simply
@@ -790,10 +790,9 @@ and serde will automatically convert them between formats like
 JSON, TOML, YAML, and more. To best understand serde, read
 its documentation at [serde.rs].
 
-**Supplemental crates**: [`serde_derive = "0.9.5"`],
-                         [`serde_codegen = "0.9.0"`],
-                         [`serde_json = "0.9.4"`],
-                         [`toml = "0.2.1"`]
+**Supplemental crates**: [`serde_derive = "0.9.10"`],
+                         [`serde_json = "0.9.8"`],
+                         [`toml = "0.3.1"`]
 
 **Example**: [`examples/serde.rs`]
 
@@ -836,9 +835,9 @@ fn main() {
 
 [serde.rs]: https://serde.rs/
 [`rustc-serialize`]: https://docs.rs/rustc-serialize
-[`serde_derive = "0.9.0-rc2"`]: https://docs.rs/serde_derive/0.9.0-rc2/serde_derive
-[`serde_json = "0.9.0-rc1"`]: https://docs.rs/serde_json/0.9.0-rc1/serde_json
-[`toml = "0.2.1"`]: https://docs.rs/toml/0.2.1/toml
+[`serde_derive = "0.9.10"`]: https://docs.rs/serde_derive/0.9.10/serde_derive
+[`serde_json = "0.9.8"`]: https://docs.rs/serde_json/0.9.8/serde_json
+[`toml = "0.3.1"`]: https://docs.rs/toml/0.3.1/toml
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
@@ -884,9 +883,9 @@ fn main() {
 
 
 <a id="toml"></a>
-### `toml = "0.2.1"` &emsp; [📖][d-toml]
+### `toml = "0.3.1"` &emsp; [📖][d-toml]
 
-[d-toml]: https://docs.rs/toml/0.2.1/toml/
+[d-toml]: https://docs.rs/toml/0.3.1/toml/
 
 [TOML](https://github.com/toml-lang/toml) is a common format for
 configuration files, like [Cargo.toml]. It's easy on the eyes, simple
