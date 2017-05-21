@@ -6,55 +6,55 @@ New to Rust and don't yet know what crates to use?
 
 Current revision: `stdx` 0.117.0-rc, for Rust 1.17, April 27, 2017.
 
-| Feature                        | Crate                     |                    |
-|--------------------------------|---------------------------|--------------------|
-| Bitfields                      | [`bitflags = "0.7.0"`]    | [📖][d-bitflags]    |
-| Byte order conversion          | [`byteorder = "1.0.0"`]   | [📖][d-byteorder]   |
-| Date and time                  | [`chrono = "0.3.0"`]      | [📖][d-chrono]      |
-| Command-line argument parsing  | [`clap = "2.20.1"`]       | [📖][d-clap]        |
-| Error handling                 | [`error-chain = "0.8.1"`] | [📖][d-error-chain] |
-| JSON                           | [`json = "0.11.5"`]       | [📖][d-json]        |
-| Global initialization          | [`lazy_static = "0.2.2"`] | [📖][d-lazy_static] |
-| C interop                      | [`libc = "0.2.20"`]       | [📖][d-libc]        |
-| Logging                        | [`log = "0.3.6"`]         | [📖][d-log]         |
-| Multidimensional arrays        | [`ndarray = "0.7.3"`]     | [📖][d-ndarray]     |
-| Big, rational, complex numbers | [`num = "0.1.36"`]        | [📖][d-num]         |
-| Random numbers                 | [`rand = "0.3.15"`]       | [📖][d-rand]        |
-| Parallel iteration             | [`rayon = "0.6.0"`]       | [📖][d-rayon]       |
-| Regular expressions            | [`regex = "0.2.1"`]       | [📖][d-regex]       |
-| HTTP client                    | [`reqwest = "0.4.0"`]     | [📖][d-reqwest]     |
-| Serialization                  | [`serde = "0.9.10"`]      | [📖][d-serde]       |
-| Temporary directories          | [`tempdir = "0.3.5"`]     | [📖][d-tempdir]     |
-| Configuration files            | [`toml = "0.3.1"`]        | [📖][d-toml]        |
-| URLs                           | [`url = "1.4.0"`]         | [📖][d-url]         |
+| Feature                        | Crate                      |                    |
+|--------------------------------|----------------------------|--------------------|
+| Bitfields                      | [`bitflags = "0.9.0"`]     | [📖][d-bitflags]    |
+| Byte order conversion          | [`byteorder = "1.0.0"`]    | [📖][d-byteorder]   |
+| Date and time                  | [`chrono = "0.3.1"`]       | [📖][d-chrono]      |
+| Command-line argument parsing  | [`clap = "2.24.2"`]        | [📖][d-clap]        |
+| Error handling                 | [`error-chain = "0.10.0"`] | [📖][d-error-chain] |
+| JSON                           | [`json = "0.11.6"`]        | [📖][d-json]        |
+| Global initialization          | [`lazy_static = "0.2.8"`]  | [📖][d-lazy_static] |
+| C interop                      | [`libc = "0.2.23"`]        | [📖][d-libc]        |
+| Logging                        | [`log = "0.3.7"`]          | [📖][d-log]         |
+| Multidimensional arrays        | [`ndarray = "0.9.1"`]      | [📖][d-ndarray]     |
+| Big, rational, complex numbers | [`num = "0.1.37"`]         | [📖][d-num]         |
+| Random numbers                 | [`rand = "0.3.15"`]        | [📖][d-rand]        |
+| Parallel iteration             | [`rayon = "0.7.0"`]        | [📖][d-rayon]       |
+| Regular expressions            | [`regex = "0.2.2"`]        | [📖][d-regex]       |
+| HTTP client                    | [`reqwest = "0.6.2"`]      | [📖][d-reqwest]     |
+| Serialization                  | [`serde = "1.0.7"`]       | [📖][d-serde]       |
+| Temporary directories          | [`tempdir = "0.3.5"`]      | [📖][d-tempdir]     |
+| Configuration files            | [`toml = "0.4.1"`]         | [📖][d-toml]        |
+| URLs                           | [`url = "1.4.0"`]          | [📖][d-url]         |
 
-[`bitflags = "0.7.0"`]: #bitflags
+[`bitflags = "0.9.0"`]: #bitflags
 [`byteorder = "1.0.0"`]: #byteorder
-[`chrono = "0.3.0"`]: #chrono
-[`clap = "2.20.1"`]: #clap
-[`error-chain = "0.8.1"`]: #error-chain
-[`json = "0.11.5"`]: #json
-[`lazy_static = "0.2.2"`]: #lazy_static
-[`libc = "0.2.20"`]: #libc
-[`log = "0.3.6"`]: #log
-[`ndarray = "0.7.3"`]: #ndarray
-[`num = "0.1.36"`]: #num
+[`chrono = "0.3.1"`]: #chrono
+[`clap = "2.24.2"`]: #clap
+[`error-chain = "0.10.0"`]: #error-chain
+[`json = "0.11.6"`]: #json
+[`lazy_static = "0.2.8"`]: #lazy_static
+[`libc = "0.2.23"`]: #libc
+[`log = "0.3.7"`]: #log
+[`ndarray = "0.9.1"`]: #ndarray
+[`num = "0.1.37"`]: #num
 [`rand = "0.3.15"`]: #rand
-[`rayon = "0.6.0"`]: #rayon
-[`regex = "0.2.1"`]: #regex
-[`reqwest = "0.4.0"`]: #reqwest
-[`serde = "0.9.10"`]: #serde
+[`rayon = "0.7.0"`]: #rayon
+[`regex = "0.2.2"`]: #regex
+[`reqwest = "0.6.2"`]: #reqwest
+[`serde = "1.0.7"`]: #serde
 [`tempdir = "0.3.5"`]: #tempdir
-[`toml = "0.3.1"`]: #toml
+[`toml = "0.4.1"`]: #toml
 [`url = "1.4.0"`]: #url
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
 <a id="bitflags"></a>
-### `bitflags = "0.7.0"` &emsp; [📖][d-bitflags]
+### `bitflags = "0.9.0"` &emsp; [📖][d-bitflags]
 
-[d-bitflags]: https://docs.rs/bitflags/0.7.0/bitflags/
+[d-bitflags]: https://docs.rs/bitflags/0.9.0/bitflags/
 
 The only thing this crate does is export the
 [`bitflags!`](http://doc.rust-lang.org/bitflags/bitflags/macro.bitflags!.html#example)
@@ -71,7 +71,7 @@ as bits to express sets of options.
 extern crate bitflags;
 
 bitflags! {
-    flags Flags: u32 {
+    struct Flags: u32 {
         const FLAG_A       = 0b00000001,
         const FLAG_B       = 0b00000010,
         const FLAG_C       = 0b00000100,
@@ -133,9 +133,9 @@ fn main() {
 
 
 <a id="chrono"></a>
-### `chrono = "0.3.0"` &emsp; [📖][d-chrono]
+### `chrono = "0.3.1"` &emsp; [📖][d-chrono]
 
-[d-chrono]: https://docs.rs/chrono/0.3.0/chrono/
+[d-chrono]: https://docs.rs/chrono/0.3.1/chrono/
 
 Date and time types.
 
@@ -167,9 +167,9 @@ fn main() {
 
 
 <a id="clap"></a>
-### `clap = "2.20.1"` &emsp; [📖][d-clap]
+### `clap = "2.24.2"` &emsp; [📖][d-clap]
 
-[d-clap]: https://docs.rs/clap/2.20.1/clap/
+[d-clap]: https://docs.rs/clap/2.24.2/clap/
 
 Clap is a command line argument parser that is easy to
 use and is highly configurable.
@@ -231,7 +231,7 @@ fn main() {
 
 
 <a id="error-chain"></a>
-### `error-chain = "0.8.1"` &emsp; [📖][d-error-chain]
+### `error-chain = "0.10.0"` &emsp; [📖][d-error-chain]
 
 [d-error-chain]: https://docs.rs/error-chain/0.8.1/error_chain/
 
@@ -309,9 +309,9 @@ fn run() -> Result<()> {
 
 
 <a id="json"></a>
-### `json = "0.11.5"` &emsp; [📖][d-json]
+### `json = "0.11.6"` &emsp; [📖][d-json]
 
-[d-json]: https://docs.rs/json/0.11.5/json/
+[d-json]: https://docs.rs/json/0.11.6/json/
 
 Access to [JSON], the "JavaScript Object Notation" format,
 widely used for transmission and storage of data on the Internet.
@@ -365,9 +365,9 @@ fn main() {
 
 
 <a id="lazy_static"></a>
-### `lazy_static = "0.2.2"` &emsp; [📖][d-lazy_static]
+### `lazy_static = "0.2.8"` &emsp; [📖][d-lazy_static]
 
-[d-lazy_static]: https://docs.rs/lazy_static/0.2.2/lazy_static
+[d-lazy_static]: https://docs.rs/lazy_static/0.2.8/lazy_static
 
 Rust has strict rules about accessing global state. In particular
 there is no ['life before main'] in Rust, so it's not possible to
@@ -412,9 +412,9 @@ fn main() {
 
 
 <a id="libc"></a>
-### `libc = "0.2.20"` &emsp; [📖][d-libc]
+### `libc = "0.2.23"` &emsp; [📖][d-libc]
 
-[d-libc]: https://docs.rs/libc/0.2.20/libc/
+[d-libc]: https://docs.rs/libc/0.2.23/libc/
 
 If you need to talk to foreign code, you need this crate. It exports C
 type and function definitions appropriate to each target platform Rust
@@ -446,9 +446,9 @@ fn main() {
 
 
 <a id="log"></a>
-### `log = "0.3.6"` &emsp; [📖][d-log]
+### `log = "0.3.7"` &emsp; [📖][d-log]
 
-[d-log]: https://docs.rs/log/0.3.6/log/
+[d-log]: https://docs.rs/log/0.3.7/log/
 
 The most common way to perform basic logging in Rust, with the
 `error!`, `warn!`, `info!`, and `debug!` macros. It is often
@@ -457,9 +457,9 @@ console, controlled by the `RUST_LOG` environment variable.
 This is the traditional logging crate used by `rustc`, and
 its functionality was once built in to the language.
 
-**Supplemental crates**: [`env_logger = "0.4.0"`]
+**Supplemental crates**: [`env_logger = "0.4.2"`]
 
-[`env_logger = "0.4.0"`]: https://docs.rs/env_logger/0.4.0/env_logger/
+[`env_logger = "0.4.2"`]: https://docs.rs/env_logger/0.4.2/env_logger/
 
 **Example**: [`examples/log.rs`]
 
@@ -494,9 +494,9 @@ fn main() {
 
 
 <a id="ndarray"></a>
-### `ndarray = "0.7.3"` &emsp; [📖][d-ndarray]
+### `ndarray = "0.9.1"` &emsp; [📖][d-ndarray]
 
-[d-ndarray]: https://docs.rs/ndarray/0.7.3/ndarray/
+[d-ndarray]: https://docs.rs/ndarray/0.9.1/ndarray/
 
 The ndarray crate provides an N-dimensional container for general
 elements and for numerics. The multidimensional array, otherwise known
@@ -552,9 +552,9 @@ fn main() {
 
 
 <a id="num"></a>
-### `num = "0.1.36"` &emsp; [📖][d-num]
+### `num = "0.1.37"` &emsp; [📖][d-num]
 
-[d-num]: https://docs.rs/num/0.1.36/num/
+[d-num]: https://docs.rs/num/0.1.37/num/
 
 Big integers, rational numbers, complex numbers, and numeric
 traits. This is a rust-lang crate that has persisted through Rust's
@@ -624,9 +624,9 @@ fn main() {
 
 
 <a id="rayon"></a>
-### `rayon = "0.6.0"` &emsp; [📖][d-rayon]
+### `rayon = "0.7.0"` &emsp; [📖][d-rayon]
 
-[d-rayon]: https://docs.rs/rayon/0.6.0/rayon/
+[d-rayon]: https://docs.rs/rayon/0.7.0/rayon/
 
 When people say that Rust makes parallelism easy, this
 is why. Rayon provides parallel iterators that make
@@ -687,9 +687,9 @@ fn partition<T: PartialOrd + Send>(v: &mut [T]) -> usize {
 
 
 <a id="regex"></a>
-### `regex = "0.2.1"` &emsp; [📖][d-regex]
+### `regex = "0.2.2"` &emsp; [📖][d-regex]
 
-[d-regex]: https://docs.rs/regex/0.2.1/regex/
+[d-regex]: https://docs.rs/regex/0.2.2/regex/
 
 Rust's regular expressions are [fast], like Rust is fast. Part of
 their power comes from a careful design that disallows back-references
@@ -724,9 +724,9 @@ fn main() {
 
 
 <a id="reqwest"></a>
-### `reqwest = "0.4.0"` &emsp; [📖][d-reqwest]
+### `reqwest = "0.6.2"` &emsp; [📖][d-reqwest]
 
-[d-reqwest]: https://docs.rs/reqwest/0.4.0/reqwest/
+[d-reqwest]: https://docs.rs/reqwest/0.6.2/reqwest/
 
 A simple HTTP and HTTPS client.
 
@@ -776,9 +776,9 @@ fn main() {
 
 
 <a id="serde"></a>
-### `serde = "0.9.10"` &emsp; [📖][d-serde]
+### `serde = "1.0.7"` &emsp; [📖][d-serde]
 
-[d-serde]: https://docs.rs/serde/0.9.10/serde/
+[d-serde]: https://docs.rs/serde/1.0.7/serde/
 
 Serialization and deserialization of Rust datastructures is fast
 and easy using the `serde` serialization framework. Simply
@@ -787,9 +787,9 @@ and serde will automatically convert them between formats like
 JSON, TOML, YAML, and more. To best understand serde, read
 its documentation at [serde.rs].
 
-**Supplemental crates**: [`serde_derive = "0.9.10"`],
-                         [`serde_json = "0.9.8"`],
-                         [`toml = "0.3.1"`]
+**Supplemental crates**: [`serde_derive = "1.0.7"`],
+                         [`serde_json = "1.0.2"`],
+                         [`toml = "0.4.1"`]
 
 **Example**: [`examples/serde.rs`]
 
@@ -832,9 +832,9 @@ fn main() {
 
 [serde.rs]: https://serde.rs/
 [`rustc-serialize`]: https://docs.rs/rustc-serialize
-[`serde_derive = "0.9.10"`]: https://docs.rs/serde_derive/0.9.10/serde_derive
-[`serde_json = "0.9.8"`]: https://docs.rs/serde_json/0.9.8/serde_json
-[`toml = "0.3.1"`]: https://docs.rs/toml/0.3.1/toml
+[`serde_derive = "1.0.7"`]: https://docs.rs/serde_derive/1.0.7/serde_derive
+[`serde_json = "1.0.2"`]: https://docs.rs/serde_json/1.0.2/serde_json
+[`toml = "0.4.1"`]: https://docs.rs/toml/0.4.1/toml
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
@@ -880,9 +880,9 @@ fn main() {
 
 
 <a id="toml"></a>
-### `toml = "0.3.1"` &emsp; [📖][d-toml]
+### `toml = "0.4.1"` &emsp; [📖][d-toml]
 
-[d-toml]: https://docs.rs/toml/0.3.1/toml/
+[d-toml]: https://docs.rs/toml/0.4.1/toml/
 
 [TOML](https://github.com/toml-lang/toml) is a common format for
 configuration files, like [Cargo.toml]. It's easy on the eyes, simple
