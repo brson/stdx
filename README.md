@@ -23,38 +23,16 @@ Current revision: `stdx` 0.117.0-rc, for Rust 1.17, April 27, 2017.
 | Parallel iteration             | [`rayon = "0.7.0"`]        | [📖][d-rayon]       |
 | Regular expressions            | [`regex = "0.2.2"`]        | [📖][d-regex]       |
 | HTTP client                    | [`reqwest = "0.6.2"`]      | [📖][d-reqwest]     |
-| Serialization                  | [`serde = "1.0.7"`]       | [📖][d-serde]       |
+| Serialization                  | [`serde = "1.0.7"`]        | [📖][d-serde]       |
 | Temporary directories          | [`tempdir = "0.3.5"`]      | [📖][d-tempdir]     |
 | Configuration files            | [`toml = "0.4.1"`]         | [📖][d-toml]        |
 | URLs                           | [`url = "1.4.0"`]          | [📖][d-url]         |
-
-[`bitflags = "0.9.0"`]: #bitflags
-[`byteorder = "1.0.0"`]: #byteorder
-[`chrono = "0.3.1"`]: #chrono
-[`clap = "2.24.2"`]: #clap
-[`error-chain = "0.10.0"`]: #error-chain
-[`json = "0.11.6"`]: #json
-[`lazy_static = "0.2.8"`]: #lazy_static
-[`libc = "0.2.23"`]: #libc
-[`log = "0.3.7"`]: #log
-[`ndarray = "0.9.1"`]: #ndarray
-[`num = "0.1.37"`]: #num
-[`rand = "0.3.15"`]: #rand
-[`rayon = "0.7.0"`]: #rayon
-[`regex = "0.2.2"`]: #regex
-[`reqwest = "0.6.2"`]: #reqwest
-[`serde = "1.0.7"`]: #serde
-[`tempdir = "0.3.5"`]: #tempdir
-[`toml = "0.4.1"`]: #toml
-[`url = "1.4.0"`]: #url
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
 <a id="bitflags"></a>
 ### `bitflags = "0.9.0"` &emsp; [📖][d-bitflags]
-
-[d-bitflags]: https://docs.rs/bitflags/0.9.0/bitflags/
 
 The only thing this crate does is export the
 [`bitflags!`](http://doc.rust-lang.org/bitflags/bitflags/macro.bitflags!.html#example)
@@ -97,8 +75,6 @@ fn main() {
 <a id="byteorder"></a>
 ### `byteorder = "1.0.0"` &emsp; [📖][d-byteorder]
 
-[d-byteorder]: https://docs.rs/byteorder/1.0.0/byteorder/
-
 Functions for converting between numbers and bytes, in
 little-endian, or big-endian orders.
 
@@ -135,8 +111,6 @@ fn main() {
 <a id="chrono"></a>
 ### `chrono = "0.3.1"` &emsp; [📖][d-chrono]
 
-[d-chrono]: https://docs.rs/chrono/0.3.1/chrono/
-
 Date and time types.
 
 **Example**: [`examples/chrono.rs`]
@@ -168,8 +142,6 @@ fn main() {
 
 <a id="clap"></a>
 ### `clap = "2.24.2"` &emsp; [📖][d-clap]
-
-[d-clap]: https://docs.rs/clap/2.24.2/clap/
 
 Clap is a command line argument parser that is easy to
 use and is highly configurable.
@@ -232,8 +204,6 @@ fn main() {
 
 <a id="error-chain"></a>
 ### `error-chain = "0.10.0"` &emsp; [📖][d-error-chain]
-
-[d-error-chain]: https://docs.rs/error-chain/0.8.1/error_chain/
 
 Rust programs that handle errors consistently are reliable programs.
 Even after one understands [error handling] in Rust, it can be
@@ -311,8 +281,6 @@ fn run() -> Result<()> {
 <a id="json"></a>
 ### `json = "0.11.6"` &emsp; [📖][d-json]
 
-[d-json]: https://docs.rs/json/0.11.6/json/
-
 Access to [JSON], the "JavaScript Object Notation" format,
 widely used for transmission and storage of data on the Internet.
 This crate can be used for reading, writing, and manipulation
@@ -367,8 +335,6 @@ fn main() {
 <a id="lazy_static"></a>
 ### `lazy_static = "0.2.8"` &emsp; [📖][d-lazy_static]
 
-[d-lazy_static]: https://docs.rs/lazy_static/0.2.8/lazy_static
-
 Rust has strict rules about accessing global state. In particular
 there is no ['life before main'] in Rust, so it's not possible to
 write a programmatic constructor for a global value that will be run
@@ -414,8 +380,6 @@ fn main() {
 <a id="libc"></a>
 ### `libc = "0.2.23"` &emsp; [📖][d-libc]
 
-[d-libc]: https://docs.rs/libc/0.2.23/libc/
-
 If you need to talk to foreign code, you need this crate. It exports C
 type and function definitions appropriate to each target platform Rust
 supports. It defines the standardized C features that are common
@@ -447,8 +411,6 @@ fn main() {
 
 <a id="log"></a>
 ### `log = "0.3.7"` &emsp; [📖][d-log]
-
-[d-log]: https://docs.rs/log/0.3.7/log/
 
 The most common way to perform basic logging in Rust, with the
 `error!`, `warn!`, `info!`, and `debug!` macros. It is often
@@ -487,16 +449,11 @@ fn main() {
 
 **Alternatives**: [`slog`], [`log4rs`]
 
-[`slog`]: https://docs.rs/slog
-[`log4rs`]: https://docs.rs/log4rs
-
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
 <a id="ndarray"></a>
 ### `ndarray = "0.9.1"` &emsp; [📖][d-ndarray]
-
-[d-ndarray]: https://docs.rs/ndarray/0.9.1/ndarray/
 
 The ndarray crate provides an N-dimensional container for general
 elements and for numerics. The multidimensional array, otherwise known
@@ -554,8 +511,6 @@ fn main() {
 <a id="num"></a>
 ### `num = "0.1.37"` &emsp; [📖][d-num]
 
-[d-num]: https://docs.rs/num/0.1.37/num/
-
 Big integers, rational numbers, complex numbers, and numeric
 traits. This is a rust-lang crate that has persisted through Rust's
 evolution but is somewhat unloved.
@@ -596,8 +551,6 @@ fn main() {
 <a id="rand"></a>
 ### `rand = "0.3.15"` &emsp; [📖][d-rand]
 
-[d-rand]: https://docs.rs/rand/0.3.15/rand/
-
 Random number generators. The defaults are cryptographically strong.
 
 **Example**: [`examples/rand.rs`]
@@ -625,8 +578,6 @@ fn main() {
 
 <a id="rayon"></a>
 ### `rayon = "0.7.0"` &emsp; [📖][d-rayon]
-
-[d-rayon]: https://docs.rs/rayon/0.7.0/rayon/
 
 When people say that Rust makes parallelism easy, this
 is why. Rayon provides parallel iterators that make
@@ -689,8 +640,6 @@ fn partition<T: PartialOrd + Send>(v: &mut [T]) -> usize {
 <a id="regex"></a>
 ### `regex = "0.2.2"` &emsp; [📖][d-regex]
 
-[d-regex]: https://docs.rs/regex/0.2.2/regex/
-
 Rust's regular expressions are [fast], like Rust is fast. Part of
 their power comes from a careful design that disallows back-references
 and arbitrary lookahead, creating predictable worst-case performance.
@@ -725,8 +674,6 @@ fn main() {
 
 <a id="reqwest"></a>
 ### `reqwest = "0.6.2"` &emsp; [📖][d-reqwest]
-
-[d-reqwest]: https://docs.rs/reqwest/0.6.2/reqwest/
 
 A simple HTTP and HTTPS client.
 
@@ -778,8 +725,6 @@ fn main() {
 <a id="serde"></a>
 ### `serde = "1.0.7"` &emsp; [📖][d-serde]
 
-[d-serde]: https://docs.rs/serde/1.0.7/serde/
-
 Serialization and deserialization of Rust datastructures is fast
 and easy using the `serde` serialization framework. Simply
 tag your data structures with `#[derive(Serialize, Deserialize)]`
@@ -830,19 +775,11 @@ fn main() {
 
 **Alternatives**: [`rustc-serialize`]
 
-[serde.rs]: https://serde.rs/
-[`rustc-serialize`]: https://docs.rs/rustc-serialize
-[`serde_derive = "1.0.7"`]: https://docs.rs/serde_derive/1.0.7/serde_derive
-[`serde_json = "1.0.2"`]: https://docs.rs/serde_json/1.0.2/serde_json
-[`toml = "0.4.1"`]: https://docs.rs/toml/0.4.1/toml
-
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
 <a id="tempdir"></a>
 ### `tempdir = "0.3.5"` &emsp; [📖][d-tempdir]
-
-[d-tempdir]: https://docs.rs/tempdir/0.3.5/tempdir/
 
 The most common way to create temporary directories in Rust,
 this crate was once part of the standard library.
@@ -882,8 +819,6 @@ fn main() {
 <a id="toml"></a>
 ### `toml = "0.4.1"` &emsp; [📖][d-toml]
 
-[d-toml]: https://docs.rs/toml/0.4.1/toml/
-
 [TOML](https://github.com/toml-lang/toml) is a common format for
 configuration files, like [Cargo.toml]. It's easy on the eyes, simple
 to parse, and serializes from Rust types with [`serde`](#serde).
@@ -915,8 +850,6 @@ fn main() {
 
 <a id="url"></a>
 ### `url = "1.4.0"` &emsp; [📖][d-url]
-
-[d-url]: https://docs.rs/url/1.4.0/url/
 
 The URL parser and type, originally created for [Servo].
 
@@ -1116,3 +1049,60 @@ copyright is owned by its contributors.
 [perm]: https://en.wikipedia.org/wiki/Permissive_free_software_licence
 [rustlice]: https://github.com/rust-lang/rust/blob/master/COPYRIGHT
 
+
+<!-- links -->
+
+# stdx crates
+
+[`bitflags = "0.9.0"`]: #bitflags
+[`byteorder = "1.0.0"`]: #byteorder
+[`chrono = "0.3.1"`]: #chrono
+[`clap = "2.24.2"`]: #clap
+[`error-chain = "0.10.0"`]: #error-chain
+[`json = "0.11.6"`]: #json
+[`lazy_static = "0.2.8"`]: #lazy_static
+[`libc = "0.2.23"`]: #libc
+[`log = "0.3.7"`]: #log
+[`ndarray = "0.9.1"`]: #ndarray
+[`num = "0.1.37"`]: #num
+[`rand = "0.3.15"`]: #rand
+[`rayon = "0.7.0"`]: #rayon
+[`regex = "0.2.2"`]: #regex
+[`reqwest = "0.6.2"`]: #reqwest
+[`serde = "1.0.7"`]: #serde
+[`tempdir = "0.3.5"`]: #tempdir
+[`toml = "0.4.1"`]: #toml
+[`url = "1.4.0"`]: #url
+
+# Supplemental crates
+
+[`serde_derive = "1.0.7"`]: https://docs.rs/serde_derive/1.0.7/serde_derive
+[`serde_json = "1.0.2"`]: https://docs.rs/serde_json/1.0.2/serde_json
+
+# Alternative crates
+
+[`rustc-serialize`]: https://docs.rs/rustc-serialize
+[`slog`]: https://docs.rs/slog
+[`log4rs`]: https://docs.rs/log4rs
+
+# stdx crate doc links
+
+[d-bitflags]: https://docs.rs/bitflags/0.9.0/bitflags/
+[d-byteorder]: https://docs.rs/byteorder/1.0.0/byteorder/
+[d-chrono]: https://docs.rs/chrono/0.3.1/chrono/
+[d-clap]: https://docs.rs/clap/2.24.2/clap/
+[d-error-chain]: https://docs.rs/error-chain/0.8.1/error_chain/
+[d-json]: https://docs.rs/json/0.11.6/json/
+[d-lazy_static]: https://docs.rs/lazy_static/0.2.8/lazy_static
+[d-libc]: https://docs.rs/libc/0.2.23/libc/
+[d-log]: https://docs.rs/log/0.3.7/log/
+[d-ndarray]: https://docs.rs/ndarray/0.9.1/ndarray/
+[d-num]: https://docs.rs/num/0.1.37/num/
+[d-rand]: https://docs.rs/rand/0.3.15/rand/
+[d-rayon]: https://docs.rs/rayon/0.7.0/rayon/
+[d-regex]: https://docs.rs/regex/0.2.2/regex/
+[d-reqwest]: https://docs.rs/reqwest/0.6.2/reqwest/
+[d-serde]: https://docs.rs/serde/1.0.7/serde/
+[d-tempdir]: https://docs.rs/tempdir/0.3.5/tempdir/
+[d-toml]: https://docs.rs/toml/0.4.1/toml/
+[d-url]: https://docs.rs/url/1.4.0/url/
