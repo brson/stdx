@@ -6,7 +6,7 @@ fn main() {
     let mut input = (0..1000).collect::<Vec<_>>();
 
     // Calculate the sum of squares
-    let sq_sum = input.par_iter()
+    let sq_sum: i32 = input.par_iter()
                       .map(|&i| i * i)
                       .sum();
 
