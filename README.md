@@ -13,7 +13,7 @@ Current revision: `stdx` 0.117.0-rc, for Rust 1.17, April 27, 2017.
 | Date and time                  | [`chrono = "0.3.1"`]       | [📖][d-chrono]      |
 | Command-line argument parsing  | [`clap = "2.24.2"`]        | [📖][d-clap]        |
 | Error handling                 | [`error-chain = "0.10.0"`] | [📖][d-error-chain] |
-| JSON                           | [`json = "0.11.6"`]        | [📖][d-json]        |
+| JSON                           | [`serde_json = "1.0.2"`]   | [📖][d-serde_json]  |
 | Global initialization          | [`lazy_static = "0.2.8"`]  | [📖][d-lazy_static] |
 | C interop                      | [`libc = "0.2.23"`]        | [📖][d-libc]        |
 | Logging                        | [`log = "0.3.7"`]          | [📖][d-log]         |
@@ -278,14 +278,14 @@ fn run() -> Result<()> {
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
-<a id="json"></a>
-### `json = "0.11.6"` &emsp; [📖][d-json]
+<a id="serde_json"></a>
+### `serde_json = "1.0.2"` &emsp; [📖][d-serde_json]
 
 Access to [JSON], the "JavaScript Object Notation" format,
 widely used for transmission and storage of data on the Internet.
 This crate can be used for reading, writing, and manipulation
-of arbitrary JSON; for simple serialization to Rust data structures,
-use [`serde`](#serde) and `serde_json`.
+of arbitrary JSON in addition to it's use for automatic serialization
+with [serde][serde.rs].
 
 [JSON]: http://json.org/
 
@@ -294,40 +294,30 @@ use [`serde`](#serde) and `serde_json`.
 [`examples/json.rs`]: examples/json.rs
 
 ```rust
-#[macro_use]
-extern crate json;
+extern crate serde_json;
+
+use serde_json::Value;
 
 fn main() {
-    let parsed = json::parse(r#"
-{
-    "code": 200,
-    "success": true,
-    "payload": {
-        "features": [
-            "awesome",
-            "easyAPI",
-            "lowLearningCurve"
-        ]
-    }
-}
+    // Some JSON input data as a &str. Maybe this comes from the user.
+    let data = r#"{
+                    "name": "John Doe",
+                    "age": 43,
+                    "phones": [
+                      "+44 1234567",
+                      "+44 2345678"
+                    ]
+                  }"#;
 
-"#).unwrap();
+    // Parse the string of data into serde_json::Value.
+    let v: Value = serde_json::from_str(data).unwrap();
 
-    let instantiated = object!{
-        "code" => 200,
-        "success" => true,
-        "payload" => object!{
-            "features" => array![
-                "awesome",
-                "easyAPI",
-                "lowLearningCurve"
-            ]
-        }
-    };
-
-    assert_eq!(parsed, instantiated);
+    // Access parts of the data by indexing with square brackets.
+    println!("Please call {} at the number {}", v["name"], v["phones"][0]);
 }
 ```
+
+**Alternatives**: [`json`]
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
@@ -1059,7 +1049,7 @@ copyright is owned by its contributors.
 [`chrono = "0.3.1"`]: #chrono
 [`clap = "2.24.2"`]: #clap
 [`error-chain = "0.10.0"`]: #error-chain
-[`json = "0.11.6"`]: #json
+[`serde_json = "1.0.2"`]: #serde_json
 [`lazy_static = "0.2.8"`]: #lazy_static
 [`libc = "0.2.23"`]: #libc
 [`log = "0.3.7"`]: #log
@@ -1077,13 +1067,13 @@ copyright is owned by its contributors.
 # Supplemental crates
 
 [`serde_derive = "1.0.7"`]: https://docs.rs/serde_derive/1.0.7/serde_derive
-[`serde_json = "1.0.2"`]: https://docs.rs/serde_json/1.0.2/serde_json
 
 # Alternative crates
 
 [`rustc-serialize`]: https://docs.rs/rustc-serialize
 [`slog`]: https://docs.rs/slog
 [`log4rs`]: https://docs.rs/log4rs
+[`json`]: https://docs.rs/json
 
 # stdx crate doc links
 
@@ -1092,7 +1082,7 @@ copyright is owned by its contributors.
 [d-chrono]: https://docs.rs/chrono/0.3.1/chrono/
 [d-clap]: https://docs.rs/clap/2.24.2/clap/
 [d-error-chain]: https://docs.rs/error-chain/0.8.1/error_chain/
-[d-json]: https://docs.rs/json/0.11.6/json/
+[d-serde_json]: https://docs.rs/serde_json/1.0.2/serde_json/
 [d-lazy_static]: https://docs.rs/lazy_static/0.2.8/lazy_static
 [d-libc]: https://docs.rs/libc/0.2.23/libc/
 [d-log]: https://docs.rs/log/0.3.7/log/

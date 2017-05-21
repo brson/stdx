@@ -14,7 +14,7 @@ byteorder = "1.0.0"
 chrono = { version = "0.3.1", features = ["serde"] }
 clap = "2.24.2"
 error-chain = "0.10.0"
-json = "0.11.6"
+serde_json = "1.0.2"
 lazy_static = "0.2.8"
 libc = "0.2.23"
 log = "0.3.7"
@@ -32,4 +32,3 @@ url = "1.4.0"
 # Supplemental dependencies
 env_logger = "0.4.2"
 serde_derive = "1.0.7"
-serde_json = "1.0.2"
