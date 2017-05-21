@@ -1,11 +1,13 @@
 extern crate toml;
 
+use toml::Value;
+
 fn main() {
     let toml = r#"
     [test]
     foo = "bar"
 "#;
 
-    let value = toml::Parser::new(toml).parse().unwrap();
+    let value = toml.parse::<Value>().unwrap();
     println!("{:?}", value);
 }

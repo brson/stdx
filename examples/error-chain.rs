@@ -41,7 +41,6 @@ fn main() {
 // for which the error type is always our own `Error`.
 fn run() -> Result<()> {
     use std::fs::File;
-    use std::env;
 
     // Use chain_err to attach your own context to errors
     File::open("my secret file")
@@ -49,6 +48,4 @@ fn run() -> Result<()> {
 
     // Use the `bail!` macro to return an error Result, ala `println!`
     bail!("giving up");
-
-    Ok(())
 }
