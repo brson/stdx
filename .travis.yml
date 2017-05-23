@@ -1,0 +1,20 @@
+sudo: false
+language: rust
+
+rust: stable
+
+before_install:
+  - cargo install cargo-tree --debug
+  - export PATH=$HOME/.cargo/bin:$PATH
+
+script:
+  # Fail if there are any duplicate dependencies
+  - "[[ ! $(cargo tree -d | tee /dev/fd/2 ) ]]"
+
+# Copied from cargo-tree's .travis.yml
+addons:
+  apt:
+    sources:
+      - kalakris-cmake
+    packages:
+      - cmake
