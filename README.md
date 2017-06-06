@@ -13,7 +13,6 @@ Current revision: `stdx` 0.118.0-rc, for Rust 1.18, June 8, 2017.
 | Date and time                  | [`chrono = "0.3.1"`]       | [📖][d-chrono]      |
 | Command-line argument parsing  | [`clap = "2.24.2"`]        | [📖][d-clap]        |
 | Error handling                 | [`error-chain = "0.10.0"`] | [📖][d-error-chain] |
-| JSON                           | [`serde_json = "1.0.2"`]   | [📖][d-serde_json]  |
 | Global initialization          | [`lazy_static = "0.2.8"`]  | [📖][d-lazy_static] |
 | C interop                      | [`libc = "0.2.23"`]        | [📖][d-libc]        |
 | Logging                        | [`log = "0.3.8"`]          | [📖][d-log]         |
@@ -24,6 +23,7 @@ Current revision: `stdx` 0.118.0-rc, for Rust 1.18, June 8, 2017.
 | Regular expressions            | [`regex = "0.2.2"`]        | [📖][d-regex]       |
 | HTTP client                    | [`reqwest = "0.6.2"`]      | [📖][d-reqwest]     |
 | Serialization                  | [`serde = "1.0.8"`]        | [📖][d-serde]       |
+| JSON                           | [`serde_json = "1.0.2"`]   | [📖][d-serde_json]  |
 | Temporary directories          | [`tempdir = "0.3.5"`]      | [📖][d-tempdir]     |
 | Configuration files            | [`toml = "0.4.1"`]         | [📖][d-toml]        |
 | URLs                           | [`url = "1.4.1"`]          | [📖][d-url]         |
@@ -274,50 +274,6 @@ fn run() -> Result<()> {
 **Alternatives**: [`quick-error`]
 
 [`quick-error`]: https://docs.rs/quick-error/1.1.0/quick_error/
-
-&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
-
-
-<a id="serde_json"></a>
-### `serde_json = "1.0.2"` &emsp; [📖][d-serde_json]
-
-Access to [JSON], the "JavaScript Object Notation" format,
-widely used for transmission and storage of data on the Internet.
-This crate can be used for reading, writing, and manipulation
-of arbitrary JSON in addition to it's use for automatic serialization
-with [serde][serde.rs].
-
-[JSON]: http://json.org/
-
-**Example**: [`examples/json.rs`]
-
-[`examples/json.rs`]: examples/json.rs
-
-```rust
-extern crate serde_json;
-
-use serde_json::Value;
-
-fn main() {
-    // Some JSON input data as a &str. Maybe this comes from the user.
-    let data = r#"{
-                    "name": "John Doe",
-                    "age": 43,
-                    "phones": [
-                      "+44 1234567",
-                      "+44 2345678"
-                    ]
-                  }"#;
-
-    // Parse the string of data into serde_json::Value.
-    let v: Value = serde_json::from_str(data).unwrap();
-
-    // Access parts of the data by indexing with square brackets.
-    println!("Please call {} at the number {}", v["name"], v["phones"][0]);
-}
-```
-
-**Alternatives**: [`json`]
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
@@ -762,6 +718,50 @@ fn main() {
 ```
 
 **Alternatives**: [`rustc-serialize`]
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
+
+<a id="serde_json"></a>
+### `serde_json = "1.0.2"` &emsp; [📖][d-serde_json]
+
+Access to [JSON], the "JavaScript Object Notation" format,
+widely used for transmission and storage of data on the Internet.
+This crate can be used for reading, writing, and manipulation
+of arbitrary JSON in addition to it's use for automatic serialization
+with [serde][serde.rs].
+
+[JSON]: http://json.org/
+
+**Example**: [`examples/json.rs`]
+
+[`examples/json.rs`]: examples/json.rs
+
+```rust
+extern crate serde_json;
+
+use serde_json::Value;
+
+fn main() {
+    // Some JSON input data as a &str. Maybe this comes from the user.
+    let data = r#"{
+                    "name": "John Doe",
+                    "age": 43,
+                    "phones": [
+                      "+44 1234567",
+                      "+44 2345678"
+                    ]
+                  }"#;
+
+    // Parse the string of data into serde_json::Value.
+    let v: Value = serde_json::from_str(data).unwrap();
+
+    // Access parts of the data by indexing with square brackets.
+    println!("Please call {} at the number {}", v["name"], v["phones"][0]);
+}
+```
+
+**Alternatives**: [`json`]
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
