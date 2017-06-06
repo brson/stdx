@@ -1042,7 +1042,7 @@ copyright is owned by its contributors.
 
 <!-- links -->
 
-# stdx crates
+<!-- stdx crates -->
 
 [`bitflags = "0.9.0"`]: #bitflags
 [`byteorder = "1.0.0"`]: #byteorder
@@ -1064,18 +1064,18 @@ copyright is owned by its contributors.
 [`toml = "0.4.1"`]: #toml
 [`url = "1.4.0"`]: #url
 
-# Supplemental crates
+<!-- Supplemental crates -->
 
 [`serde_derive = "1.0.7"`]: https://docs.rs/serde_derive/1.0.7/serde_derive
 
-# Alternative crates
+<!-- Alternative crates -->
 
 [`rustc-serialize`]: https://docs.rs/rustc-serialize
 [`slog`]: https://docs.rs/slog
 [`log4rs`]: https://docs.rs/log4rs
 [`json`]: https://docs.rs/json
 
-# stdx crate doc links
+<!-- stdx crate doc links -->
 
 [d-bitflags]: https://docs.rs/bitflags/0.9.0/bitflags/
 [d-byteorder]: https://docs.rs/byteorder/1.0.0/byteorder/
