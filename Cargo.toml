@@ -24,7 +24,7 @@ num = "0.1.37"
 rand = "0.3.15"
 rayon = "0.7.1"
 regex = "0.2.2"
-reqwest = "0.6.2"
+reqwest = { version = "0.6.2", features = ["serde"] }
 serde = "1.0.8"
 tempdir = "0.3.5"
 toml = "0.4.1"
