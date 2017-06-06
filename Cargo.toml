@@ -1,6 +1,6 @@
 [package]
 name = "stdx"
-version = "0.117.0-rc"
+version = "0.118.0-rc"
 authors = ["Brian Anderson <banderson@mozilla.com>"]
 description = "The missing batteries of Rust"
 license = "MIT/Apache-2.0"
@@ -9,7 +9,7 @@ license = "MIT/Apache-2.0"
 
 # If you update these also update all the versions in README.md
 
-bitflags = "0.9.0"
+bitflags = "0.9.1"
 byteorder = "1.0.0"
 chrono = { version = "0.3.1", features = ["serde"] }
 clap = "2.24.2"
@@ -17,18 +17,18 @@ error-chain = "0.10.0"
 serde_json = "1.0.2"
 lazy_static = "0.2.8"
 libc = "0.2.23"
-log = "0.3.7"
+log = "0.3.8"
 ndarray = { version = "0.9.1", features = ["serde"] }
 num = "0.1.37"
 rand = "0.3.15"
-rayon = "0.7.0"
+rayon = "0.7.1"
 regex = "0.2.2"
 reqwest = "0.6.2"
-serde = "1.0.7"
+serde = "1.0.8"
 tempdir = "0.3.5"
 toml = "0.4.1"
-url = "1.4.0"
+url = "1.4.1"
 
 # Supplemental dependencies
-env_logger = "0.4.2"
-serde_derive = "1.0.7"
+env_logger = "0.4.3"
+serde_derive = "1.0.8"

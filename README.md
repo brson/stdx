@@ -4,11 +4,11 @@
 New to Rust and don't yet know what crates to use?
 [**stdx has the best crates**](#about-stdx).
 
-Current revision: `stdx` 0.117.0-rc, for Rust 1.17, April 27, 2017.
+Current revision: `stdx` 0.118.0-rc, for Rust 1.18, June 8, 2017.
 
 | Feature                        | Crate                      |                    |
 |--------------------------------|----------------------------|--------------------|
-| Bitfields                      | [`bitflags = "0.9.0"`]     | [📖][d-bitflags]    |
+| Bitfields                      | [`bitflags = "0.9.1"`]     | [📖][d-bitflags]    |
 | Byte order conversion          | [`byteorder = "1.0.0"`]    | [📖][d-byteorder]   |
 | Date and time                  | [`chrono = "0.3.1"`]       | [📖][d-chrono]      |
 | Command-line argument parsing  | [`clap = "2.24.2"`]        | [📖][d-clap]        |
@@ -16,23 +16,23 @@ Current revision: `stdx` 0.117.0-rc, for Rust 1.17, April 27, 2017.
 | JSON                           | [`serde_json = "1.0.2"`]   | [📖][d-serde_json]  |
 | Global initialization          | [`lazy_static = "0.2.8"`]  | [📖][d-lazy_static] |
 | C interop                      | [`libc = "0.2.23"`]        | [📖][d-libc]        |
-| Logging                        | [`log = "0.3.7"`]          | [📖][d-log]         |
+| Logging                        | [`log = "0.3.8"`]          | [📖][d-log]         |
 | Multidimensional arrays        | [`ndarray = "0.9.1"`]      | [📖][d-ndarray]     |
 | Big, rational, complex numbers | [`num = "0.1.37"`]         | [📖][d-num]         |
 | Random numbers                 | [`rand = "0.3.15"`]        | [📖][d-rand]        |
-| Parallel iteration             | [`rayon = "0.7.0"`]        | [📖][d-rayon]       |
+| Parallel iteration             | [`rayon = "0.7.1"`]        | [📖][d-rayon]       |
 | Regular expressions            | [`regex = "0.2.2"`]        | [📖][d-regex]       |
 | HTTP client                    | [`reqwest = "0.6.2"`]      | [📖][d-reqwest]     |
-| Serialization                  | [`serde = "1.0.7"`]        | [📖][d-serde]       |
+| Serialization                  | [`serde = "1.0.8"`]        | [📖][d-serde]       |
 | Temporary directories          | [`tempdir = "0.3.5"`]      | [📖][d-tempdir]     |
 | Configuration files            | [`toml = "0.4.1"`]         | [📖][d-toml]        |
-| URLs                           | [`url = "1.4.0"`]          | [📖][d-url]         |
+| URLs                           | [`url = "1.4.1"`]          | [📖][d-url]         |
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
 <a id="bitflags"></a>
-### `bitflags = "0.9.0"` &emsp; [📖][d-bitflags]
+### `bitflags = "0.9.1"` &emsp; [📖][d-bitflags]
 
 The only thing this crate does is export the
 [`bitflags!`](http://doc.rust-lang.org/bitflags/bitflags/macro.bitflags!.html#example)
@@ -400,7 +400,7 @@ fn main() {
 
 
 <a id="log"></a>
-### `log = "0.3.7"` &emsp; [📖][d-log]
+### `log = "0.3.8"` &emsp; [📖][d-log]
 
 The most common way to perform basic logging in Rust, with the
 `error!`, `warn!`, `info!`, and `debug!` macros. It is often
@@ -409,9 +409,7 @@ console, controlled by the `RUST_LOG` environment variable.
 This is the traditional logging crate used by `rustc`, and
 its functionality was once built in to the language.
 
-**Supplemental crates**: [`env_logger = "0.4.2"`]
-
-[`env_logger = "0.4.2"`]: https://docs.rs/env_logger/0.4.2/env_logger/
+**Supplemental crates**: [`env_logger = "0.4.3"`]
 
 **Example**: [`examples/log.rs`]
 
@@ -567,7 +565,7 @@ fn main() {
 
 
 <a id="rayon"></a>
-### `rayon = "0.7.0"` &emsp; [📖][d-rayon]
+### `rayon = "0.7.1"` &emsp; [📖][d-rayon]
 
 When people say that Rust makes parallelism easy, this
 is why. Rayon provides parallel iterators that make
@@ -713,7 +711,7 @@ fn main() {
 
 
 <a id="serde"></a>
-### `serde = "1.0.7"` &emsp; [📖][d-serde]
+### `serde = "1.0.8"` &emsp; [📖][d-serde]
 
 Serialization and deserialization of Rust datastructures is fast
 and easy using the `serde` serialization framework. Simply
@@ -722,7 +720,7 @@ and serde will automatically convert them between formats like
 JSON, TOML, YAML, and more. To best understand serde, read
 its documentation at [serde.rs].
 
-**Supplemental crates**: [`serde_derive = "1.0.7"`],
+**Supplemental crates**: [`serde_derive = "1.0.8"`],
                          [`serde_json = "1.0.2"`],
                          [`toml = "0.4.1"`]
 
@@ -839,7 +837,7 @@ fn main() {
 
 
 <a id="url"></a>
-### `url = "1.4.0"` &emsp; [📖][d-url]
+### `url = "1.4.1"` &emsp; [📖][d-url]
 
 The URL parser and type, originally created for [Servo].
 
@@ -915,7 +913,7 @@ section of your `Cargo.toml` like so:
 
 ```toml
 [dependencies]
-bitflags = "0.9.0"
+bitflags = "0.9.1"
 ```
 
 Then copy the full example into your `examples` directory, like
@@ -1052,21 +1050,22 @@ copyright is owned by its contributors.
 [`serde_json = "1.0.2"`]: #serde_json
 [`lazy_static = "0.2.8"`]: #lazy_static
 [`libc = "0.2.23"`]: #libc
-[`log = "0.3.7"`]: #log
+[`log = "0.3.8"`]: #log
 [`ndarray = "0.9.1"`]: #ndarray
 [`num = "0.1.37"`]: #num
 [`rand = "0.3.15"`]: #rand
-[`rayon = "0.7.0"`]: #rayon
+[`rayon = "0.7.1"`]: #rayon
 [`regex = "0.2.2"`]: #regex
 [`reqwest = "0.6.2"`]: #reqwest
-[`serde = "1.0.7"`]: #serde
+[`serde = "1.0.8"`]: #serde
 [`tempdir = "0.3.5"`]: #tempdir
 [`toml = "0.4.1"`]: #toml
-[`url = "1.4.0"`]: #url
+[`url = "1.4.1"`]: #url
 
 <!-- Supplemental crates -->
 
-[`serde_derive = "1.0.7"`]: https://docs.rs/serde_derive/1.0.7/serde_derive
+[`env_logger = "0.4.3"`]: https://docs.rs/env_logger/0.4.3/env_logger/
+[`serde_derive = "1.0.8"`]: https://docs.rs/serde_derive/1.0.8/serde_derive
 
 <!-- Alternative crates -->
 
@@ -1077,7 +1076,7 @@ copyright is owned by its contributors.
 
 <!-- stdx crate doc links -->
 
-[d-bitflags]: https://docs.rs/bitflags/0.9.0/bitflags/
+[d-bitflags]: https://docs.rs/bitflags/0.9.1/bitflags/
 [d-byteorder]: https://docs.rs/byteorder/1.0.0/byteorder/
 [d-chrono]: https://docs.rs/chrono/0.3.1/chrono/
 [d-clap]: https://docs.rs/clap/2.24.2/clap/
@@ -1085,14 +1084,14 @@ copyright is owned by its contributors.
 [d-serde_json]: https://docs.rs/serde_json/1.0.2/serde_json/
 [d-lazy_static]: https://docs.rs/lazy_static/0.2.8/lazy_static
 [d-libc]: https://docs.rs/libc/0.2.23/libc/
-[d-log]: https://docs.rs/log/0.3.7/log/
+[d-log]: https://docs.rs/log/0.3.8/log/
 [d-ndarray]: https://docs.rs/ndarray/0.9.1/ndarray/
 [d-num]: https://docs.rs/num/0.1.37/num/
 [d-rand]: https://docs.rs/rand/0.3.15/rand/
-[d-rayon]: https://docs.rs/rayon/0.7.0/rayon/
+[d-rayon]: https://docs.rs/rayon/0.7.1/rayon/
 [d-regex]: https://docs.rs/regex/0.2.2/regex/
 [d-reqwest]: https://docs.rs/reqwest/0.6.2/reqwest/
-[d-serde]: https://docs.rs/serde/1.0.7/serde/
+[d-serde]: https://docs.rs/serde/1.0.8/serde/
 [d-tempdir]: https://docs.rs/tempdir/0.3.5/tempdir/
 [d-toml]: https://docs.rs/toml/0.4.1/toml/
-[d-url]: https://docs.rs/url/1.4.0/url/
+[d-url]: https://docs.rs/url/1.4.1/url/
