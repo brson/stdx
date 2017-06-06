@@ -915,7 +915,7 @@ section of your `Cargo.toml` like so:
 
 ```toml
 [dependencies]
-bitflags = "0.7.0"
+bitflags = "0.9.0"
 ```
 
 Then copy the full example into your `examples` directory, like
