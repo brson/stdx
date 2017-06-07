@@ -13,7 +13,7 @@ Current revision: `stdx` 0.118.0-rc, for Rust 1.18, June 8, 2017.
 | Date and time                  | [`chrono = "0.3.1"`]       | [📖][d-chrono]      |
 | Command-line argument parsing  | [`clap = "2.24.2"`]        | [📖][d-clap]        |
 | Error handling                 | [`error-chain = "0.10.0"`] | [📖][d-error-chain] |
-| Compression - deflate (gzip)   | [`flate2 = "0.2.19"]       | [📖][d-flate2]      |
+| Compression - deflate (gzip)   | [`flate2 = "0.2.19"`]      | [📖][d-flate2]      |
 | Global initialization          | [`lazy_static = "0.2.8"`]  | [📖][d-lazy_static] |
 | C interop                      | [`libc = "0.2.23"`]        | [📖][d-libc]        |
 | Logging                        | [`log = "0.3.8"`]          | [📖][d-log]         |
@@ -797,7 +797,7 @@ fn main() {
 The "tar" archive format is in common use on the web. It is most often
 found in the form of `.tar.gz` files (called "tarballs") that have
 been compressed with the [DEFLATE] algorithm, which the `tar` crate
-can decompress when paired with the [`flate2`][flate] crate.
+can decompress when paired with the [`flate2`][flate2] crate.
 
 **Example**: [`examples/tar.rs`]
 
@@ -1106,11 +1106,12 @@ copyright is owned by its contributors.
 
 <!-- stdx crates -->
 
-[`bitflags = "0.9.0"`]: #bitflags
+[`bitflags = "0.9.1"`]: #bitflags
 [`byteorder = "1.0.0"`]: #byteorder
 [`chrono = "0.3.1"`]: #chrono
 [`clap = "2.24.2"`]: #clap
 [`error-chain = "0.10.0"`]: #error-chain
+[`flate2 = "0.2.19"`]: #flate2
 [`serde_json = "1.0.2"`]: #serde_json
 [`lazy_static = "0.2.8"`]: #lazy_static
 [`libc = "0.2.23"`]: #libc
