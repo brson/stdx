@@ -13,6 +13,7 @@ Current revision: `stdx` 0.118.0-rc, for Rust 1.18, June 8, 2017.
 | Date and time                  | [`chrono = "0.3.1"`]       | [📖][d-chrono]      |
 | Command-line argument parsing  | [`clap = "2.24.2"`]        | [📖][d-clap]        |
 | Error handling                 | [`error-chain = "0.10.0"`] | [📖][d-error-chain] |
+| Compression - deflate (gzip)   | [`flate2 = "0.2.19"]       | [📖][d-flate2]      |
 | Global initialization          | [`lazy_static = "0.2.8"`]  | [📖][d-lazy_static] |
 | C interop                      | [`libc = "0.2.23"`]        | [📖][d-libc]        |
 | Logging                        | [`log = "0.3.8"`]          | [📖][d-log]         |
@@ -24,6 +25,7 @@ Current revision: `stdx` 0.118.0-rc, for Rust 1.18, June 8, 2017.
 | HTTP client                    | [`reqwest = "0.6.2"`]      | [📖][d-reqwest]     |
 | Serialization                  | [`serde = "1.0.8"`]        | [📖][d-serde]       |
 | JSON                           | [`serde_json = "1.0.2"`]   | [📖][d-serde_json]  |
+| Tar archives                   | [`tar = "0.4.13"`]         | [📖][d-tar]  |
 | Temporary directories          | [`tempdir = "0.3.5"`]      | [📖][d-tempdir]     |
 | Configuration files            | [`toml = "0.4.1"`]         | [📖][d-toml]        |
 | URLs                           | [`url = "1.4.1"`]          | [📖][d-url]         |
@@ -274,6 +276,46 @@ fn run() -> Result<()> {
 **Alternatives**: [`quick-error`]
 
 [`quick-error`]: https://docs.rs/quick-error/1.1.0/quick_error/
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
+
+<a id="flate2"></a>
+### `flate2 = "0.2.19"` &emsp; [📖][d-flate2]
+
+Compression and decompression using the [DEFLATE] algorithm.
+
+**Example**: [`examples/flate2.rs`]
+
+[`examples/flate2.rs`]: examples/flate2.rs
+
+```rust
+extern crate flate2;
+extern crate tar;
+
+use flate2::read::GzDecoder;
+use std::env;
+use std::fs::File;
+use std::io::{self, BufReader};
+use tar::Archive;
+
+fn run() -> Result<(), io::Error> {
+    let mut args = env::args().skip(1);
+    let tarball = args.next().expect("incorrect argument");
+    let outdir = args.next().expect("incorrect arguments");
+
+    let archive = File::open(tarball)?;
+    let archive = BufReader::new(archive);
+    let archive = GzDecoder::new(archive)?;
+    let mut archive = Archive::new(archive);
+
+    archive.unpack(outdir)?;
+
+    Ok(())
+}
+
+fn main() { run().unwrap() }
+```
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
@@ -766,6 +808,49 @@ fn main() {
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+<a id="tar"></a>
+### `tar = "0.4.13"` &emsp; [📖][d-tar]
+
+The "tar" archive format is in common use on the web. It is most often
+found in the form of `.tar.gz` files (called "tarballs") that have
+been compressed with the [DEFLATE] algorithm, which the `tar` crate
+can decompress when paired with the [`flate2`][flate] crate.
+
+**Example**: [`examples/tar.rs`]
+
+[`examples/tar.rs`]: examples/tar.rs
+
+```rust
+extern crate flate2;
+extern crate tar;
+
+use flate2::read::GzDecoder;
+use std::env;
+use std::fs::File;
+use std::io::{self, BufReader};
+use tar::Archive;
+
+fn run() -> Result<(), io::Error> {
+    let mut args = env::args().skip(1);
+    let tarball = args.next().expect("incorrect argument");
+    let outdir = args.next().expect("incorrect arguments");
+
+    let archive = File::open(tarball)?;
+    let archive = BufReader::new(archive);
+    let archive = GzDecoder::new(archive)?;
+    let mut archive = Archive::new(archive);
+
+    archive.unpack(outdir)?;
+
+    Ok(())
+}
+
+fn main() { run().unwrap() }
+```
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
+
 <a id="tempdir"></a>
 ### `tempdir = "0.3.5"` &emsp; [📖][d-tempdir]
 
@@ -1059,6 +1144,7 @@ copyright is owned by its contributors.
 [`reqwest = "0.6.2"`]: #reqwest
 [`serde = "1.0.8"`]: #serde
 [`tempdir = "0.3.5"`]: #tempdir
+[`tar = "0.4.13"`]: #tar
 [`toml = "0.4.1"`]: #toml
 [`url = "1.4.1"`]: #url
 
@@ -1081,6 +1167,7 @@ copyright is owned by its contributors.
 [d-chrono]: https://docs.rs/chrono/0.3.1/chrono/
 [d-clap]: https://docs.rs/clap/2.24.2/clap/
 [d-error-chain]: https://docs.rs/error-chain/0.8.1/error_chain/
+[d-flate2]: https://docs.rs/flate2/0.2.19/flate2/
 [d-serde_json]: https://docs.rs/serde_json/1.0.2/serde_json/
 [d-lazy_static]: https://docs.rs/lazy_static/0.2.8/lazy_static
 [d-libc]: https://docs.rs/libc/0.2.23/libc/
@@ -1092,6 +1179,11 @@ copyright is owned by its contributors.
 [d-regex]: https://docs.rs/regex/0.2.2/regex/
 [d-reqwest]: https://docs.rs/reqwest/0.6.2/reqwest/
 [d-serde]: https://docs.rs/serde/1.0.8/serde/
+[d-tar]: https://docs.rs/tar/0.4.13/tar/
 [d-tempdir]: https://docs.rs/tempdir/0.3.5/tempdir/
 [d-toml]: https://docs.rs/toml/0.4.1/toml/
 [d-url]: https://docs.rs/url/1.4.1/url/
+
+<!-- other links -->
+
+[DEFLATE]: https://en.wikipedia.org/wiki/DEFLATE
