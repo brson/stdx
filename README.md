@@ -199,8 +199,6 @@ fn main() {
 
 **Alternatives**: [`docopt`]
 
-[`docopt`]: https://docs.rs/docopt
-
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
@@ -212,8 +210,6 @@ Even after one understands [error handling] in Rust, it can be
 difficult to grasp and implement its best practices. `error-chain`
 helps you define your own error type that works with the `?` operator
 to make error handling in Rust simple and elegant.
-
-[error handling]: https://rust-lang.github.io/book/ch09-00-error-handling.html
 
 **Example**: [`examples/error-chain.rs`]
 
@@ -275,8 +271,6 @@ fn run() -> Result<()> {
 
 **Alternatives**: [`quick-error`]
 
-[`quick-error`]: https://docs.rs/quick-error/1.1.0/quick_error/
-
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
@@ -329,8 +323,6 @@ write a programmatic constructor for a global value that will be run
 at startup. Instead, Rust prefers lazy execution for global
 initialization, and the `lazy_static!` macro does just that.
 
-['life before main']: https://isocpp.org/wiki/faq/ctors#static-init-order
-
 **Example**: [`examples/lazy_static.rs`]
 
 [`examples/lazy_static.rs`]: examples/lazy_static.rs
@@ -374,11 +366,6 @@ supports. It defines the standardized C features that are common
 across all platforms as well as non-standard features specific to the
 platform C libraries. For more platform-specific FFI definitions
 see [`nix`] and [`winapi`].
-
-**Supplemental crates**: [`nix`], [`winapi`]
-
-[`nix`]: https://docs.rs/nix
-[`winapi`]: https://docs.rs/winapi
 
 **Example**: [`examples/libc.rs`]
 
@@ -630,8 +617,6 @@ Rust's regular expressions are [fast], like Rust is fast. Part of
 their power comes from a careful design that disallows back-references
 and arbitrary lookahead, creating predictable worst-case performance.
 
-[fast]: http://blog.burntsushi.net/ripgrep/
-
 **Example**: [`examples/regex.rs`]
 
 [`examples/regex.rs`]: examples/regex.rs
@@ -773,8 +758,6 @@ This crate can be used for reading, writing, and manipulation
 of arbitrary JSON in addition to it's use for automatic serialization
 with [serde][serde.rs].
 
-[JSON]: http://json.org/
-
 **Example**: [`examples/json.rs`]
 
 [`examples/json.rs`]: examples/json.rs
@@ -896,8 +879,6 @@ fn main() {
 configuration files, like [Cargo.toml]. It's easy on the eyes, simple
 to parse, and serializes from Rust types with [`serde`](#serde).
 
-[Cargo.toml]: http://doc.crates.io/manifest.html
-
 **Example**: [`examples/toml.rs`]
 
 [`examples/toml.rs`]: examples/toml.rs
@@ -925,8 +906,6 @@ fn main() {
 ### `url = "1.4.1"` &emsp; [📖][d-url]
 
 The URL parser and type, originally created for [Servo].
-
-[Servo]: https://servo.org
 
 **Example**: [`examples/url.rs`]
 
@@ -1155,10 +1134,12 @@ copyright is owned by its contributors.
 
 <!-- Alternative crates -->
 
+[`json`]: https://docs.rs/json
+[`log4rs`]: https://docs.rs/log4rs
 [`rustc-serialize`]: https://docs.rs/rustc-serialize
 [`slog`]: https://docs.rs/slog
-[`log4rs`]: https://docs.rs/log4rs
-[`json`]: https://docs.rs/json
+[`quick-error`]: https://docs.rs/quick-error
+[`docopt`]: https://docs.rs/docopt
 
 <!-- stdx crate doc links -->
 
@@ -1168,7 +1149,6 @@ copyright is owned by its contributors.
 [d-clap]: https://docs.rs/clap/2.24.2/clap/
 [d-error-chain]: https://docs.rs/error-chain/0.8.1/error_chain/
 [d-flate2]: https://docs.rs/flate2/0.2.19/flate2/
-[d-serde_json]: https://docs.rs/serde_json/1.0.2/serde_json/
 [d-lazy_static]: https://docs.rs/lazy_static/0.2.8/lazy_static
 [d-libc]: https://docs.rs/libc/0.2.23/libc/
 [d-log]: https://docs.rs/log/0.3.8/log/
@@ -1179,6 +1159,7 @@ copyright is owned by its contributors.
 [d-regex]: https://docs.rs/regex/0.2.2/regex/
 [d-reqwest]: https://docs.rs/reqwest/0.6.2/reqwest/
 [d-serde]: https://docs.rs/serde/1.0.8/serde/
+[d-serde_json]: https://docs.rs/serde_json/1.0.2/serde_json/
 [d-tar]: https://docs.rs/tar/0.4.13/tar/
 [d-tempdir]: https://docs.rs/tempdir/0.3.5/tempdir/
 [d-toml]: https://docs.rs/toml/0.4.1/toml/
@@ -1187,3 +1168,9 @@ copyright is owned by its contributors.
 <!-- other links -->
 
 [DEFLATE]: https://en.wikipedia.org/wiki/DEFLATE
+[error handling]: https://rust-lang.github.io/book/ch09-00-error-handling.html
+['life before main']: https://isocpp.org/wiki/faq/ctors#static-init-order
+[fast]: http://blog.burntsushi.net/ripgrep/
+[JSON]: http://json.org/
+[Cargo.toml]: http://doc.crates.io/manifest.html
+[Servo]: https://servo.org
