@@ -19,6 +19,7 @@ flate2 = "0.2.19"
 lazy_static = "0.2.8"
 libc = "0.2.23"
 log = "0.3.8"
+memmap = "0.5.2"
 # FIXME bluss/rust-ndarray#314 serde
 ndarray = "0.9.1"
 num = "0.1.37"
