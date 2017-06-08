@@ -1201,6 +1201,7 @@ copyright is owned by its contributors.
 [error handling]: https://rust-lang.github.io/book/ch09-00-error-handling.html
 ['life before main']: https://isocpp.org/wiki/faq/ctors#static-init-order
 [fast]: http://blog.burntsushi.net/ripgrep/
+[flate2]: #flate2
 [JSON]: http://json.org/
 [Cargo.toml]: http://doc.crates.io/manifest.html
 [Servo]: https://servo.org
