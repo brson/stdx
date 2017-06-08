@@ -1044,6 +1044,11 @@ All crates must work on Rust's tier-1 platforms, currently x86 Linux,
 OS X, and Windows.
 
 
+## Contributing
+
+See [CONTRIBUTING.md].
+
+
 ## License
 
 `stdx` and the crates it links to are licensed under various
