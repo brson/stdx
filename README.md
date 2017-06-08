@@ -44,8 +44,6 @@ as bits to express sets of options.
 
 **Example**: [`examples/bitflags.rs`]
 
-[`examples/bitflags.rs`]: examples/bitflags.rs
-
 ```rust
 #[macro_use]
 extern crate bitflags;
@@ -82,8 +80,6 @@ little-endian, or big-endian orders.
 
 **Example**: [`examples/byteorder.rs`]
 
-[`examples/byteorder.rs`]: examples/byteorder.rs
-
 ```rust
 extern crate byteorder;
 
@@ -117,8 +113,6 @@ Date and time types.
 
 **Example**: [`examples/chrono.rs`]
 
-[`examples/chrono.rs`]: examples/chrono.rs
-
 ```rust
 extern crate chrono;
 use chrono::*;
@@ -149,8 +143,6 @@ Clap is a command line argument parser that is easy to
 use and is highly configurable.
 
 **Example**: [`examples/clap.rs`]
-
-[`examples/clap.rs`]: examples/clap.rs
 
 ```rust
 extern crate clap;
@@ -212,8 +204,6 @@ helps you define your own error type that works with the `?` operator
 to make error handling in Rust simple and elegant.
 
 **Example**: [`examples/error-chain.rs`]
-
-[`examples/error-chain.rs`]: examples/error-chain.rs
 
 ```rust
 // `error_chain!` can recurse deeply
@@ -281,8 +271,6 @@ Compression and decompression using the [DEFLATE] algorithm.
 
 **Example**: [`examples/flate2.rs`]
 
-[`examples/flate2.rs`]: examples/flate2.rs
-
 ```rust
 extern crate flate2;
 extern crate tar;
@@ -324,8 +312,6 @@ at startup. Instead, Rust prefers lazy execution for global
 initialization, and the `lazy_static!` macro does just that.
 
 **Example**: [`examples/lazy_static.rs`]
-
-[`examples/lazy_static.rs`]: examples/lazy_static.rs
 
 ```rust
 #[macro_use]
@@ -369,8 +355,6 @@ see [`nix`] and [`winapi`].
 
 **Example**: [`examples/libc.rs`]
 
-[`examples/libc.rs`]: examples/libc.rs
-
 ```rust
 extern crate libc;
 
@@ -397,8 +381,6 @@ its functionality was once built in to the language.
 **Supplemental crates**: [`env_logger = "0.4.3"`]
 
 **Example**: [`examples/log.rs`]
-
-[`examples/log.rs`]: examples/log.rs
 
 ```rust
 #[macro_use]
@@ -434,8 +416,6 @@ as a "matrix", is a core data structure for numerical applications,
 and Rust does not have one in the language or standard library.
 
 **Example**: [`examples/ndarray.rs`]
-
-[`examples/ndarray.rs`]: examples/ndarray.rs
 
 ```rust
 #[macro_use(s)]
@@ -490,8 +470,6 @@ evolution but is somewhat unloved.
 
 **Example**: [`examples/num.rs`]
 
-[`examples/num.rs`]: examples/num.rs
-
 ```rust
 extern crate num;
 
@@ -528,8 +506,6 @@ Random number generators. The defaults are cryptographically strong.
 
 **Example**: [`examples/rand.rs`]
 
-[`examples/rand.rs`]: examples/rand.rs
-
 ```rust
 extern crate rand;
 
@@ -558,8 +534,6 @@ expressing efficient parallel operations simple
 and foolproof.
 
 **Example**: [`examples/rayon.rs`]
-
-[`examples/rayon.rs`]: examples/rayon.rs
 
 ```rust
 extern crate rayon;
@@ -619,8 +593,6 @@ and arbitrary lookahead, creating predictable worst-case performance.
 
 **Example**: [`examples/regex.rs`]
 
-[`examples/regex.rs`]: examples/regex.rs
-
 ```rust
 extern crate regex;
 
@@ -649,8 +621,6 @@ fn main() {
 A simple HTTP and HTTPS client.
 
 **Example**: [`examples/reqwest.rs`]
-
-[`examples/reqwest.rs`]: examples/reqwest.rs
 
 ```rust
 extern crate reqwest;
@@ -709,8 +679,6 @@ its documentation at [serde.rs].
 
 **Example**: [`examples/serde.rs`]
 
-[`examples/serde.rs`]: examples/serde.rs
-
 ```rust
 #[macro_use]
 extern crate serde_derive;
@@ -760,8 +728,6 @@ with [serde][serde.rs].
 
 **Example**: [`examples/json.rs`]
 
-[`examples/json.rs`]: examples/json.rs
-
 ```rust
 extern crate serde_json;
 
@@ -800,8 +766,6 @@ been compressed with the [DEFLATE] algorithm, which the `tar` crate
 can decompress when paired with the [`flate2`][flate2] crate.
 
 **Example**: [`examples/tar.rs`]
-
-[`examples/tar.rs`]: examples/tar.rs
 
 ```rust
 extern crate flate2;
@@ -842,8 +806,6 @@ this crate was once part of the standard library.
 
 **Example**: [`examples/tempdir.rs`]
 
-[`examples/tempdir.rs`]: examples/tempdir.rs
-
 ```rust
 extern crate tempdir;
 
@@ -881,8 +843,6 @@ to parse, and serializes from Rust types with [`serde`](#serde).
 
 **Example**: [`examples/toml.rs`]
 
-[`examples/toml.rs`]: examples/toml.rs
-
 ```rust
 extern crate toml;
 
@@ -908,8 +868,6 @@ fn main() {
 The URL parser and type, originally created for [Servo].
 
 **Example**: [`examples/url.rs`]
-
-[`examples/url.rs`]: examples/url.rs
 
 ```rust
 extern crate url;
@@ -984,8 +942,6 @@ Then copy the full example into your `examples` directory, like
 so:
 
 **Example**: [`examples/bitflags.rs`]
-
-[`examples/bitflags.rs`]: examples/bitflags.rs
 
 ```rust
 #[macro_use]
@@ -1128,20 +1084,6 @@ copyright is owned by its contributors.
 [`toml = "0.4.1"`]: #toml
 [`url = "1.4.1"`]: #url
 
-<!-- Supplemental crates -->
-
-[`env_logger = "0.4.3"`]: https://docs.rs/env_logger/0.4.3/env_logger/
-[`serde_derive = "1.0.8"`]: https://docs.rs/serde_derive/1.0.8/serde_derive
-
-<!-- Alternative crates -->
-
-[`json`]: https://docs.rs/json
-[`log4rs`]: https://docs.rs/log4rs
-[`rustc-serialize`]: https://docs.rs/rustc-serialize
-[`slog`]: https://docs.rs/slog
-[`quick-error`]: https://docs.rs/quick-error
-[`docopt`]: https://docs.rs/docopt
-
 <!-- stdx crate doc links -->
 
 [d-bitflags]: https://docs.rs/bitflags/0.9.1/bitflags/
@@ -1165,6 +1107,44 @@ copyright is owned by its contributors.
 [d-tempdir]: https://docs.rs/tempdir/0.3.5/tempdir/
 [d-toml]: https://docs.rs/toml/0.4.1/toml/
 [d-url]: https://docs.rs/url/1.4.1/url/
+
+<!-- examples -->
+
+[`examples/bitflags.rs`]: examples/bitflags.rs
+[`examples/byteorder.rs`]: examples/byteorder.rs
+[`examples/chrono.rs`]: examples/chrono.rs
+[`examples/clap.rs`]: examples/clap.rs
+[`examples/error-chain.rs`]: examples/error-chain.rs
+[`examples/flate2.rs`]: examples/flate2.rs
+[`examples/lazy_static.rs`]: examples/lazy_static.rs
+[`examples/libc.rs`]: examples/libc.rs
+[`examples/log.rs`]: examples/log.rs
+[`examples/ndarray.rs`]: examples/ndarray.rs
+[`examples/num.rs`]: examples/num.rs
+[`examples/rand.rs`]: examples/rand.rs
+[`examples/rayon.rs`]: examples/rayon.rs
+[`examples/regex.rs`]: examples/regex.rs
+[`examples/reqwest.rs`]: examples/reqwest.rs
+[`examples/serde.rs`]: examples/serde.rs
+[`examples/json.rs`]: examples/json.rs
+[`examples/tar.rs`]: examples/tar.rs
+[`examples/tempdir.rs`]: examples/tempdir.rs
+[`examples/toml.rs`]: examples/toml.rs
+[`examples/url.rs`]: examples/url.rs
+
+<!-- Supplemental crates -->
+
+[`env_logger = "0.4.3"`]: https://docs.rs/env_logger/0.4.3/env_logger/
+[`serde_derive = "1.0.8"`]: https://docs.rs/serde_derive/1.0.8/serde_derive
+
+<!-- Alternative crates -->
+
+[`json`]: https://docs.rs/json
+[`log4rs`]: https://docs.rs/log4rs
+[`rustc-serialize`]: https://docs.rs/rustc-serialize
+[`slog`]: https://docs.rs/slog
+[`quick-error`]: https://docs.rs/quick-error
+[`docopt`]: https://docs.rs/docopt
 
 <!-- other links -->
 
