@@ -17,6 +17,7 @@ Current revision: `stdx` 0.118.0-rc, for Rust 1.18, June 8, 2017.
 | Global initialization          | [`lazy_static = "0.2.8"`]  | [📖][d-lazy_static] |
 | C interop                      | [`libc = "0.2.23"`]        | [📖][d-libc]        |
 | Logging                        | [`log = "0.3.8"`]          | [📖][d-log]         |
+| Memory-mapped file I/O         | [`memmap = "0.5.2"`]       | [📖][d-memmap]      |
 | Multidimensional arrays        | [`ndarray = "0.9.1"`]      | [📖][d-ndarray]     |
 | Big, rational, complex numbers | [`num = "0.1.37"`]         | [📖][d-num]         |
 | Random numbers                 | [`rand = "0.3.15"`]        | [📖][d-rand]        |
@@ -421,6 +422,47 @@ fn main() {
 ```
 
 **Alternatives**: [`slog`], [`log4rs`]
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
+
+<a id="memmap"></a>
+### `memmap = "0.5.2"` &emsp; [📖][d-memmap]
+
+Cross-platform bindings to memmory-mapped I/O, via the `mmap` syscall
+on Unix, and the `CreateFileMapping` / `MapViewOfFile` functions on
+Windows.
+
+**Example**: [`examples/memmap.rs`]
+
+[`examples/memmap.rs`]: examples/memmap.rs
+
+```rust
+extern crate memmap;
+
+use memmap::{Mmap, Protection};
+use std::env;
+use std::io;
+use std::str;
+
+fn run() -> Result<(), io::Error> {
+    let mut args = env::args().skip(1);
+    let input = args.next().expect("incorrect argument");
+
+    let map = Mmap::open_path(input, Protection::Read)?;
+    unsafe {
+        let all_bytes = map.as_slice();
+        if let Ok(file_str) = str::from_utf8(all_bytes) {
+            println!("{}", file_str);
+        } else {
+            println!("not utf8");
+        }
+    }
+    Ok(())
+}
+
+fn main() { run().unwrap() }
+```
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
@@ -1116,6 +1158,7 @@ copyright is owned by its contributors.
 [`lazy_static = "0.2.8"`]: #lazy_static
 [`libc = "0.2.23"`]: #libc
 [`log = "0.3.8"`]: #log
+[`memmap = "0.5.2"`]: #memmap
 [`ndarray = "0.9.1"`]: #ndarray
 [`num = "0.1.37"`]: #num
 [`rand = "0.3.15"`]: #rand
@@ -1153,6 +1196,7 @@ copyright is owned by its contributors.
 [d-lazy_static]: https://docs.rs/lazy_static/0.2.8/lazy_static
 [d-libc]: https://docs.rs/libc/0.2.23/libc/
 [d-log]: https://docs.rs/log/0.3.8/log/
+[d-memmap]: https://docs.rs/memmap/0.5.2/memmap/
 [d-ndarray]: https://docs.rs/ndarray/0.9.1/ndarray/
 [d-num]: https://docs.rs/num/0.1.37/num/
 [d-rand]: https://docs.rs/rand/0.3.15/rand/
