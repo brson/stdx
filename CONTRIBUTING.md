@@ -37,7 +37,7 @@ The bits that need to be maintained are:
 - The version numbers in the crate headers in README.md
 - The version numbers in the link definitions at the end of README.md
 
-All links are defined at thet end of README.md
+All links are defined at the end of README.md
 
 Every crate has an example, and that example is duplicated in both
 README.md and in the `examples/` folder. So when updating an example
