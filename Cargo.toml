@@ -16,6 +16,7 @@ chrono = { version = "0.3.1", features = ["serde"] }
 clap = "2.24.2"
 error-chain = "0.10.0"
 flate2 = "0.2.19"
+itertools = "0.6.0"
 lazy_static = "0.2.8"
 libc = "0.2.23"
 log = "0.3.8"
