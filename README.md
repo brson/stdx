@@ -20,14 +20,16 @@ Current revision: `stdx` 0.118.0-rc, for Rust 1.18, June 8, 2017.
 | Memory-mapped file I/O         | [`memmap = "0.5.2"`]       | [📖][d-memmap]      |
 | Multidimensional arrays        | [`ndarray = "0.9.1"`]      | [📖][d-ndarray]     |
 | Big, rational, complex numbers | [`num = "0.1.37"`]         | [📖][d-num]         |
+| Number of CPUs                 | [`num_cpus = "1.5.1"`]     | [📖][d-num_cpus]    |
 | Random numbers                 | [`rand = "0.3.15"`]        | [📖][d-rand]        |
 | Parallel iteration             | [`rayon = "0.7.1"`]        | [📖][d-rayon]       |
 | Regular expressions            | [`regex = "0.2.2"`]        | [📖][d-regex]       |
 | HTTP client                    | [`reqwest = "0.6.2"`]      | [📖][d-reqwest]     |
 | Serialization                  | [`serde = "1.0.8"`]        | [📖][d-serde]       |
 | JSON                           | [`serde_json = "1.0.2"`]   | [📖][d-serde_json]  |
-| Tar archives                   | [`tar = "0.4.13"`]         | [📖][d-tar]  |
+| Tar archives                   | [`tar = "0.4.13"`]         | [📖][d-tar]         |
 | Temporary directories          | [`tempdir = "0.3.5"`]      | [📖][d-tempdir]     |
+| Thread pool                    | [`threadpool = "1.3.2"`]   | [📖][d-threadpool]  |
 | Configuration files            | [`toml = "0.4.1"`]         | [📖][d-toml]        |
 | URLs                           | [`url = "1.4.1"`]          | [📖][d-url]         |
 
@@ -148,7 +150,7 @@ use and is highly configurable.
 ```rust
 extern crate clap;
 use clap::{Arg, App, SubCommand};
- 
+
 fn main() {
     let app = App::new("My Super Program")
         .version("1.0")
@@ -172,7 +174,7 @@ fn main() {
 
     // Parse the command line arguments
     let matches = app.get_matches();
- 
+
     let config = matches.value_of("config").unwrap_or("default.conf");
     let input = matches.value_of("INPUT").unwrap();
 
@@ -186,7 +188,7 @@ fn main() {
         ("push",   Some(sub_matches)) => {},
         ("commit", Some(sub_matches)) => {},
         _ => {},
-    } 
+    }
 }
 ```
 
@@ -540,6 +542,45 @@ fn main() {
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
+<a id="num_cpus"></a>
+### `num_cpus = "1.5.1"` &emsp; [📖][d-num_cpus]
+
+Get number of cpus on current machine
+
+**Example**: [`examples/num_cpus.rs`]
+
+```rust
+extern crate threadpool;
+extern crate num_cpus;
+
+use threadpool::ThreadPool;
+use std::sync::mpsc::channel;
+
+fn main() {
+    // Get the number of cpus on current machine
+    let n_workers = num_cpus::get();
+    let n_jobs = 8;
+
+    // Create the thread pool with amount of workers equal to cores
+    let pool = ThreadPool::new(n_workers);
+
+    // Create transmitter and receiver channel
+    let (tx, rx) = channel();
+
+    // For each job grab a free worker from the pool and execute
+    for _ in 0..n_jobs {
+        let tx = tx.clone();
+        pool.execute(move || {
+            tx.send(1).unwrap();
+        });
+    }
+
+    assert_eq!(rx.iter().take(n_jobs).fold(0, |a, b| a + b), 8);
+}
+```
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
 
 <a id="rand"></a>
 ### `rand = "0.3.15"` &emsp; [📖][d-rand]
@@ -875,6 +916,45 @@ fn main() {
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
+
+<a id="threadpool"></a>
+### `threadpool = "1.3.2"` &emsp; [📖][d-threadpool]
+
+A thread pool for running a number of jobs on a fixed set of worker threads.
+
+**Example**: [`examples/threadpool.rs`]
+
+```rust
+extern crate threadpool;
+extern crate num_cpus;
+
+use threadpool::ThreadPool;
+use std::sync::mpsc::channel;
+
+fn main() {
+    // Get the number of cpus on current machine
+    let n_workers = num_cpus::get();
+    let n_jobs = 8;
+
+    // Create the thread pool with amount of workers equal to cores
+    let pool = ThreadPool::new(n_workers);
+
+    // Create transmitter and receiver channel
+    let (tx, rx) = channel();
+
+    // For each job grab a free worker from the pool and execute
+    for _ in 0..n_jobs {
+        let tx = tx.clone();
+        pool.execute(move || {
+            tx.send(1).unwrap();
+        });
+    }
+
+    assert_eq!(rx.iter().take(n_jobs).fold(0, |a, b| a + b), 8);
+}
+```
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 <a id="toml"></a>
 ### `toml = "0.4.1"` &emsp; [📖][d-toml]
