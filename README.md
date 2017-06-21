@@ -32,6 +32,7 @@ Current revision: `stdx` 0.118.0-rc, for Rust 1.18, June 8, 2017.
 | Thread pool                    | [`threadpool = "1.3.2"`]   | [📖][d-threadpool]  |
 | Configuration files            | [`toml = "0.4.1"`]         | [📖][d-toml]        |
 | URLs                           | [`url = "1.4.1"`]          | [📖][d-url]         |
+| Walking directories recursively| [`walkdir = "1.0.7"`]      | [📖][d-walkdir]     |
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
@@ -1019,6 +1020,34 @@ fn main() {
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+<a id="walkdir"></a>
+### `walkdir = "1.0.7"` &emsp; [📖][d-walkdir]
+
+A cross platform Rust library for efficiently walking a directory recursively.
+
+**Example**: [`examples/walkdir.rs`]
+
+```rust
+extern crate walkdir;
+
+use walkdir::{WalkDir, Error};
+
+fn run(wd: WalkDir) -> Result<(), Error> {
+    for entry in wd {
+        let entry = entry?;
+        println!("{}", entry.path().display());
+    }
+    Ok(())
+}
+
+fn main() {
+    run(WalkDir::new(".")).unwrap();
+}
+```
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
+
 ## About `stdx`
 
 Rust has a lovely and portable standard library, but it is not
@@ -1211,6 +1240,7 @@ copyright is owned by its contributors.
 [`tar = "0.4.13"`]: #tar
 [`toml = "0.4.1"`]: #toml
 [`url = "1.4.1"`]: #url
+[`walkdir = "1.0.7"`]: #walkdir
 
 <!-- stdx crate doc links -->
 
@@ -1236,6 +1266,7 @@ copyright is owned by its contributors.
 [d-tempdir]: https://docs.rs/tempdir/0.3.5/tempdir/
 [d-toml]: https://docs.rs/toml/0.4.1/toml/
 [d-url]: https://docs.rs/url/1.4.1/url/
+[d-walkdir]: https://docs.rs/walkdir/1/walkdir/
 
 <!-- examples -->
 
@@ -1260,6 +1291,7 @@ copyright is owned by its contributors.
 [`examples/tempdir.rs`]: examples/tempdir.rs
 [`examples/toml.rs`]: examples/toml.rs
 [`examples/url.rs`]: examples/url.rs
+[`examples/walkdir.rs`]: examples/walkdir.rs
 
 <!-- Supplemental crates -->
 
