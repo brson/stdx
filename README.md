@@ -1234,13 +1234,15 @@ copyright is owned by its contributors.
 [`memmap = "0.5.2"`]: #memmap
 [`ndarray = "0.9.1"`]: #ndarray
 [`num = "0.1.37"`]: #num
+[`num_cpus = "1.5.1"`]: #num_cpus
 [`rand = "0.3.15"`]: #rand
 [`rayon = "0.7.1"`]: #rayon
 [`regex = "0.2.2"`]: #regex
 [`reqwest = "0.6.2"`]: #reqwest
 [`serde = "1.0.8"`]: #serde
-[`tempdir = "0.3.5"`]: #tempdir
 [`tar = "0.4.13"`]: #tar
+[`tempdir = "0.3.5"`]: #tempdir
+[`threadpool = "1.3.2"`]: #threadpool
 [`toml = "0.4.1"`]: #toml
 [`url = "1.4.1"`]: #url
 [`walkdir = "1.0.7"`]: #walkdir
