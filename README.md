@@ -32,7 +32,7 @@ Current revision: `stdx` 0.118.0-rc, for Rust 1.18, June 8, 2017.
 | Thread pool                    | [`threadpool = "1.3.2"`]   | [📖][d-threadpool]  |
 | Configuration files            | [`toml = "0.4.1"`]         | [📖][d-toml]        |
 | URLs                           | [`url = "1.4.1"`]          | [📖][d-url]         |
-| Walking directories recursively| [`walkdir = "1.0.7"`]      | [📖][d-walkdir]     |
+| Directory traversal            | [`walkdir = "1.0.7"`]      | [📖][d-walkdir]     |
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
@@ -1023,7 +1023,9 @@ fn main() {
 <a id="walkdir"></a>
 ### `walkdir = "1.0.7"` &emsp; [📖][d-walkdir]
 
-A cross platform Rust library for efficiently walking a directory recursively.
+A cross platform Rust library for efficiently walking a directory
+recursively. Note the [`filter_entry`] method on the directory
+iterator that short-circuits decent into subdirectories.
 
 **Example**: [`examples/walkdir.rs`]
 
@@ -1032,17 +1034,18 @@ extern crate walkdir;
 
 use walkdir::{WalkDir, Error};
 
-fn run(wd: WalkDir) -> Result<(), Error> {
+fn run() -> Result<(), Error> {
+    let wd = WalkDir::new(".");
+
     for entry in wd {
         let entry = entry?;
         println!("{}", entry.path().display());
     }
+
     Ok(())
 }
 
-fn main() {
-    run(WalkDir::new(".")).unwrap();
-}
+fn main() { run().unwrap(); }
 ```
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
@@ -1256,6 +1259,7 @@ copyright is owned by its contributors.
 [d-memmap]: https://docs.rs/memmap/0.5.2/memmap/
 [d-ndarray]: https://docs.rs/ndarray/0.9.1/ndarray/
 [d-num]: https://docs.rs/num/0.1.37/num/
+[d-num_cpus]: https://docs.rs/num_cpus/1.5.1/num_cpus/
 [d-rand]: https://docs.rs/rand/0.3.15/rand/
 [d-rayon]: https://docs.rs/rayon/0.7.1/rayon/
 [d-regex]: https://docs.rs/regex/0.2.2/regex/
@@ -1264,6 +1268,7 @@ copyright is owned by its contributors.
 [d-serde_json]: https://docs.rs/serde_json/1.0.2/serde_json/
 [d-tar]: https://docs.rs/tar/0.4.13/tar/
 [d-tempdir]: https://docs.rs/tempdir/0.3.5/tempdir/
+[d-threadpool]: https://docs.rs/threadpool/1.3.2/threadpool/
 [d-toml]: https://docs.rs/toml/0.4.1/toml/
 [d-url]: https://docs.rs/url/1.4.1/url/
 [d-walkdir]: https://docs.rs/walkdir/1/walkdir/
@@ -1281,6 +1286,7 @@ copyright is owned by its contributors.
 [`examples/log.rs`]: examples/log.rs
 [`examples/ndarray.rs`]: examples/ndarray.rs
 [`examples/num.rs`]: examples/num.rs
+[`examples/num_cpus.rs`]: examples/num_cpus.rs
 [`examples/rand.rs`]: examples/rand.rs
 [`examples/rayon.rs`]: examples/rayon.rs
 [`examples/regex.rs`]: examples/regex.rs
@@ -1289,6 +1295,7 @@ copyright is owned by its contributors.
 [`examples/json.rs`]: examples/json.rs
 [`examples/tar.rs`]: examples/tar.rs
 [`examples/tempdir.rs`]: examples/tempdir.rs
+[`examples/threadpool.rs`]: examples/threadpool.rs
 [`examples/toml.rs`]: examples/toml.rs
 [`examples/url.rs`]: examples/url.rs
 [`examples/walkdir.rs`]: examples/walkdir.rs
@@ -1317,3 +1324,4 @@ copyright is owned by its contributors.
 [JSON]: http://json.org/
 [Cargo.toml]: http://doc.crates.io/manifest.html
 [Servo]: https://servo.org
+[`filter_entry`]: https://docs.rs/walkdir/1.0/walkdir/trait.WalkDirIterator.html#method.filter_entry
