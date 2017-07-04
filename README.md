@@ -14,6 +14,7 @@ Current revision: `stdx` 0.118.0-rc, for Rust 1.18, June 8, 2017.
 | Command-line argument parsing  | [`clap = "2.24.2"`]        | [📖][d-clap]        |
 | Error handling                 | [`error-chain = "0.10.0"`] | [📖][d-error-chain] |
 | Compression - deflate (gzip)   | [`flate2 = "0.2.19"`]      | [📖][d-flate2]      |
+| Iterator functions, macros     | [`itertools = "0.6.0"`]    | [📖][d-itertools]   |
 | Global initialization          | [`lazy_static = "0.2.8"`]  | [📖][d-lazy_static] |
 | C interop                      | [`libc = "0.2.23"`]        | [📖][d-libc]        |
 | Logging                        | [`log = "0.3.8"`]          | [📖][d-log]         |
@@ -301,6 +302,42 @@ fn run() -> Result<(), io::Error> {
 }
 
 fn main() { run().unwrap() }
+```
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
+
+<a id="itertools"></a>
+### `itertools = "0.6.0"` &emsp; [📖][d-itertools]
+
+The Rust standard Iterator (hyperlinked) type provides a
+powerful abstraction for operating over sequences of values,
+and is used pervasively throughout Rust. There are though a number
+of common operations one might want to perform on sequences that are
+not provided by the standard library, and that's where itertools comes
+in. This crate has everything *including* the kitchen sink (in the
+form of the `batching` adaptor). Highlights include `dedup`, `group_by`,
+`mend_slices`, `merge`, `sorted`, `join` and more.
+
+**Example**: [`examples/itertools.rs`]
+
+```rust
+extern crate itertools;
+
+use itertools::{join, max, sorted};
+
+fn main(){
+    let a = [3, 2, 5, 8, 7];
+
+    // Combine all iterator elements into one String,
+    // seperated by *.
+    println!("{:?}", join(&a, "*"));
+    // Return the maximum value of the iterable.
+    println!("{:?}", max(a.iter()).unwrap());
+    // Collect all the iterable's elements into a
+    // sorted vector in ascending order.
+    println!("{:?}", sorted(a.iter()));
+}
 ```
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
@@ -1227,6 +1264,7 @@ copyright is owned by its contributors.
 [`clap = "2.24.2"`]: #clap
 [`error-chain = "0.10.0"`]: #error-chain
 [`flate2 = "0.2.19"`]: #flate2
+[`itertools = "0.6.0"`]: #itertools
 [`serde_json = "1.0.2"`]: #serde_json
 [`lazy_static = "0.2.8"`]: #lazy_static
 [`libc = "0.2.23"`]: #libc
@@ -1255,6 +1293,7 @@ copyright is owned by its contributors.
 [d-clap]: https://docs.rs/clap/2.24.2/clap/
 [d-error-chain]: https://docs.rs/error-chain/0.8.1/error_chain/
 [d-flate2]: https://docs.rs/flate2/0.2.19/flate2/
+[d-itertools]: https://docs.rs/itertools/0.6.0/itertools/
 [d-lazy_static]: https://docs.rs/lazy_static/0.2.8/lazy_static
 [d-libc]: https://docs.rs/libc/0.2.23/libc/
 [d-log]: https://docs.rs/log/0.3.8/log/
@@ -1283,6 +1322,7 @@ copyright is owned by its contributors.
 [`examples/clap.rs`]: examples/clap.rs
 [`examples/error-chain.rs`]: examples/error-chain.rs
 [`examples/flate2.rs`]: examples/flate2.rs
+[`examples/itertools.rs`]: examples/itertools.rs
 [`examples/lazy_static.rs`]: examples/lazy_static.rs
 [`examples/libc.rs`]: examples/libc.rs
 [`examples/log.rs`]: examples/log.rs
