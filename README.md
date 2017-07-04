@@ -13,6 +13,7 @@ Current revision: `stdx` 0.118.0-rc, for Rust 1.18, June 8, 2017.
 | Date and time                  | [`chrono = "0.3.1"`]       | [📖][d-chrono]      |
 | Command-line argument parsing  | [`clap = "2.24.2"`]        | [📖][d-clap]        |
 | Error handling                 | [`error-chain = "0.10.0"`] | [📖][d-error-chain] |
+| Fast (FN) hashing              | [`fnv = "1.0.3"`]          | [📖][d-fnv]         |
 | Compression - deflate (gzip)   | [`flate2 = "0.2.19"`]      | [📖][d-flate2]      |
 | Iterator functions, macros     | [`itertools = "0.6.0"`]    | [📖][d-itertools]   |
 | Global initialization          | [`lazy_static = "0.2.8"`]  | [📖][d-lazy_static] |
@@ -302,6 +303,38 @@ fn run() -> Result<(), io::Error> {
 }
 
 fn main() { run().unwrap() }
+```
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
+<a id="fnv"></a>
+### `fnv = "1.0.3"` &emsp; [📖][d-fnv]
+
+An implementation of the Fowler–Noll–Vo hash function, which is a
+custom Hasher implementation that is more efficient for smaller hash
+keys.
+
+**Example**: [`examples/fnv.rs`]
+
+```rust
+extern crate fnv;
+
+use fnv::FnvHashMap;
+
+fn main() {
+    let mut map = FnvHashMap::default();
+    map.insert(1, "one");
+    map.insert(2, "two");
+    map.insert(3, "three");
+
+    for (number, word) in map.iter() {
+        println!("Number {}: {}", number, word);
+    }
+
+    map.remove(&(2));
+    println!("The length of HashMap is {}.", map.len());
+    println!("The first element is {}.", map.get(&(1)).unwrap());
+}
 ```
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
@@ -1264,6 +1297,7 @@ copyright is owned by its contributors.
 [`clap = "2.24.2"`]: #clap
 [`error-chain = "0.10.0"`]: #error-chain
 [`flate2 = "0.2.19"`]: #flate2
+[`fnv = "1.0.3"`]: #fnv
 [`itertools = "0.6.0"`]: #itertools
 [`serde_json = "1.0.2"`]: #serde_json
 [`lazy_static = "0.2.8"`]: #lazy_static
@@ -1293,6 +1327,7 @@ copyright is owned by its contributors.
 [d-clap]: https://docs.rs/clap/2.24.2/clap/
 [d-error-chain]: https://docs.rs/error-chain/0.8.1/error_chain/
 [d-flate2]: https://docs.rs/flate2/0.2.19/flate2/
+[d-fnv]: https://docs.rs/fnv/1.0.3/fnv/
 [d-itertools]: https://docs.rs/itertools/0.6.0/itertools/
 [d-lazy_static]: https://docs.rs/lazy_static/0.2.8/lazy_static
 [d-libc]: https://docs.rs/libc/0.2.23/libc/
@@ -1322,6 +1357,7 @@ copyright is owned by its contributors.
 [`examples/clap.rs`]: examples/clap.rs
 [`examples/error-chain.rs`]: examples/error-chain.rs
 [`examples/flate2.rs`]: examples/flate2.rs
+[`examples/fnv.rs`]: examples/fnv.rs
 [`examples/itertools.rs`]: examples/itertools.rs
 [`examples/lazy_static.rs`]: examples/lazy_static.rs
 [`examples/libc.rs`]: examples/libc.rs
