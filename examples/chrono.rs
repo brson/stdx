@@ -3,9 +3,9 @@ use chrono::*;
 
 fn main() {
     let local: DateTime<Local> = Local::now();
-    let utc: DateTime<UTC> = UTC::now();
+    let utc: DateTime<Utc> = Utc::now();
 
-    let dt = UTC.ymd(2014, 11, 28).and_hms(12, 0, 9);
+    let dt = Utc.ymd(2014, 11, 28).and_hms(12, 0, 9);
 
     assert_eq!((dt.year(), dt.month(), dt.day()), (2014, 11, 28));
     assert_eq!((dt.hour(), dt.minute(), dt.second()), (12, 0, 9));
