@@ -878,7 +878,7 @@ Access to [JSON], the "JavaScript Object Notation" format,
 widely used for transmission and storage of data on the Internet.
 This crate can be used for reading, writing, and manipulation
 of arbitrary JSON in addition to it's use for automatic serialization
-with [serde][serde.rs].
+with [serde](#serde).
 
 **Example**: [`examples/json.rs`]
 
@@ -1270,7 +1270,7 @@ OS X, and Windows.
 
 ## Contributing
 
-See [CONTRIBUTING.md].
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 
 ## License
@@ -1392,6 +1392,11 @@ copyright is owned by its contributors.
 [`quick-error`]: https://docs.rs/quick-error
 [`docopt`]: https://docs.rs/docopt
 
+<!-- other crates -->
+
+[`nix`]: https://docs.rs/nix
+[`winapi`]: https://docs.rs/winapi
+
 <!-- other links -->
 
 [DEFLATE]: https://en.wikipedia.org/wiki/DEFLATE
@@ -1403,3 +1408,4 @@ copyright is owned by its contributors.
 [Cargo.toml]: http://doc.crates.io/manifest.html
 [Servo]: https://servo.org
 [`filter_entry`]: https://docs.rs/walkdir/1.0/walkdir/trait.WalkDirIterator.html#method.filter_entry
+[serde.rs]: https://serde.rs/
