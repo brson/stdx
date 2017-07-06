@@ -894,7 +894,7 @@ Access to [JSON], the "JavaScript Object Notation" format,
 widely used for transmission and storage of data on the Internet.
 This crate can be used for reading, writing, and manipulation
 of arbitrary JSON in addition to it's use for automatic serialization
-with [serde][serde.rs].
+with [serde](#serde).
 
 **Example**: [`examples/json.rs`]
 
@@ -1288,7 +1288,7 @@ OS X, and Windows.
 
 ## Contributing
 
-See [CONTRIBUTING.md].
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 
 ## License
@@ -1423,7 +1423,6 @@ copyright is owned by its contributors.
 [Servo]: https://servo.org
 [`filter_entry`]: https://docs.rs/walkdir/1.0/walkdir/trait.WalkDirIterator.html#method.filter_entry
 ["hash flooding"]: https://en.wikipedia.org/wiki/SipHash
-[CONTRIBUTING.md]: https://github.com/brson/stdx/blob/master/CONTRIBUTING.md
 [`Iterator`]: https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html
 [`batching`]: https://docs.rs/itertools/0.6/itertools/trait.Itertools.html#method.batching
 [`dedup`]: https://docs.rs/itertools/0.6/itertools/trait.Itertools.html#method.dedup
@@ -1447,3 +1446,4 @@ copyright is owned by its contributors.
 [`debug!`]: https://docs.rs/log/0.3/log/macro.debug.html
 [`env_logger`]: https://docs.rs/env_logger
 [hyper]: https://docs.rs/hyper
+[serde.rs]: https://serde.rs/
