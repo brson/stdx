@@ -12,7 +12,7 @@ license = "MIT/Apache-2.0"
 
 bitflags = "0.9.1"
 byteorder = "1.0.0"
-chrono = { version = "0.3.1", features = ["serde"] }
+chrono = { version = "0.4.0", features = ["serde"] }
 clap = "2.24.2"
 error-chain = "0.10.0"
 flate2 = "0.2.19"
