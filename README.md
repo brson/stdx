@@ -13,7 +13,7 @@ Current revision: `stdx` 0.118.0-rc, for Rust 1.18, June 8, 2017.
 | Date and time                  | [`chrono = "0.4.0"`]       | [📖][d-chrono]      |
 | Command-line argument parsing  | [`clap = "2.24.2"`]        | [📖][d-clap]        |
 | Error handling                 | [`error-chain = "0.10.0"`] | [📖][d-error-chain] |
-| Fast (FN) hashing              | [`fnv = "1.0.3"`]          | [📖][d-fnv]         |
+| Fast hashing                   | [`fnv = "1.0.3"`]          | [📖][d-fnv]         |
 | Compression - deflate (gzip)   | [`flate2 = "0.2.19"`]      | [📖][d-flate2]      |
 | Iterator functions, macros     | [`itertools = "0.6.0"`]    | [📖][d-itertools]   |
 | Global initialization          | [`lazy_static = "0.2.8"`]  | [📖][d-lazy_static] |
@@ -42,11 +42,10 @@ Current revision: `stdx` 0.118.0-rc, for Rust 1.18, June 8, 2017.
 <a id="bitflags"></a>
 ### `bitflags = "0.9.1"` &emsp; [📖][d-bitflags]
 
-The only thing this crate does is export the
-[`bitflags!`](http://doc.rust-lang.org/bitflags/bitflags/macro.bitflags!.html#example)
-macro, but it's a heckuva-useful macro. `bitflags!` produces typesafe
-bitmasks, types with named values that are efficiently packed together
-as bits to express sets of options.
+The only thing this crate does is export the [`bitflags!`] macro, but
+it's a heckuva-useful macro. `bitflags!` produces typesafe bitmasks,
+types with named values that are efficiently packed together as bits
+to express sets of options.
 
 **Example**: [`examples/bitflags.rs`]
 
@@ -81,8 +80,11 @@ fn main() {
 <a id="byteorder"></a>
 ### `byteorder = "1.0.0"` &emsp; [📖][d-byteorder]
 
-Functions for converting between numbers and bytes, in
-little-endian, or big-endian orders.
+When serializing integers it's important to consider that not all
+computers store in memory the individual bytes of the number in the
+same order. The choice of byte order is called ["endianness"], and
+this simple crate provides the crucial functions for converting
+between numbers and bytes, in little-endian, or big-endian orders.
 
 **Example**: [`examples/byteorder.rs`]
 
@@ -310,9 +312,12 @@ fn main() { run().unwrap() }
 <a id="fnv"></a>
 ### `fnv = "1.0.3"` &emsp; [📖][d-fnv]
 
-An implementation of the Fowler–Noll–Vo hash function, which is a
-custom Hasher implementation that is more efficient for smaller hash
-keys.
+The standard library's hash maps are notoriously slow for small keys (like
+integers). That's because they provide strong protection against a class of
+denial-of-service attacks called ["hash flooding"]. And that's a reasonable
+default. But when your `HashMap`s are a bottleneck consider reaching for this
+crate. It provides the Fowler-Noll-Vo hash function, and conveniences for
+creating FNV hash maps that are considerably faster than those in std.
 
 **Example**: [`examples/fnv.rs`]
 
@@ -343,14 +348,13 @@ fn main() {
 <a id="itertools"></a>
 ### `itertools = "0.6.0"` &emsp; [📖][d-itertools]
 
-The Rust standard Iterator (hyperlinked) type provides a
-powerful abstraction for operating over sequences of values,
-and is used pervasively throughout Rust. There are though a number
-of common operations one might want to perform on sequences that are
-not provided by the standard library, and that's where itertools comes
-in. This crate has everything *including* the kitchen sink (in the
-form of the `batching` adaptor). Highlights include `dedup`, `group_by`,
-`mend_slices`, `merge`, `sorted`, `join` and more.
+The Rust standard [`Iterator`] type provides a powerful abstraction for
+operating over sequences of values, and is used pervasively throughout
+Rust. There are though a number of common operations one might want to perform
+on sequences that are not provided by the standard library, and that's where
+itertools comes in. This crate has everything *including* the kitchen sink (in
+the form of the [`batching`] adaptor). Highlights include [`dedup`], [`group_by`],
+[`mend_slices`], [`merge`], [`sorted`], [`join`] and more.
 
 **Example**: [`examples/itertools.rs`]
 
@@ -446,11 +450,11 @@ fn main() {
 ### `log = "0.3.8"` &emsp; [📖][d-log]
 
 The most common way to perform basic logging in Rust, with the
-`error!`, `warn!`, `info!`, and `debug!` macros. It is often
-combined with the `env_logger` crate to get logging to the
-console, controlled by the `RUST_LOG` environment variable.
-This is the traditional logging crate used by `rustc`, and
-its functionality was once built in to the language.
+[`error!`], [`warn!`], [`info!`], and [`debug!`] macros. It is often
+combined with the [`env_logger`] crate to get logging to the console,
+controlled by the [`RUST_LOG`] environment variable.  This is the
+traditional logging crate used by `rustc`, and its functionality was
+once built in to the language.
 
 **Supplemental crates**: [`env_logger = "0.4.3"`]
 
@@ -484,9 +488,15 @@ fn main() {
 <a id="memmap"></a>
 ### `memmap = "0.5.2"` &emsp; [📖][d-memmap]
 
-Cross-platform bindings to memmory-mapped I/O, via the `mmap` syscall
-on Unix, and the `CreateFileMapping` / `MapViewOfFile` functions on
-Windows.
+Cross-platform access to [memmory-mapped I/O], a technique for sharing
+memory between processes, and for accessing the content of files as a
+simple array of bytes. It is implemented by binding the [`mmap`]
+syscall on Unix, and the [`CreateFileMapping`] / [`MapViewOfFile`]
+functions on Windows. This is a low-level feature used to build other
+abstractions. Note that it's not generally possible to create safe
+abstractions for memory mapping, since memory mapping entails shared
+access to resources outside of Rust's control. As such, the APIs
+in this crate are unsafe.
 
 **Example**: [`examples/memmap.rs`]
 
@@ -580,8 +590,10 @@ fn main() {
 ### `num = "0.1.37"` &emsp; [📖][d-num]
 
 Big integers, rational numbers, complex numbers, and numeric
-traits. This is a rust-lang crate that has persisted through Rust's
-evolution but is somewhat unloved.
+traits. This crate has a long history, beginning life in the standard
+library, being moved into the rust-lang organization, and finally
+being adopted by community maintainers. It remains a common way to
+access the kinds of features it provides.
 
 **Example**: [`examples/num.rs`]
 
@@ -616,7 +628,8 @@ fn main() {
 <a id="num_cpus"></a>
 ### `num_cpus = "1.5.1"` &emsp; [📖][d-num_cpus]
 
-Get number of cpus on current machine
+When you need to make things parallel, you need to know how many CPUs
+to use! This is the simple way to get that information.
 
 **Example**: [`examples/num_cpus.rs`]
 
@@ -656,7 +669,9 @@ fn main() {
 <a id="rand"></a>
 ### `rand = "0.3.15"` &emsp; [📖][d-rand]
 
-Random number generators. The defaults are cryptographically strong.
+Random number generators. The defaults are cryptographically
+strong. This is another crate with a long history, beginning life in
+the standard library.
 
 **Example**: [`examples/rand.rs`]
 
@@ -682,10 +697,9 @@ fn main() {
 <a id="rayon"></a>
 ### `rayon = "0.7.1"` &emsp; [📖][d-rayon]
 
-When people say that Rust makes parallelism easy, this
-is why. Rayon provides parallel iterators that make
-expressing efficient parallel operations simple
-and foolproof.
+When people say that Rust makes parallelism easy, this is why. Rayon
+provides parallel iterators that make expressing efficient parallel
+operations simple and foolproof.
 
 **Example**: [`examples/rayon.rs`]
 
@@ -772,7 +786,9 @@ fn main() {
 <a id="reqwest"></a>
 ### `reqwest = "0.6.2"` &emsp; [📖][d-reqwest]
 
-A simple HTTP and HTTPS client.
+A simple HTTP and HTTPS client. It is built on the popular Rust HTTP
+implementation, [hyper], which is the HTTP stack developed for
+[Servo].
 
 **Example**: [`examples/reqwest.rs`]
 
@@ -1025,6 +1041,8 @@ fn main() {
 }
 ```
 
+**Alternatives**: [`scoped_threadpool`]
+
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 <a id="toml"></a>
@@ -1238,7 +1256,7 @@ enable:
   will be able to say which crates are known to work correctly
   with `stdx`.
 * The more people use the `stdx` version lock the more assurance they
-  get they get. This plays into future Rust's LTS directions.
+  get. This plays into future Rust's LTS directions.
 
 By applying high quality standards to a small selection of critical
 crates we can create a high degree of confidence in a larger core of
@@ -1391,6 +1409,7 @@ copyright is owned by its contributors.
 [`slog`]: https://docs.rs/slog
 [`quick-error`]: https://docs.rs/quick-error
 [`docopt`]: https://docs.rs/docopt
+[`scoped_threadpool`]: https://docs.rs/scoped_threadpool
 
 <!-- other links -->
 
@@ -1403,3 +1422,28 @@ copyright is owned by its contributors.
 [Cargo.toml]: http://doc.crates.io/manifest.html
 [Servo]: https://servo.org
 [`filter_entry`]: https://docs.rs/walkdir/1.0/walkdir/trait.WalkDirIterator.html#method.filter_entry
+["hash flooding"]: https://en.wikipedia.org/wiki/SipHash
+[CONTRIBUTING.md]: https://github.com/brson/stdx/blob/master/CONTRIBUTING.md
+[`Iterator`]: https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html
+[`batching`]: https://docs.rs/itertools/0.6/itertools/trait.Itertools.html#method.batching
+[`dedup`]: https://docs.rs/itertools/0.6/itertools/trait.Itertools.html#method.dedup
+[`group_by`]: https://docs.rs/itertools/0.6/itertools/trait.Itertools.html#method.group_by
+[`mend_slices`]: https://docs.rs/itertools/0.6/itertools/trait.Itertools.html#method.mend_slices
+[`merge`]: https://docs.rs/itertools/0.6/itertools/trait.Itertools.html#method.merge
+[`sorted`]: https://docs.rs/itertools/0.6/itertools/trait.Itertools.html#method.sorted
+[`join`]: https://docs.rs/itertools/0.6/itertools/trait.Itertools.html#method.join
+[`nix`]: https://docs.rs/nix
+[`winapi`]: https://docs.rs/winapi
+[memory-mapped I/O]: https://en.wikipedia.org/wiki/Memory-mapped_file
+[`mmap`]: https://en.wikipedia.org/wiki/mmap
+[`CreateFileMapping`]: https://msdn.microsoft.com/en-us/library/windows/desktop/aa366537(v=vs.85).aspx
+[`MapViewOfFile`]: https://msdn.microsoft.com/en-us/library/windows/desktop/aa366761(v=vs.85).aspx
+[`bitflags!`]: https://docs.rs/bitflags/0.9/bitflags/macro.bitflags.html
+["endianness"]: https://en.wikipedia.org/wiki/Endianness
+[`RUST_LOG`]: https://docs.rs/env_logger/0.4/env_logger/#filtering-results
+[`error!`]: https://docs.rs/log/0.3/log/macro.error.html
+[`warn!`]: https://docs.rs/log/0.3/log/macro.warn.html
+[`info!`]: https://docs.rs/log/0.3/log/macro.info.html
+[`debug!`]: https://docs.rs/log/0.3/log/macro.debug.html
+[`env_logger`]: https://docs.rs/env_logger
+[hyper]: https://docs.rs/hyper
