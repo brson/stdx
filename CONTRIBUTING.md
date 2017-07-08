@@ -50,3 +50,11 @@ cargo build --examples
 ```
 
 Note that `--examples` was added only in Rust 1.20.
+
+Each crate in the README is accompanied with a short description. This
+description should tell a little story about Rust. When is this crate needed?
+Is there anything Rust-specific about this crate that would provide interesting
+context? Is there any background reading to link to that would educate an
+inexperienced reader? Does this crate have an interesting history? If the
+description mentions Rust types that the reader may not be aware of remember to
+hyperlink them.
