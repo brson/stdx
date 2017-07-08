@@ -10,7 +10,7 @@ Current revision: `stdx` 0.118.0-rc, for Rust 1.18, June 8, 2017.
 |--------------------------------|----------------------------|--------------------|
 | Bitfields                      | [`bitflags = "0.9.1"`]     | [📖][d-bitflags]    |
 | Byte order conversion          | [`byteorder = "1.0.0"`]    | [📖][d-byteorder]   |
-| Date and time                  | [`chrono = "0.3.1"`]       | [📖][d-chrono]      |
+| Date and time                  | [`chrono = "0.4.0"`]       | [📖][d-chrono]      |
 | Command-line argument parsing  | [`clap = "2.24.2"`]        | [📖][d-clap]        |
 | Error handling                 | [`error-chain = "0.10.0"`] | [📖][d-error-chain] |
 | Fast (FN) hashing              | [`fnv = "1.0.3"`]          | [📖][d-fnv]         |
@@ -113,7 +113,7 @@ fn main() {
 
 
 <a id="chrono"></a>
-### `chrono = "0.3.1"` &emsp; [📖][d-chrono]
+### `chrono = "0.4.0"` &emsp; [📖][d-chrono]
 
 Date and time types.
 
@@ -125,9 +125,9 @@ use chrono::*;
 
 fn main() {
     let local: DateTime<Local> = Local::now();
-    let utc: DateTime<UTC> = UTC::now();
+    let utc: DateTime<Utc> = Utc::now();
 
-    let dt = UTC.ymd(2014, 11, 28).and_hms(12, 0, 9);
+    let dt = Utc.ymd(2014, 11, 28).and_hms(12, 0, 9);
 
     assert_eq!((dt.year(), dt.month(), dt.day()), (2014, 11, 28));
     assert_eq!((dt.hour(), dt.minute(), dt.second()), (12, 0, 9));
@@ -1293,7 +1293,7 @@ copyright is owned by its contributors.
 
 [`bitflags = "0.9.1"`]: #bitflags
 [`byteorder = "1.0.0"`]: #byteorder
-[`chrono = "0.3.1"`]: #chrono
+[`chrono = "0.4.0"`]: #chrono
 [`clap = "2.24.2"`]: #clap
 [`error-chain = "0.10.0"`]: #error-chain
 [`flate2 = "0.2.19"`]: #flate2
@@ -1323,7 +1323,7 @@ copyright is owned by its contributors.
 
 [d-bitflags]: https://docs.rs/bitflags/0.9.1/bitflags/
 [d-byteorder]: https://docs.rs/byteorder/1.0.0/byteorder/
-[d-chrono]: https://docs.rs/chrono/0.3.1/chrono/
+[d-chrono]: https://docs.rs/chrono/0.4.0/chrono/
 [d-clap]: https://docs.rs/clap/2.24.2/clap/
 [d-error-chain]: https://docs.rs/error-chain/0.8.1/error_chain/
 [d-flate2]: https://docs.rs/flate2/0.2.19/flate2/
