@@ -27,7 +27,7 @@ Current revision: `stdx` 0.118.0-rc, for Rust 1.18, June 8, 2017.
 | Parallel iteration             | [`rayon = "0.7.1"`]        | [📖][d-rayon]       |
 | Regular expressions            | [`regex = "0.2.2"`]        | [📖][d-regex]       |
 | HTTP client                    | [`reqwest = "0.6.2"`]      | [📖][d-reqwest]     |
-| Semantic versioning            | [`semver = "0.7.0"`]       | [📖][d-semver]      |
+| Software versioning            | [`semver = "0.7.0"`]       | [📖][d-semver]      |
 | Serialization                  | [`serde = "1.0.8"`]        | [📖][d-serde]       |
 | JSON                           | [`serde_json = "1.0.2"`]   | [📖][d-serde_json]  |
 | Tar archives                   | [`tar = "0.4.13"`]         | [📖][d-tar]         |
@@ -837,7 +837,8 @@ fn main() {
 <a id="semver"></a>
 ### `semver = "0.7.0"` &emsp; [📖][d-semver]
 
-Parsing and comparison of semantic version numbers. [Cargo] uses SemVer to determine which versions of packages need to be installed.
+[Semantic version][semver] parsing and comparison.
+This is most popular software versioning scheme in the Rust ecosystem.
 
 **Example**: [`examples/semver.rs`]
 
@@ -1403,6 +1404,7 @@ copyright is owned by its contributors.
 [d-toml]: https://docs.rs/toml/0.4.1/toml/
 [d-url]: https://docs.rs/url/1.4.1/url/
 [d-walkdir]: https://docs.rs/walkdir/1/walkdir/
+[d-semver]: https://docs.rs/semver/0.7.0/semver/
 
 <!-- examples -->
 
@@ -1485,3 +1487,4 @@ copyright is owned by its contributors.
 [`env_logger`]: https://docs.rs/env_logger
 [hyper]: https://docs.rs/hyper
 [serde.rs]: https://serde.rs/
+[semver]: http://semver.org/
