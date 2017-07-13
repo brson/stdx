@@ -30,6 +30,7 @@ rand = "0.3.15"
 rayon = "0.7.1"
 regex = "0.2.2"
 reqwest = { version = "0.6.2", features = ["serde"] }
+semver = "0.7.0"
 serde = "1.0.8"
 serde_json = "1.0.2"
 tar = "0.4.13"

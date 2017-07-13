@@ -27,6 +27,7 @@ Current revision: `stdx` 0.118.0-rc, for Rust 1.18, June 8, 2017.
 | Parallel iteration             | [`rayon = "0.7.1"`]        | [📖][d-rayon]       |
 | Regular expressions            | [`regex = "0.2.2"`]        | [📖][d-regex]       |
 | HTTP client                    | [`reqwest = "0.6.2"`]      | [📖][d-reqwest]     |
+| Semantic versioning            | [`semver = "0.7.0"`]       | [📖][d-semver]      |
 | Serialization                  | [`serde = "1.0.8"`]        | [📖][d-serde]       |
 | JSON                           | [`serde_json = "1.0.2"`]   | [📖][d-serde_json]  |
 | Tar archives                   | [`tar = "0.4.13"`]         | [📖][d-tar]         |
@@ -827,6 +828,41 @@ fn main() {
     let res = client.post("http://httpbin.org/post")
         .json(&map)
         .send();
+}
+```
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
+
+<a id="semver"></a>
+### `semver = "0.7.0"` &emsp; [📖][d-semver]
+
+Parsing and comparison of semantic version numbers. [Cargo] uses SemVer to determine which versions of packages need to be installed.
+
+**Example**: [`examples/semver.rs`]
+
+```rust
+extern crate semver;
+
+fn main() {
+    // Construct Version objects
+    assert!(Version::parse("1.2.3") == Ok(Version {
+        major: 1,
+        minor: 2,
+        patch: 3,
+        pre: vec!(),
+        build: vec!(),
+    }));
+
+    // Compare Versions
+    assert!(Version::parse("1.2.3-alpha") != Version::parse("1.2.3-beta"));
+    assert!(Version::parse("1.2.3-alpha2") >  Version::parse("1.2.0"));
+
+    // Increment patch number of mutable Version
+    let mut bugfix_release = Version::parse("1.0.0").unwrap();
+    bugfix_release.increment_patch();
+
+    assert_eq!(Ok(bugfix_release), Version::parse("1.0.1"));
 }
 ```
 
