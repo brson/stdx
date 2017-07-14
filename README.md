@@ -1365,6 +1365,7 @@ copyright is owned by its contributors.
 [`rayon = "0.7.1"`]: #rayon
 [`regex = "0.2.2"`]: #regex
 [`reqwest = "0.6.2"`]: #reqwest
+[`semver = "0.7.0"`]: #semver
 [`serde = "1.0.8"`]: #serde
 [`tar = "0.4.13"`]: #tar
 [`tempdir = "0.3.5"`]: #tempdir
@@ -1424,6 +1425,7 @@ copyright is owned by its contributors.
 [`examples/regex.rs`]: examples/regex.rs
 [`examples/reqwest.rs`]: examples/reqwest.rs
 [`examples/serde.rs`]: examples/serde.rs
+[`examples/semver.rs`]: examples/semver.rs
 [`examples/json.rs`]: examples/json.rs
 [`examples/tar.rs`]: examples/tar.rs
 [`examples/tempdir.rs`]: examples/tempdir.rs
