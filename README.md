@@ -488,7 +488,7 @@ fn main() {
 <a id="memmap"></a>
 ### `memmap = "0.5.2"` &emsp; [📖][d-memmap]
 
-Cross-platform access to [memmory-mapped I/O], a technique for sharing
+Cross-platform access to [memory-mapped I/O], a technique for sharing
 memory between processes, and for accessing the content of files as a
 simple array of bytes. It is implemented by binding the [`mmap`]
 syscall on Unix, and the [`CreateFileMapping`] / [`MapViewOfFile`]
