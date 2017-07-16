@@ -4,37 +4,37 @@
 New to Rust and don't yet know what crates to use?
 [**stdx has the best crates**](#about-stdx).
 
-Current revision: `stdx` 0.118.0-rc, for Rust 1.18, June 8, 2017.
+Current revision: `stdx` 0.119.0-rc, for Rust 1.19, July 20, 2017.
 
 | Feature                        | Crate                      |                    |
 |--------------------------------|----------------------------|--------------------|
 | Bitfields                      | [`bitflags = "0.9.1"`]     | [📖][d-bitflags]    |
-| Byte order conversion          | [`byteorder = "1.0.0"`]    | [📖][d-byteorder]   |
+| Byte order conversion          | [`byteorder = "1.1.0"`]    | [📖][d-byteorder]   |
 | Date and time                  | [`chrono = "0.4.0"`]       | [📖][d-chrono]      |
-| Command-line argument parsing  | [`clap = "2.24.2"`]        | [📖][d-clap]        |
+| Command-line argument parsing  | [`clap = "2.25.0"`]        | [📖][d-clap]        |
 | Error handling                 | [`error-chain = "0.10.0"`] | [📖][d-error-chain] |
-| Fast hashing                   | [`fnv = "1.0.3"`]          | [📖][d-fnv]         |
+| Fast hashing                   | [`fnv = "1.0.5"`]          | [📖][d-fnv]         |
 | Compression - deflate (gzip)   | [`flate2 = "0.2.19"`]      | [📖][d-flate2]      |
 | Iterator functions, macros     | [`itertools = "0.6.0"`]    | [📖][d-itertools]   |
 | Global initialization          | [`lazy_static = "0.2.8"`]  | [📖][d-lazy_static] |
-| C interop                      | [`libc = "0.2.23"`]        | [📖][d-libc]        |
+| C interop                      | [`libc = "0.2.25"`]        | [📖][d-libc]        |
 | Logging                        | [`log = "0.3.8"`]          | [📖][d-log]         |
 | Memory-mapped file I/O         | [`memmap = "0.5.2"`]       | [📖][d-memmap]      |
 | Multidimensional arrays        | [`ndarray = "0.9.1"`]      | [📖][d-ndarray]     |
-| Big, rational, complex numbers | [`num = "0.1.37"`]         | [📖][d-num]         |
-| Number of CPUs                 | [`num_cpus = "1.5.1"`]     | [📖][d-num_cpus]    |
+| Big, rational, complex numbers | [`num = "0.1.40"`]         | [📖][d-num]         |
+| Number of CPUs                 | [`num_cpus = "1.6.2"`]     | [📖][d-num_cpus]    |
 | Random numbers                 | [`rand = "0.3.15"`]        | [📖][d-rand]        |
-| Parallel iteration             | [`rayon = "0.7.1"`]        | [📖][d-rayon]       |
+| Parallel iteration             | [`rayon = "0.8.2"`]        | [📖][d-rayon]       |
 | Regular expressions            | [`regex = "0.2.2"`]        | [📖][d-regex]       |
-| HTTP client                    | [`reqwest = "0.6.2"`]      | [📖][d-reqwest]     |
+| HTTP client                    | [`reqwest = "0.7.1"`]      | [📖][d-reqwest]     |
 | Software versioning            | [`semver = "0.7.0"`]       | [📖][d-semver]      |
-| Serialization                  | [`serde = "1.0.8"`]        | [📖][d-serde]       |
+| Serialization                  | [`serde = "1.0.10"`]        | [📖][d-serde]       |
 | JSON                           | [`serde_json = "1.0.2"`]   | [📖][d-serde_json]  |
-| Tar archives                   | [`tar = "0.4.13"`]         | [📖][d-tar]         |
+| Tar archives                   | [`tar = "0.4.23"`]         | [📖][d-tar]         |
 | Temporary directories          | [`tempdir = "0.3.5"`]      | [📖][d-tempdir]     |
-| Thread pool                    | [`threadpool = "1.3.2"`]   | [📖][d-threadpool]  |
-| Configuration files            | [`toml = "0.4.1"`]         | [📖][d-toml]        |
-| URLs                           | [`url = "1.4.1"`]          | [📖][d-url]         |
+| Thread pool                    | [`threadpool = "1.4.0"`]   | [📖][d-threadpool]  |
+| Configuration files            | [`toml = "0.4.2"`]         | [📖][d-toml]        |
+| URLs                           | [`url = "1.5.1"`]          | [📖][d-url]         |
 | Directory traversal            | [`walkdir = "1.0.7"`]      | [📖][d-walkdir]     |
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
@@ -79,7 +79,7 @@ fn main() {
 
 
 <a id="byteorder"></a>
-### `byteorder = "1.0.0"` &emsp; [📖][d-byteorder]
+### `byteorder = "1.1.0"` &emsp; [📖][d-byteorder]
 
 When serializing integers it's important to consider that not all
 computers store in memory the individual bytes of the number in the
@@ -146,7 +146,7 @@ fn main() {
 
 
 <a id="clap"></a>
-### `clap = "2.24.2"` &emsp; [📖][d-clap]
+### `clap = "2.25.0"` &emsp; [📖][d-clap]
 
 Clap is a command line argument parser that is easy to
 use and is highly configurable.
@@ -311,7 +311,7 @@ fn main() { run().unwrap() }
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 <a id="fnv"></a>
-### `fnv = "1.0.3"` &emsp; [📖][d-fnv]
+### `fnv = "1.0.5"` &emsp; [📖][d-fnv]
 
 The standard library's hash maps are notoriously slow for small keys (like
 integers). That's because they provide strong protection against a class of
@@ -423,7 +423,7 @@ fn main() {
 
 
 <a id="libc"></a>
-### `libc = "0.2.23"` &emsp; [📖][d-libc]
+### `libc = "0.2.25"` &emsp; [📖][d-libc]
 
 If you need to talk to foreign code, you need this crate. It exports C
 type and function definitions appropriate to each target platform Rust
@@ -588,7 +588,7 @@ fn main() {
 
 
 <a id="num"></a>
-### `num = "0.1.37"` &emsp; [📖][d-num]
+### `num = "0.1.40"` &emsp; [📖][d-num]
 
 Big integers, rational numbers, complex numbers, and numeric
 traits. This crate has a long history, beginning life in the standard
@@ -627,7 +627,7 @@ fn main() {
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 <a id="num_cpus"></a>
-### `num_cpus = "1.5.1"` &emsp; [📖][d-num_cpus]
+### `num_cpus = "1.6.2"` &emsp; [📖][d-num_cpus]
 
 When you need to make things parallel, you need to know how many CPUs
 to use! This is the simple way to get that information.
@@ -696,7 +696,7 @@ fn main() {
 
 
 <a id="rayon"></a>
-### `rayon = "0.7.1"` &emsp; [📖][d-rayon]
+### `rayon = "0.8.2"` &emsp; [📖][d-rayon]
 
 When people say that Rust makes parallelism easy, this is why. Rayon
 provides parallel iterators that make expressing efficient parallel
@@ -785,7 +785,7 @@ fn main() {
 
 
 <a id="reqwest"></a>
-### `reqwest = "0.6.2"` &emsp; [📖][d-reqwest]
+### `reqwest = "0.7.1"` &emsp; [📖][d-reqwest]
 
 A simple HTTP and HTTPS client. It is built on the popular Rust HTTP
 implementation, [hyper], which is the HTTP stack developed for
@@ -872,7 +872,7 @@ fn main() {
 
 
 <a id="serde"></a>
-### `serde = "1.0.8"` &emsp; [📖][d-serde]
+### `serde = "1.0.10"` &emsp; [📖][d-serde]
 
 Serialization and deserialization of Rust datastructures is fast
 and easy using the `serde` serialization framework. Simply
@@ -881,9 +881,9 @@ and serde will automatically convert them between formats like
 JSON, TOML, YAML, and more. To best understand serde, read
 its documentation at [serde.rs].
 
-**Supplemental crates**: [`serde_derive = "1.0.8"`],
+**Supplemental crates**: [`serde_derive = "1.0.10"`],
                          [`serde_json = "1.0.2"`],
-                         [`toml = "0.4.1"`]
+                         [`toml = "0.4.2"`]
 
 **Example**: [`examples/serde.rs`]
 
@@ -966,7 +966,7 @@ fn main() {
 
 
 <a id="tar"></a>
-### `tar = "0.4.13"` &emsp; [📖][d-tar]
+### `tar = "0.4.23"` &emsp; [📖][d-tar]
 
 The "tar" archive format is in common use on the web. It is most often
 found in the form of `.tar.gz` files (called "tarballs") that have
@@ -1043,7 +1043,7 @@ fn main() {
 
 
 <a id="threadpool"></a>
-### `threadpool = "1.3.2"` &emsp; [📖][d-threadpool]
+### `threadpool = "1.4.0"` &emsp; [📖][d-threadpool]
 
 A thread pool for running a number of jobs on a fixed set of worker threads.
 
@@ -1084,7 +1084,7 @@ fn main() {
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 <a id="toml"></a>
-### `toml = "0.4.1"` &emsp; [📖][d-toml]
+### `toml = "0.4.2"` &emsp; [📖][d-toml]
 
 [TOML](https://github.com/toml-lang/toml) is a common format for
 configuration files, like [Cargo.toml]. It's easy on the eyes, simple
@@ -1112,7 +1112,7 @@ fn main() {
 
 
 <a id="url"></a>
-### `url = "1.4.1"` &emsp; [📖][d-url]
+### `url = "1.5.1"` &emsp; [📖][d-url]
 
 The URL parser and type, originally created for [Servo].
 
@@ -1348,62 +1348,62 @@ copyright is owned by its contributors.
 <!-- stdx crates -->
 
 [`bitflags = "0.9.1"`]: #bitflags
-[`byteorder = "1.0.0"`]: #byteorder
+[`byteorder = "1.1.0"`]: #byteorder
 [`chrono = "0.4.0"`]: #chrono
-[`clap = "2.24.2"`]: #clap
+[`clap = "2.25.0"`]: #clap
 [`error-chain = "0.10.0"`]: #error-chain
 [`flate2 = "0.2.19"`]: #flate2
-[`fnv = "1.0.3"`]: #fnv
+[`fnv = "1.0.5"`]: #fnv
 [`itertools = "0.6.0"`]: #itertools
 [`serde_json = "1.0.2"`]: #serde_json
 [`lazy_static = "0.2.8"`]: #lazy_static
-[`libc = "0.2.23"`]: #libc
+[`libc = "0.2.25"`]: #libc
 [`log = "0.3.8"`]: #log
 [`memmap = "0.5.2"`]: #memmap
 [`ndarray = "0.9.1"`]: #ndarray
-[`num = "0.1.37"`]: #num
-[`num_cpus = "1.5.1"`]: #num_cpus
+[`num = "0.1.40"`]: #num
+[`num_cpus = "1.6.2"`]: #num_cpus
 [`rand = "0.3.15"`]: #rand
-[`rayon = "0.7.1"`]: #rayon
+[`rayon = "0.8.2"`]: #rayon
 [`regex = "0.2.2"`]: #regex
-[`reqwest = "0.6.2"`]: #reqwest
+[`reqwest = "0.7.1"`]: #reqwest
 [`semver = "0.7.0"`]: #semver
-[`serde = "1.0.8"`]: #serde
-[`tar = "0.4.13"`]: #tar
+[`serde = "1.0.10"`]: #serde
+[`tar = "0.4.23"`]: #tar
 [`tempdir = "0.3.5"`]: #tempdir
-[`threadpool = "1.3.2"`]: #threadpool
-[`toml = "0.4.1"`]: #toml
-[`url = "1.4.1"`]: #url
+[`threadpool = "1.4.0"`]: #threadpool
+[`toml = "0.4.2"`]: #toml
+[`url = "1.5.1"`]: #url
 [`walkdir = "1.0.7"`]: #walkdir
 
 <!-- stdx crate doc links -->
 
 [d-bitflags]: https://docs.rs/bitflags/0.9.1/bitflags/
-[d-byteorder]: https://docs.rs/byteorder/1.0.0/byteorder/
+[d-byteorder]: https://docs.rs/byteorder/1.1.0/byteorder/
 [d-chrono]: https://docs.rs/chrono/0.4.0/chrono/
-[d-clap]: https://docs.rs/clap/2.24.2/clap/
+[d-clap]: https://docs.rs/clap/2.25.0/clap/
 [d-error-chain]: https://docs.rs/error-chain/0.8.1/error_chain/
 [d-flate2]: https://docs.rs/flate2/0.2.19/flate2/
-[d-fnv]: https://docs.rs/fnv/1.0.3/fnv/
+[d-fnv]: https://docs.rs/fnv/1.0.5/fnv/
 [d-itertools]: https://docs.rs/itertools/0.6.0/itertools/
 [d-lazy_static]: https://docs.rs/lazy_static/0.2.8/lazy_static
-[d-libc]: https://docs.rs/libc/0.2.23/libc/
+[d-libc]: https://docs.rs/libc/0.2.25/libc/
 [d-log]: https://docs.rs/log/0.3.8/log/
 [d-memmap]: https://docs.rs/memmap/0.5.2/memmap/
 [d-ndarray]: https://docs.rs/ndarray/0.9.1/ndarray/
-[d-num]: https://docs.rs/num/0.1.37/num/
-[d-num_cpus]: https://docs.rs/num_cpus/1.5.1/num_cpus/
+[d-num]: https://docs.rs/num/0.1.40/num/
+[d-num_cpus]: https://docs.rs/num_cpus/1.6.2/num_cpus/
 [d-rand]: https://docs.rs/rand/0.3.15/rand/
-[d-rayon]: https://docs.rs/rayon/0.7.1/rayon/
+[d-rayon]: https://docs.rs/rayon/0.8.2/rayon/
 [d-regex]: https://docs.rs/regex/0.2.2/regex/
-[d-reqwest]: https://docs.rs/reqwest/0.6.2/reqwest/
-[d-serde]: https://docs.rs/serde/1.0.8/serde/
+[d-reqwest]: https://docs.rs/reqwest/0.7.1/reqwest/
+[d-serde]: https://docs.rs/serde/1.0.10/serde/
 [d-serde_json]: https://docs.rs/serde_json/1.0.2/serde_json/
-[d-tar]: https://docs.rs/tar/0.4.13/tar/
+[d-tar]: https://docs.rs/tar/0.4.23/tar/
 [d-tempdir]: https://docs.rs/tempdir/0.3.5/tempdir/
-[d-threadpool]: https://docs.rs/threadpool/1.3.2/threadpool/
-[d-toml]: https://docs.rs/toml/0.4.1/toml/
-[d-url]: https://docs.rs/url/1.4.1/url/
+[d-threadpool]: https://docs.rs/threadpool/1.4.0/threadpool/
+[d-toml]: https://docs.rs/toml/0.4.2/toml/
+[d-url]: https://docs.rs/url/1.5.1/url/
 [d-walkdir]: https://docs.rs/walkdir/1/walkdir/
 [d-semver]: https://docs.rs/semver/0.7.0/semver/
 
@@ -1440,7 +1440,7 @@ copyright is owned by its contributors.
 <!-- Supplemental crates -->
 
 [`env_logger = "0.4.3"`]: https://docs.rs/env_logger/0.4.3/env_logger/
-[`serde_derive = "1.0.8"`]: https://docs.rs/serde_derive/1.0.8/serde_derive
+[`serde_derive = "1.0.10"`]: https://docs.rs/serde_derive/1.0.10/serde_derive
 
 <!-- Alternative crates -->
 
