@@ -1,1 +1,5 @@
 language: rust
+
+script:
+  - cargo build
+  - cargo test
