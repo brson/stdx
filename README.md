@@ -1414,7 +1414,7 @@ copyright is owned by its contributors.
 <!-- other links -->
 
 [DEFLATE]: https://en.wikipedia.org/wiki/DEFLATE
-[error handling]: https://rust-lang.github.io/book/ch09-00-error-handling.html
+[error handling]: https://rust-lang.github.io/book/second-edition/ch09-00-error-handling.html
 ['life before main']: https://isocpp.org/wiki/faq/ctors#static-init-order
 [fast]: http://blog.burntsushi.net/ripgrep/
 [flate2]: #flate2
