@@ -837,8 +837,9 @@ fn main() {
 <a id="semver"></a>
 ### `semver = "0.7.0"` &emsp; [📖][d-semver]
 
-[Semantic version][semver] parsing and comparison.
-This is most popular software versioning scheme in the Rust ecosystem.
+Rust uses [semantic versioning][semver] (also known as "semver") for
+crate versioning. This crate provides the canonical semver
+representation for Rust.
 
 **Example**: [`examples/semver.rs`]
 
