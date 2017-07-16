@@ -12,7 +12,7 @@ use tar::Archive;
 fn run() -> Result<(), io::Error> {
     let mut args = env::args().skip(1);
     let tarball = args.next().expect("incorrect argument");
-    let outdir = args.next().expect("incorrect arguments");
+    let outdir = args.next().expect("incorrect argument");
 
     let archive = File::open(tarball)?;
     let archive = BufReader::new(archive);
