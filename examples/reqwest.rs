@@ -18,7 +18,7 @@ fn main() {
 
     // Make a POST request
     let client = reqwest::Client::new().unwrap();
-    let res = client.post("http://httpbin.org/post")
+    let res = client.post("http://httpbin.org/post").unwrap()
         .body("the exact body that is sent")
         .send();
 
@@ -29,7 +29,7 @@ fn main() {
 
     // This will POST a body of `{"lang":"rust","body":"json"}`
     let client = reqwest::Client::new().unwrap();
-    let res = client.post("http://httpbin.org/post")
-        .json(&map)
+    let res = client.post("http://httpbin.org/post").unwrap()
+        .json(&map).unwrap()
         .send();
 }
