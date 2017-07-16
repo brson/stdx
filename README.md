@@ -56,12 +56,12 @@ extern crate bitflags;
 
 bitflags! {
     struct Flags: u32 {
-        const FLAG_A       = 0b00000001,
-        const FLAG_B       = 0b00000010,
-        const FLAG_C       = 0b00000100,
+        const FLAG_A       = 0b00000001;
+        const FLAG_B       = 0b00000010;
+        const FLAG_C       = 0b00000100;
         const FLAG_ABC     = FLAG_A.bits
                            | FLAG_B.bits
-                           | FLAG_C.bits,
+                           | FLAG_C.bits;
     }
 }
 
@@ -153,7 +153,7 @@ use and is highly configurable.
 
 **Example**: [`examples/clap.rs`]
 
-```rust
+```rust,no_run
 extern crate clap;
 use clap::{Arg, App, SubCommand};
 
@@ -214,7 +214,7 @@ to make error handling in Rust simple and elegant.
 
 **Example**: [`examples/error-chain.rs`]
 
-```rust
+```rust,no_run,ignore
 // `error_chain!` can recurse deeply
 #![recursion_limit = "1024"]
 
@@ -280,7 +280,7 @@ Compression and decompression using the [DEFLATE] algorithm.
 
 **Example**: [`examples/flate2.rs`]
 
-```rust
+```rust,no_run
 extern crate flate2;
 extern crate tar;
 
@@ -293,7 +293,7 @@ use tar::Archive;
 fn run() -> Result<(), io::Error> {
     let mut args = env::args().skip(1);
     let tarball = args.next().expect("incorrect argument");
-    let outdir = args.next().expect("incorrect arguments");
+    let outdir = args.next().expect("incorrect argument");
 
     let archive = File::open(tarball)?;
     let archive = BufReader::new(archive);
@@ -503,7 +503,7 @@ in this crate are unsafe.
 
 [`examples/memmap.rs`]: examples/memmap.rs
 
-```rust
+```rust,no_run
 extern crate memmap;
 
 use memmap::{Mmap, Protection};
@@ -793,7 +793,7 @@ implementation, [hyper], which is the HTTP stack developed for
 
 **Example**: [`examples/reqwest.rs`]
 
-```rust
+```rust,no_run
 extern crate reqwest;
 
 use std::collections::HashMap;
@@ -845,6 +845,8 @@ representation for Rust.
 
 ```rust
 extern crate semver;
+
+use semver::Version;
 
 fn main() {
     // Construct Version objects
@@ -975,7 +977,7 @@ can decompress when paired with the [`flate2`][flate2] crate.
 
 **Example**: [`examples/tar.rs`]
 
-```rust
+```rust,no_run
 extern crate flate2;
 extern crate tar;
 
@@ -988,7 +990,7 @@ use tar::Archive;
 fn run() -> Result<(), io::Error> {
     let mut args = env::args().skip(1);
     let tarball = args.next().expect("incorrect argument");
-    let outdir = args.next().expect("incorrect arguments");
+    let outdir = args.next().expect("incorrect argument");
 
     let archive = File::open(tarball)?;
     let archive = BufReader::new(archive);
