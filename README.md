@@ -27,6 +27,7 @@ Current revision: `stdx` 0.118.0-rc, for Rust 1.18, June 8, 2017.
 | Parallel iteration             | [`rayon = "0.7.1"`]        | [📖][d-rayon]       |
 | Regular expressions            | [`regex = "0.2.2"`]        | [📖][d-regex]       |
 | HTTP client                    | [`reqwest = "0.6.2"`]      | [📖][d-reqwest]     |
+| Software versioning            | [`semver = "0.7.0"`]       | [📖][d-semver]      |
 | Serialization                  | [`serde = "1.0.8"`]        | [📖][d-serde]       |
 | JSON                           | [`serde_json = "1.0.2"`]   | [📖][d-serde_json]  |
 | Tar archives                   | [`tar = "0.4.13"`]         | [📖][d-tar]         |
@@ -833,6 +834,41 @@ fn main() {
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
+<a id="semver"></a>
+### `semver = "0.7.0"` &emsp; [📖][d-semver]
+
+[Semantic version][semver] parsing and comparison.
+This is most popular software versioning scheme in the Rust ecosystem.
+
+**Example**: [`examples/semver.rs`]
+
+```rust
+extern crate semver;
+
+use semver::Version;
+
+fn main() {
+    assert!(Version::parse("1.0.0-alpha") < Version::parse("1.0.0-alpha.20170707"));
+    assert!(Version::parse("1.0.0-alpha.20170707") < Version::parse("1.0.0-alpha.20170714"));
+    assert!(Version::parse("1.0.0-alpha.20170712") < Version::parse("1.0.0-alpha.20170712.1"));
+    assert!(Version::parse("1.0.0-alpha.20170712.1") < Version::parse("1.0.0-beta"));
+    assert!(Version::parse("1.0.0-beta") < Version::parse("1.0.0-pre"));
+    assert!(Version::parse("1.0.0-pre") < Version::parse("1.0.0-rc"));
+    assert!(Version::parse("1.0.0-rc") < Version::parse("1.0.0"));
+
+    let mut version = Version::parse("1.0.0").unwrap();
+    version.increment_patch();
+    assert_eq!(version, Version::parse("1.0.1").unwrap());
+    version.increment_minor();
+    assert_eq!(version, Version::parse("1.1.0").unwrap());
+    version.increment_major();
+    assert_eq!(version, Version::parse("2.0.0").unwrap());
+}
+```
+
+&nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
+
 <a id="serde"></a>
 ### `serde = "1.0.8"` &emsp; [📖][d-serde]
 
@@ -1329,6 +1365,7 @@ copyright is owned by its contributors.
 [`rayon = "0.7.1"`]: #rayon
 [`regex = "0.2.2"`]: #regex
 [`reqwest = "0.6.2"`]: #reqwest
+[`semver = "0.7.0"`]: #semver
 [`serde = "1.0.8"`]: #serde
 [`tar = "0.4.13"`]: #tar
 [`tempdir = "0.3.5"`]: #tempdir
@@ -1366,6 +1403,7 @@ copyright is owned by its contributors.
 [d-toml]: https://docs.rs/toml/0.4.1/toml/
 [d-url]: https://docs.rs/url/1.4.1/url/
 [d-walkdir]: https://docs.rs/walkdir/1/walkdir/
+[d-semver]: https://docs.rs/semver/0.7.0/semver/
 
 <!-- examples -->
 
@@ -1388,6 +1426,7 @@ copyright is owned by its contributors.
 [`examples/regex.rs`]: examples/regex.rs
 [`examples/reqwest.rs`]: examples/reqwest.rs
 [`examples/serde.rs`]: examples/serde.rs
+[`examples/semver.rs`]: examples/semver.rs
 [`examples/json.rs`]: examples/json.rs
 [`examples/tar.rs`]: examples/tar.rs
 [`examples/tempdir.rs`]: examples/tempdir.rs
@@ -1447,3 +1486,4 @@ copyright is owned by its contributors.
 [`env_logger`]: https://docs.rs/env_logger
 [hyper]: https://docs.rs/hyper
 [serde.rs]: https://serde.rs/
+[semver]: http://semver.org/
