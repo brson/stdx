@@ -1,6 +1,6 @@
 # 0.119.0-rc
 
-- [Added num cpus and threadpool](https://github.com/brson/stdx/pull/41)
+- [Added num_cpus and threadpool](https://github.com/brson/stdx/pull/41)
 - [Add walkdir](https://github.com/brson/stdx/pull/43)
 - [Add itertools](https://github.com/brson/stdx/pull/40)
 - [Add fnv](https://github.com/brson/stdx/pull/38)
