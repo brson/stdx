@@ -11,4 +11,6 @@
 - [Bump all deps for 1.19](https://github.com/brson/stdx/pull/57)
 - [Test with skeptic](https://github.com/brson/stdx/pull/58)
 
+Contributors: Alisha, Anna Liao, Brian Anderson, David Peklak, dowon
+Cha, Isaac Grosof, plafü, Tshepang Lekhonkhobe
 
