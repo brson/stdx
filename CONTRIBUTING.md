@@ -43,13 +43,8 @@ Every crate has an example, and that example is duplicated in both
 README.md and in the `examples/` folder. So when updating an example
 make sure to do it in both places.
 
-Test that the examples at least build with:
-
-```
-cargo build --examples
-```
-
-Note that `--examples` was added only in Rust 1.20.
+Test with `cargo test`, which will both build the examples in
+the `examples` folder, and run the examples in README.md.
 
 Each crate in the README is accompanied with a short description. This
 description should tell a little story about Rust. When is this crate needed?
