@@ -6,12 +6,13 @@ New to Rust and don't yet know what crates to use?
 
 Current revision: `stdx` 0.119.0-rc, for Rust 1.19, July 20, 2017.
 
-| Feature                        | Crate                      |                    |
-|--------------------------------|----------------------------|--------------------|
+| Feature                        | Crate                      |                     |
+|--------------------------------|----------------------------|---------------------|
 | Bitfields                      | [`bitflags = "0.9.1"`]     | [📖][d-bitflags]    |
 | Byte order conversion          | [`byteorder = "1.1.0"`]    | [📖][d-byteorder]   |
 | Date and time                  | [`chrono = "0.4.0"`]       | [📖][d-chrono]      |
 | Command-line argument parsing  | [`clap = "2.25.0"`]        | [📖][d-clap]        |
+| Encoding/decoding              | [`encoding_rs = "0.6.11"`] | [📖][d-encoding_rs] |
 | Error handling                 | [`error-chain = "0.10.0"`] | [📖][d-error-chain] |
 | Fast hashing                   | [`fnv = "1.0.5"`]          | [📖][d-fnv]         |
 | Compression - deflate (gzip)   | [`flate2 = "0.2.19"`]      | [📖][d-flate2]      |
@@ -28,7 +29,7 @@ Current revision: `stdx` 0.119.0-rc, for Rust 1.19, July 20, 2017.
 | Regular expressions            | [`regex = "0.2.2"`]        | [📖][d-regex]       |
 | HTTP client                    | [`reqwest = "0.7.1"`]      | [📖][d-reqwest]     |
 | Software versioning            | [`semver = "0.7.0"`]       | [📖][d-semver]      |
-| Serialization                  | [`serde = "1.0.10"`]        | [📖][d-serde]       |
+| Serialization                  | [`serde = "1.0.10"`]       | [📖][d-serde]       |
 | JSON                           | [`serde_json = "1.0.2"`]   | [📖][d-serde_json]  |
 | Tar archives                   | [`tar = "0.4.23"`]         | [📖][d-tar]         |
 | Temporary directories          | [`tempdir = "0.3.5"`]      | [📖][d-tempdir]     |
@@ -201,6 +202,38 @@ fn main() {
 **Alternatives**: [`docopt`]
 
 &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
+
+
+<a id="encoding_rs"></a>
+ ### `encoding_rs = "0.6.11"` &emsp; [📖][d-encoding_rs]
+
+encoding_rs is a Gecko-oriented Free Software / Open Source
+implementation of the Encoding Standard in Rust. Gecko-oriented means
+that converting to and from UTF-16 is supported in addition to
+converting to and from UTF-8, that the performance and streamability
+goals are browser-oriented, and that FFI-friendliness is a goal.
+
+ **Example**: [`examples/encoding_rs.rs`]
+
+ ```rust
+ extern crate encoding_rs;
+ use encoding_rs::*;
+
+ fn main() {
+     let expected = "\u{30CF}\u{30ED}\u{30FC}\u{30FB}\u{30EF}\u{30FC}\u{30EB}\u{30C9}";
+     let encoded = b"\x83n\x83\x8D\x81[\x81E\x83\x8F\x81[\x83\x8B\x83h";
+
+     let (decoded, encoding_used, had_errors) = SHIFT_JIS.decode(encoded);
+
+     assert_eq!(&decoded[..], expected);
+     assert_eq!(encoding_used, SHIFT_JIS);
+     assert!(!had_errors);
+
+     println!("Decoded result: {}", decoded);
+ }
+ ```
+
+ &nbsp;&NewLine;&nbsp;&NewLine;&nbsp;&NewLine;
 
 
 <a id="error-chain"></a>
@@ -1353,6 +1386,7 @@ copyright is owned by its contributors.
 [`byteorder = "1.1.0"`]: #byteorder
 [`chrono = "0.4.0"`]: #chrono
 [`clap = "2.25.0"`]: #clap
+[`encoding_rs = "0.6.11"`]: #encoding_rs
 [`error-chain = "0.10.0"`]: #error-chain
 [`flate2 = "0.2.19"`]: #flate2
 [`fnv = "1.0.5"`]: #fnv
@@ -1384,6 +1418,7 @@ copyright is owned by its contributors.
 [d-byteorder]: https://docs.rs/byteorder/1.1.0/byteorder/
 [d-chrono]: https://docs.rs/chrono/0.4.0/chrono/
 [d-clap]: https://docs.rs/clap/2.25.0/clap/
+[d-encoding_rs]: https://docs.rs/encoding_rs/0.6.11/encoding_rs/
 [d-error-chain]: https://docs.rs/error-chain/0.8.1/error_chain/
 [d-flate2]: https://docs.rs/flate2/0.2.19/flate2/
 [d-fnv]: https://docs.rs/fnv/1.0.5/fnv/
@@ -1415,6 +1450,7 @@ copyright is owned by its contributors.
 [`examples/byteorder.rs`]: examples/byteorder.rs
 [`examples/chrono.rs`]: examples/chrono.rs
 [`examples/clap.rs`]: examples/clap.rs
+[`examples/encoding_rs.rs`]: examples/encoding_rs.rs
 [`examples/error-chain.rs`]: examples/error-chain.rs
 [`examples/flate2.rs`]: examples/flate2.rs
 [`examples/fnv.rs`]: examples/fnv.rs
