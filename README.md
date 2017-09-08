@@ -933,7 +933,7 @@ fn main() {
 Access to [JSON], the "JavaScript Object Notation" format,
 widely used for transmission and storage of data on the Internet.
 This crate can be used for reading, writing, and manipulation
-of arbitrary JSON in addition to it's use for automatic serialization
+of arbitrary JSON in addition to its use for automatic serialization
 with [serde](#serde).
 
 **Example**: [`examples/json.rs`]
