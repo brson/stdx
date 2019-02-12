@@ -46,7 +46,4 @@ env_logger = "0.4.3"
 serde_derive = "1.0.10"
 
 [build-dependencies]
-skeptic = "0.13.4"
-
-[dev-dependencies]
-skeptic = "0.13.4"
+skeptic = { version = "0.13.4", path = "../rust-skeptic/src/skeptic" }
