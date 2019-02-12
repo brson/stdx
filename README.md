@@ -4,7 +4,7 @@
 New to Rust and don't yet know what crates to use?
 [**stdx has the best crates**](#about-stdx).
 
-Current revision: `stdx` 0.119.0-rc, for Rust 1.19, July 20, 2017.
+Current revision: `stdx` 0.132.0-rc, for Rust 1.32, January 17, 2019.
 
 | Feature                        | Crate                      |                    |
 |--------------------------------|----------------------------|--------------------|
