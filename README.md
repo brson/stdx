@@ -6,8 +6,8 @@ New to Rust and don't yet know what crates to use?
 
 Current revision: `stdx` 0.119.0-rc, for Rust 1.19, July 20, 2017.
 
-| Feature                        | Crate                      |                     |
-|--------------------------------|----------------------------|---------------------|
+| Feature                        | Crate                      |                    |
+|--------------------------------|----------------------------|--------------------|
 | Bitfields                      | [`bitflags = "0.9.1"`]     | [📖][d-bitflags]    |
 | Byte order conversion          | [`byteorder = "1.1.0"`]    | [📖][d-byteorder]   |
 | Date and time                  | [`chrono = "0.4.0"`]       | [📖][d-chrono]      |

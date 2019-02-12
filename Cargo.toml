@@ -30,7 +30,7 @@ num_cpus = "1.6.2"
 rand = "0.3.15"
 rayon = "0.8.2"
 regex = "0.2.2"
-reqwest = { version = "0.7.1", features = ["serde"] }
+reqwest = { version = "0.7.1" }
 semver = { version = "0.7.0", features = ["serde"] }
 serde = "1.0.10"
 serde_json = "1.0.2"
@@ -46,7 +46,7 @@ env_logger = "0.4.3"
 serde_derive = "1.0.10"
 
 [build-dependencies]
-skeptic = "0.11.0"
+skeptic = "0.13.4"
 
 [dev-dependencies]
-skeptic = "0.11.0"
+skeptic = "0.13.4"
