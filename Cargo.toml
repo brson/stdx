@@ -30,7 +30,7 @@ num_cpus = "1.6.2"
 rand = "0.3.15"
 rayon = "0.8.2"
 regex = "0.2.2"
-reqwest = { version = "0.7.1", features = ["serde"] }
+reqwest = { version = "0.7.1" }
 semver = { version = "0.7.0", features = ["serde"] }
 serde = "1.0.10"
 serde_json = "1.0.2"
