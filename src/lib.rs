@@ -7,7 +7,6 @@ pub use std::*;
 // Export the most commonly used parts of std that are not in the std prelude.
 
 pub use std::any::{Any, TypeId};
-pub use std::ascii::AsciiExt;
 pub use std::borrow::{Borrow, BorrowMut, ToOwned, Cow};
 pub use std::cell::{Cell, RefCell};
 pub use std::cmp::{min, max};
