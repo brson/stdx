@@ -1324,7 +1324,7 @@ enable:
 * Enforcement of other compile-time feature standards
 * `stdx` as version lock - you don't even have to call into it. Just
   link to it and it locks down a chunk of your crate graph to
-  known-good combinaitons.
+  known-good combinations.
 * Ecosystem wide testing using `stdx` version lock - eventually we
   will be able to say which crates are known to work correctly
   with `stdx`.
