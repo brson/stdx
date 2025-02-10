@@ -1,3 +1,5 @@
+**This project is unmaintained. For a similar project see [rustmax](https://github.com/brson/rustmax).**
+
 <a id="list"></a>
 # `stdx` - The missing batteries of Rust
 
